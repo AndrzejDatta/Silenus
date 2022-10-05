@@ -1,6 +1,6 @@
 export const storiesName = {
-  atoms: "Components/atoms",
-  molecules: "Components/atoms",
-  organisms: "Components/atoms",
-  templates: "Components/atoms",
+  atoms: "Components/atoms/",
+  molecules: "Components/molecules/",
+  organisms: "Components/organisms/",
+  templates: "Components/templates/",
 };
