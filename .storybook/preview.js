@@ -1,6 +1,6 @@
 import React from 'react';
 import { ThemeProvider } from 'styled-components';
-import { theme } from 'assets/styles/theme.js';
+import { theme } from 'assets/styles/theme';
 
 export const parameters = {
   actions: { argTypesRegex: '^on[A-Z].*' },
@@ -11,7 +11,6 @@ export const parameters = {
     },
   },
 };
-// .storybook/preview.js
 
 export const decorators = [
   (Story) => (
