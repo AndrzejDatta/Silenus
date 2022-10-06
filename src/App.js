@@ -1,13 +1,15 @@
 import React from "react";
 import PropTypes from "prop-types";
-import Logo from "components/atoms/Logo/Logo";
-import Title from "components/atoms/Title/Title";
+import StartPage from "pages/StartPage/StartPage";
+import { Routes, Route, BrowserRouter } from "react-router-dom";
 const App = (props) => {
   return (
-    <>
-      <Title title="Title" color="startPage" size="startPage" />
-      <Logo color="black" />
-    </>
+    // <BrowserRouter>
+    //   <Routes>
+    //     <Route path="/" to={<StartPage />} />
+    //   </Routes>
+    // </BrowserRouter>
+    <StartPage />
   );
 };
 
