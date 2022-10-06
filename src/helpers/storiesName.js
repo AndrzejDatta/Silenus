@@ -3,4 +3,5 @@ export const storiesName = {
   molecules: "Components/molecules/",
   organisms: "Components/organisms/",
   templates: "Components/templates/",
+  pages: "Pages/",
 };
