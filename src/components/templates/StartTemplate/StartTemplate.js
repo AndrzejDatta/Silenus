@@ -16,11 +16,9 @@ const StartTemplate = () => {
     elementSize = "medium";
   }
   return (
-    width && (
-      <StyledStartTemplate>
-        <StartPageHeader size={elementSize} startPage="startPage" />
-      </StyledStartTemplate>
-    )
+    <StyledStartTemplate>
+      <StartPageHeader size={elementSize} startPage="startPage" />
+    </StyledStartTemplate>
   );
 };
 
