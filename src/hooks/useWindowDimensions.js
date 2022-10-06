@@ -1,23 +1,25 @@
-import React, { useEffect, useState } from "react";
-import PropTypes from "prop-types";
+import { useEffect, useState } from "react";
 
 const useWindowDimensions = () => {
   const [dimensions, setDimensions] = useState({
-    width: window.width,
-    height: window.height,
+    width: window.innerWidth,
+    height: window.innerHeight,
   });
-  useEffect(() => {
-    window.addEventListener(
-      "resize",
-      setDimensions({
-        width: window.width,
-        height: window.height,
-      })
-    );
-  }, []);
-  return <div></div>;
-};
 
-useWindowDimensions.propTypes = {};
+  function handleResize() {
+    setDimensions({
+      width: window.innerWidth,
+      height: window.innerHeight,
+    });
+  }
+
+  useEffect(() => {
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  return dimensions;
+};
 
 export default useWindowDimensions;
