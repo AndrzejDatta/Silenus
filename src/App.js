@@ -1,7 +1,8 @@
-import React from "react";
-import PropTypes from "prop-types";
-import StartPage from "pages/StartPage/StartPage";
-import { Routes, Route, BrowserRouter } from "react-router-dom";
+import React from 'react';
+import PropTypes from 'prop-types';
+import StartPage from 'pages/StartPage/StartPage';
+import { Routes, Route, BrowserRouter } from 'react-router-dom';
+
 const App = (props) => {
   return (
     // <BrowserRouter>
