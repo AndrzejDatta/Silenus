@@ -9,21 +9,24 @@ const LoginPanel = ({}) => {
       <CustomInput
         type="email"
         placeholder="Login"
-        color={({ theme }) => theme.color.grey}
+        color="#EEF6F4"
         size="medium"
+        fontSize="14px"
       />
       <CustomInput
         type="password"
         placeholder="Hasło"
-        color={({ theme }) => theme.color.grey}
+        color="#EEF6F4"
         size="medium"
+        fontSize="14px"
       />
       <CustomButton
         type="button"
         size="medium"
         text="Zaloguj się"
-        color={({ theme }) => theme.color.fontGreen}
-        backgroundColor={({ theme }) => theme.color.grey}
+        color="#3AA688"
+        backgroundColor="#EEF6F4"
+        fontSize="14px"
       />
     </StyledLoginPanelContainer>
   );

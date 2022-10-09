@@ -4,7 +4,7 @@ export const StyledOtherLoginMethodsPanel = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 30px;
+  gap: 15px;
 `;
 
 export const StyledIconContainer = styled.div`

@@ -22,8 +22,8 @@ const OtherLoginMethodsPanel = () => {
       />
       <StyledHr />
       <StyledIconContainer>
-        {icons.map((icon) => (
-          <Icon icon={icon} size="medium" color="white" />
+        {icons.map((icon, index) => (
+          <Icon key={index} icon={icon} size="medium" color="white" />
         ))}
       </StyledIconContainer>
     </StyledOtherLoginMethodsPanel>

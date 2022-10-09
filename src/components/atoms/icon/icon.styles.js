@@ -21,5 +21,6 @@ export const StyledIcon = styled.img`
     } else if (props.color === 'white') {
       return `filter: ${theme.color.filterWhite}`;
     }
-  }}
+  }};
+  cursor: pointer;
 `;
