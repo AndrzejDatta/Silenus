@@ -14,6 +14,22 @@ export const dataContext = createContext({
 });
 
 export const DataProvider = ({ children }) => {
+  function importAll(r) {
+    let images = {};
+    r.keys().map((item, index) => {
+      images[item.replace("./", "")] = r(item);
+    });
+    return images;
+  }
+
+  const images = importAll(
+    require.context(
+      "assets/icons/userAccountOption",
+      false,
+      /\.(png|jpe?g|svg)$/
+    )
+  );
+
   const startPage = {
     ...dataPL[0],
   };
@@ -54,6 +70,7 @@ export const DataProvider = ({ children }) => {
         KalendarzOpieki,
         KontoUżytkownika,
         ZidentyfikujRośline,
+        images,
       }}
     >
       {children}
