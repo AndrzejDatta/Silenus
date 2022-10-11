@@ -9,5 +9,6 @@ export const StyledUserAccountText = styled.p`
       ? ({ theme }) => theme.color.fontGreen
       : "black"};
   font-family: ${({ theme }) => theme.font.family.poppins};
-  font-weight: ${(props) => (props.isHeadling ? "bold" : "normal")}; ;
+  font-weight: ${(props) => (props.isHeadling ? "bold" : "normal")};
+  padding: ${(props) => (props.isUser ? " 0 10px" : "0 0 0 10px")}; ;
 `;
