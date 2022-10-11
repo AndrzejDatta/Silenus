@@ -1,5 +1,6 @@
-import { createContext } from "react";
+import { createContext, useState } from "react";
 import { dataPL } from "assets/data/data";
+import { useSearchParams } from "react-router-dom";
 
 export const dataContext = createContext({
   startPage: {},
@@ -11,9 +12,34 @@ export const dataContext = createContext({
   KalendarzOpieki: {},
   KontoUżytkownika: {},
   ZidentyfikujRośline: {},
+  Navbar: {},
+  images: {},
+  navIcons: {},
+  navIconsColor: [],
+  setNavIconColor: {},
 });
 
+const init = [
+  {
+    name: "plant",
+    isClicked: false,
+  },
+  {
+    name: "calendar",
+    isClicked: false,
+  },
+  {
+    name: "camera",
+    isClicked: false,
+  },
+  {
+    name: "user",
+    isClicked: false,
+  },
+];
 export const DataProvider = ({ children }) => {
+  const [navIconsColor, setNavIconColor] = useState(init);
+
   function importAll(r) {
     let images = {};
     r.keys().map((item, index) => {
@@ -29,7 +55,9 @@ export const DataProvider = ({ children }) => {
       /\.(png|jpe?g|svg)$/
     )
   );
-
+  const navIcons = importAll(
+    require.context("assets/icons/navIcons", false, /\.(png|jpe?g|svg)$/)
+  );
   const startPage = {
     ...dataPL[0],
   };
@@ -57,6 +85,9 @@ export const DataProvider = ({ children }) => {
   const ZidentyfikujRośline = {
     ...dataPL[8],
   };
+  const Navbar = {
+    ...dataPL[9],
+  };
 
   return (
     <dataContext.Provider
@@ -70,7 +101,11 @@ export const DataProvider = ({ children }) => {
         KalendarzOpieki,
         KontoUżytkownika,
         ZidentyfikujRośline,
+        Navbar,
         images,
+        navIcons,
+        navIconsColor,
+        setNavIconColor,
       }}
     >
       {children}
