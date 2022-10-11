@@ -1,9 +1,13 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { StyledUserAccountText } from "./UserAccountText.styles";
-const UserAccountText = ({ text, isHeadling, isLogout }) => {
+const UserAccountText = ({ text, isHeadling, isLogout, isOption }) => {
   return (
-    <StyledUserAccountText isHeadling={isHeadling} isLogout={isLogout}>
+    <StyledUserAccountText
+      isHeadling={isHeadling}
+      isOption={isOption}
+      isLogout={isLogout}
+    >
       {text}
     </StyledUserAccountText>
   );
