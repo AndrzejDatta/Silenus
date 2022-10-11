@@ -13,12 +13,12 @@ export const dataPL = [
   },
   {
     pageName: "Dashboard",
-    headlings: ["Moje doniczki", "Moje rośliny", "Kalendarz opieki"],
+    headings: ["Moje doniczki", "Moje rośliny", "Kalendarz opieki"],
     filters: ["Podlewanie", "Zraszanie", "Nawożenie"],
   },
   {
     pageName: "MojeDoniczki",
-    headlings: [
+    headings: [
       "Moje doniczki",
       "Parametry doniczki",
       "Pielęgnacja",
@@ -27,37 +27,82 @@ export const dataPL = [
   },
   {
     pageName: "DodajDoniczke",
-    headlings: ["Dodaj doniczkę"],
+    headings: ["Dodaj doniczkę"],
     infoText: "Wyszukiwanie urządzenia bluetooth w pobliżu",
     buttonText: "Skanuj",
   },
   {
     pageName: "MojeRośliny",
-    headlings: ["Moje rośliny", "Pielęgnacja", "Pamietnik rośliny"],
+    headings: ["Moje rośliny", "Pielęgnacja", "Pamietnik rośliny"],
     filters: ["Podlewanie", "Zraszanie", "Nawożenie"],
   },
   {
     pageName: "KontoUżytkownika",
-    headlings: ["Profil", "Ustawienia"],
+    headings: ["Profil", "Ustawienia"],
     options: [
-      "Edytuj profil",
-      "Udostępnij",
-      "Powiadomienia",
-      "Zabezpieczenia",
-      "Pomoc",
-      "O aplikacji",
-      "Oceń",
-      "Wyloguj się",
+      {
+        option: "Edytuj profil",
+        iconSrc: "edit.svg",
+      },
+      {
+        option: "Udostępnij",
+        iconSrc: "return.svg",
+      },
+      {
+        option: "Powiadomienia",
+        iconSrc: "notifications.svg",
+      },
+      {
+        option: "Zabezpieczenia",
+        iconSrc: "lockOpen.svg",
+      },
+      {
+        option: "Pomoc",
+        iconSrc: "support.svg",
+      },
+      {
+        option: "O aplikacji",
+        iconSrc: "info.svg",
+      },
+      {
+        option: "Oceń",
+        iconSrc: "star.svg",
+      },
+      {
+        option: "Wyloguj się",
+        iconSrc: "logout.svg",
+      },
     ],
+
+    // options: [
+    //   "Edytuj profil",
+    //   "Udostępnij",
+    //   "Powiadomienia",
+    //   "Zabezpieczenia",
+    //   "Pomoc",
+    //   "O aplikacji",
+    //   "Oceń",
+    //   "Wyloguj się",
+    // ],
+    // iconSrc: [
+    //   "assets/icons/edit.svg",
+    //   "assets/icons/return.svg",
+    //   "assets/icons/notifications.svg",
+    //   "assets/icons/lockOpen.svg",
+    //   "assets/icons/support.svg",
+    //   "assets/icons/info.svg",
+    //   "assets/icons/star.svg",
+    //   "assets/icons/logout.svg",
+    // ],
   },
   {
     pageName: "KalendarzOpieki",
-    headlings: ["Kalendarz opieki"],
+    headings: ["Kalendarz opieki"],
     filters: ["Podlewanie", "Zraszanie", "Nawożenie"],
   },
   {
     pageName: "ZidentyfikujRoslinę",
-    headlings: ["identyfikuj roslinę", "Popularne kategorie"],
+    headings: ["identyfikuj roslinę", "Popularne kategorie"],
     filters: [
       "bezpieczne dla zwierząt",
       "rośliny zielone",
@@ -83,12 +128,12 @@ export const dataAng = [
   },
   {
     pageName: "Dashboard",
-    headlings: ["Moje doniczki", "Moje rośliny", "Kalendarz opieki"],
+    headings: ["Moje doniczki", "Moje rośliny", "Kalendarz opieki"],
     filters: ["Podlewanie", "Zraszanie", "Nawożenie"],
   },
   {
     pageName: "MojeDoniczki",
-    headlings: [
+    headings: [
       "Moje doniczki",
       "Parametry doniczki",
       "Pielęgnacja",
@@ -97,18 +142,18 @@ export const dataAng = [
   },
   {
     pageName: "DodajDoniczke",
-    headlings: ["Dodaj doniczkę"],
+    headings: ["Dodaj doniczkę"],
     infoText: "Wyszukiwanie urządzenia bluetooth w pobliżu",
     buttonText: "Skanuj",
   },
   {
     pageName: "MojeRośliny",
-    headlings: ["Moje rośliny", "Pielęgnacja", "Pamietnik rośliny"],
+    headings: ["Moje rośliny", "Pielęgnacja", "Pamietnik rośliny"],
     filters: ["Podlewanie", "Zraszanie", "Nawożenie"],
   },
   {
     pageName: "KontoUżytkownika",
-    headlings: ["Profil", "Ustawienia"],
+    headings: ["Profil", "Ustawienia"],
     options: [
       "Edytuj profil",
       "Udostępnij",
@@ -122,12 +167,12 @@ export const dataAng = [
   },
   {
     pageName: "KalendarzOpieki",
-    headlings: ["Kalendarz opieki"],
+    headings: ["Kalendarz opieki"],
     filters: ["Podlewanie", "Zraszanie", "Nawożenie"],
   },
   {
     pageName: "ZidentyfikujRoslinę",
-    headlings: ["identyfikuj roslinę", "Popularne kategorie"],
+    headings: ["identyfikuj roslinę", "Popularne kategorie"],
     filters: [
       "bezpieczne dla zwierząt",
       "rośliny zielone",
