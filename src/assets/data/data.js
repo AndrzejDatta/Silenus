@@ -37,7 +37,7 @@ export const dataPL = [
     filters: ["Podlewanie", "Zraszanie", "Nawożenie"],
   },
   {
-    pageName: "KalendarzOpieki",
+    pageName: "KontoUżytkownika",
     headlings: ["Profil", "Ustawienia"],
     options: [
       "Edytuj profil",
@@ -47,11 +47,11 @@ export const dataPL = [
       "Pomoc",
       "O aplikacji",
       "Oceń",
-      "Wyloguj sie",
+      "Wyloguj się",
     ],
   },
   {
-    pageName: "KontoUżytkownika",
+    pageName: "KalendarzOpieki",
     headlings: ["Kalendarz opieki"],
     filters: ["Podlewanie", "Zraszanie", "Nawożenie"],
   },
@@ -107,7 +107,7 @@ export const dataAng = [
     filters: ["Podlewanie", "Zraszanie", "Nawożenie"],
   },
   {
-    pageName: "KalendarzOpieki",
+    pageName: "KontoUżytkownika",
     headlings: ["Profil", "Ustawienia"],
     options: [
       "Edytuj profil",
@@ -121,7 +121,7 @@ export const dataAng = [
     ],
   },
   {
-    pageName: "KontoUżytkownika",
+    pageName: "KalendarzOpieki",
     headlings: ["Kalendarz opieki"],
     filters: ["Podlewanie", "Zraszanie", "Nawożenie"],
   },
