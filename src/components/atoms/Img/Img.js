@@ -1,9 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { StyledImg } from "./Img.styles";
-import img from "assets/images/mobile/plant";
+import img from "assets/images/mobile/plant.png";
 const Img = ({ url = { img }, size }) => {
-  return <StyledImg url={url} size={size} />;
+  return <StyledImg url={img} size={size} />;
 };
 
 Img.propTypes = {
