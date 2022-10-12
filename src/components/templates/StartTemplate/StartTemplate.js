@@ -4,11 +4,15 @@ import useWindowDimensions from "hooks/useWindowDimensions";
 import { size } from "helpers/breakpoints";
 import { StyledStartTemplate } from "./StartTemplate.styles";
 import StartPageHeader from "components/organisms/StartPageHeader/StartPageHeader";
-const StartTemplate = () => {
+const StartTemplate = ({ children, pageType, logoColor }) => {
   const { width } = useWindowDimensions();
 
   let elementSize;
-  if (width < size.mobileS) {
+  if (width <= size.mobileS && pageType === "loginPage") {
+    console.log("tiny");
+    elementSize = "tiny";
+  } else if (width < size.mobileS) {
+    console.log("small");
     elementSize = "small";
   } else if (width < size.tablet) {
     elementSize = "medium";
@@ -16,8 +20,13 @@ const StartTemplate = () => {
     elementSize = "medium";
   }
   return (
-    <StyledStartTemplate>
-      <StartPageHeader size={elementSize} startPage="startPage" />
+    <StyledStartTemplate pageType={pageType}>
+      <StartPageHeader
+        logoSize={elementSize}
+        pageType={pageType}
+        logoColor={logoColor}
+      />
+      {children}
     </StyledStartTemplate>
   );
 };
