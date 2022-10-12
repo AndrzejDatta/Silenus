@@ -4,6 +4,7 @@ import { StyledStartPageHeader } from "components/organisms/StartPageHeader/Star
 import Logo from "components/atoms/Logo/Logo";
 import StartPageText from "components/molecules/StartPageText/StartPageText";
 const StartPageHeader = ({ logoSize, logoColor, pageType }) => {
+  console.log(logoSize);
   return (
     <StyledStartPageHeader>
       <Logo logoSize={logoSize} color={logoColor} />
