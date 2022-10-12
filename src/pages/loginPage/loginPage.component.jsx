@@ -4,7 +4,7 @@ import StartTemplate from 'components/templates/StartTemplate/StartTemplate';
 const LoginPage = () => {
   return (
   
-      <StartTemplate pageType="loginPage" logoColor='white' >
+      <StartTemplate pageType="loginPage" logoColor='white' logoSize='tiny'>
       <LoginInterface />
       </StartTemplate>
    
