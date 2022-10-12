@@ -13,6 +13,11 @@ export const StyledIcon = styled.img`
             width: 27px;
             height: 27px;
             `;
+    } else if (props.size === "tiny") {
+      return `
+            width: 22px;
+            height:22px;
+            `;
     }
   }};
   ${(props) => {
