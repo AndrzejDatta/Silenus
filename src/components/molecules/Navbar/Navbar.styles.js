@@ -5,4 +5,6 @@ export const StyledNavbar = styled.nav`
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
+  justify-self: flex-end;
+  padding: 5px 0px;
 `;

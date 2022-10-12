@@ -4,27 +4,16 @@ import Icon from "components/atoms/icon/icon.component";
 import { dataContext } from "providers/DataProvider";
 import { StyledNavbar } from "./Navbar.styles";
 const Navbar = (props) => {
-  const [color, setColor] = useState("black");
+  const { navIconsColor, changeColor } = useContext(dataContext);
 
-  function changeColor() {
-    console.log("zmieniam kolor");
-    if (color === "black") {
-      setColor("green");
-    } else if (color === "green") {
-      setColor("black");
-    }
-  }
-  const {
-    navIcons,
-    Navbar: { src },
-  } = useContext(dataContext);
-  const navElements = src?.map((item) => {
+  const { navIcons } = useContext(dataContext);
+  const navElements = navIconsColor?.map(({ name, src, isClicked }) => {
     return (
       <Icon
-        icon={navIcons[item]}
+        icon={navIcons[src]}
         size="medium"
-        color={color}
-        click={changeColor}
+        color={isClicked ? "green" : "black"}
+        click={() => changeColor(name, src)}
       />
     );
   });
@@ -34,3 +23,4 @@ const Navbar = (props) => {
 Navbar.propTypes = {};
 
 export default Navbar;
+//TODO: zastawnoic sie czy jak oplote to Link to bedzie spoko
