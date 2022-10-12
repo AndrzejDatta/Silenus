@@ -1,14 +1,13 @@
 import LoginInterface from 'components/organisms/loginInterface/loginInterface.component';
-import StartPageHeader from 'components/organisms/StartPageHeader/StartPageHeader';
 import React from 'react';
-import { StyledLoginPageContainer } from './loginPage.styles';
-
+import StartTemplate from 'components/templates/StartTemplate/StartTemplate';
 const LoginPage = () => {
   return (
-    <StyledLoginPageContainer>
-      <StartPageHeader pageType="loginPage" logoColor="white" logoSize="tiny" />
+  
+      <StartTemplate pageType="loginPage" logoColor='white' >
       <LoginInterface />
-    </StyledLoginPageContainer>
+      </StartTemplate>
+   
   );
 };
 
