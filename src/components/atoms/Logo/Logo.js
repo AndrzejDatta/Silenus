@@ -1,9 +1,9 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { StyledLogo } from 'components/atoms/Logo/Logo.styles';
+import React from "react";
+import PropTypes from "prop-types";
+import { StyledLogo } from "components/atoms/Logo/Logo.styles";
 
-const Logo = ({ color = '#3AA688', logoSize = 'small' }) => {
-  return <StyledLogo fill={color} size={logoSize} />;
+const Logo = ({ color = "#3AA688", logoSize = "small" }) => {
+  return <StyledLogo fill={color} logoSize={logoSize} />;
 };
 
 Logo.propTypes = {
