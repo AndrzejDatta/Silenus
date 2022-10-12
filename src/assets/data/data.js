@@ -15,6 +15,50 @@ export const dataPL = [
     pageName: "Dashboard",
     headings: ["Moje doniczki", "Moje rośliny", "Kalendarz opieki"],
     filters: ["Podlewanie", "Zraszanie", "Nawożenie"],
+    plants: [
+      {
+        name: "Paprotka Andrzej",
+        state: [
+          {
+            src: "tear.svg",
+            text: "5",
+          },
+          {
+            src: "waterGlass.svg",
+            text: "uzu[elnij zbiornik",
+          },
+          {
+            src: "plant.svg",
+            text: "2 dni temu",
+          },
+          {
+            src: "task_alt.svg",
+            text: "zraszanie",
+          },
+        ],
+      },
+      {
+        name: "Paprotka Ola",
+        state: [
+          {
+            src: "tear.svg",
+            text: "1",
+          },
+          {
+            src: "waterGlass.svg",
+            text: "kocham cię, mam duzo wody",
+          },
+          {
+            src: "plant.svg",
+            text: "100 dni temu",
+          },
+          {
+            src: "task_alt.svg",
+            text: "zraszanie",
+          },
+        ],
+      },
+    ],
   },
   {
     pageName: "MojeDoniczki",
