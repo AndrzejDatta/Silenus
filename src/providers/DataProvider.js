@@ -1,6 +1,5 @@
 import { createContext, useState } from "react";
 import { dataPL } from "assets/data/data";
-import { useSearchParams } from "react-router-dom";
 
 export const dataContext = createContext({
   startPage: {},
@@ -16,29 +15,33 @@ export const dataContext = createContext({
   images: {},
   navIcons: {},
   navIconsColor: [],
-  setNavIconColor: {},
+  setNavIconColor: () => {},
+  changeColor: () => {},
 });
 
-const init = [
-  {
-    name: "plant",
-    isClicked: false,
-  },
-  {
-    name: "calendar",
-    isClicked: false,
-  },
-  {
-    name: "camera",
-    isClicked: false,
-  },
-  {
-    name: "user",
-    isClicked: false,
-  },
-];
 export const DataProvider = ({ children }) => {
-  const [navIconsColor, setNavIconColor] = useState(init);
+  const [navIconsColor, setNavIconColor] = useState([
+    {
+      name: "plant",
+      src: "potted_plant.svg",
+      isClicked: false,
+    },
+    {
+      name: "calendar",
+      src: "calendar.svg",
+      isClicked: false,
+    },
+    {
+      name: "camera",
+      src: "camera.svg",
+      isClicked: false,
+    },
+    {
+      name: "user",
+      src: "accountCircle.svg",
+      isClicked: false,
+    },
+  ]);
 
   function importAll(r) {
     let images = {};
@@ -89,6 +92,24 @@ export const DataProvider = ({ children }) => {
     ...dataPL[9],
   };
 
+  function changeColor(nameElement) {
+    setNavIconColor((prevData) =>
+      prevData.map((item) => {
+        if (item.name === nameElement && !item.isClicked) {
+          return {
+            ...item,
+            isClicked: true,
+          };
+        } else {
+          return {
+            ...item,
+            isClicked: false,
+          };
+        }
+      })
+    );
+  }
+
   return (
     <dataContext.Provider
       value={{
@@ -106,6 +127,7 @@ export const DataProvider = ({ children }) => {
         navIcons,
         navIconsColor,
         setNavIconColor,
+        changeColor,
       }}
     >
       {children}
