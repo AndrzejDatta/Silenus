@@ -3,7 +3,10 @@ import PropTypes from "prop-types";
 import { dataContext } from "providers/DataProvider";
 import UserAccountText from "components/atoms/UserAccountText/UserAccountText";
 import Icon from "components/atoms/icon/icon.component";
-import { StyledUserAccountOptions } from "./UserAccountOptions.styles";
+import {
+  StyledUserAccountOptions,
+  StyledUserAccountOptionsSection,
+} from "./UserAccountOptions.styles";
 
 const UserAccountOptions = (props) => {
   const {
@@ -14,7 +17,7 @@ const UserAccountOptions = (props) => {
     if (option === "Wyloguj się") {
       return (
         <StyledUserAccountOptions>
-          <Icon icon={images[iconSrc]} size="small" color="black" />
+          <Icon icon={images[iconSrc]} size="tiny" color="black" />
           <UserAccountText
             text={option}
             isLogout={true}
@@ -26,7 +29,7 @@ const UserAccountOptions = (props) => {
     } else {
       return (
         <StyledUserAccountOptions>
-          <Icon icon={images[iconSrc]} size="small" color="green" />
+          <Icon icon={images[iconSrc]} size="tiny" color="green" />
           <UserAccountText
             text={option}
             isLogout={false}
@@ -44,13 +47,18 @@ const UserAccountOptions = (props) => {
         isLogout={false}
         isHeadling={true}
         isOption={false}
+        isUser={true}
       />
     );
   });
   optionsElement.splice(0, 0, headingElements[0]);
   optionsElement.splice(3, 0, headingElements[1]);
 
-  return <>{optionsElement}</>;
+  return (
+    <StyledUserAccountOptionsSection>
+      {optionsElement}
+    </StyledUserAccountOptionsSection>
+  );
 };
 
 UserAccountOptions.propTypes = {};
