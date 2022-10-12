@@ -1,7 +1,11 @@
 import React, { useContext } from "react";
 import PropTypes from "prop-types";
 import UserAccountText from "components/atoms/UserAccountText/UserAccountText";
-import { StyledPotStatus, StyledPotStatusInfo } from "./PotStatus.styles";
+import {
+  StyledPotStatus,
+  StyledPotStatusInfo,
+  StyledPotStatusText,
+} from "./PotStatus.styles";
 import { dataContext } from "providers/DataProvider";
 import Icon from "components/atoms/icon/icon.component";
 import Img from "components/atoms/Img/Img";
@@ -11,23 +15,39 @@ const PotStatus = (props) => {
     Dashboard: { plants },
   } = useContext(dataContext);
 
-  const elements = plants.state?.map(({ src, text }) => {
+  console.log(plants);
+  console.log(potIcons);
+  const elements = plants?.map(({ state, name }) => {
     return (
       <StyledPotStatus>
-        <Img size="medium" src={"1"} />
+        <Img size="small" src={"1"} />
         <StyledPotStatusInfo>
-          <Icon icon={potIcons[src]} size="tiny" color="black" />
           <UserAccountText
-            text={text}
+            text={name}
             isLogout={false}
-            isHeadling={false}
-            isOption={true}
+            isHeadling={true}
+            isOption={false}
+            isUser={true}
           />
+          {state.map(({ src, text }) => {
+            return (
+              <StyledPotStatusText>
+                <Icon icon={potIcons[src]} size="tiny" color="green" />
+                <UserAccountText
+                  text={text}
+                  isLogout={false}
+                  isHeadling={false}
+                  isOption={true}
+                />
+              </StyledPotStatusText>
+            );
+          })}
         </StyledPotStatusInfo>
       </StyledPotStatus>
     );
   });
 
+  console.log(elements);
   return elements;
 };
 
