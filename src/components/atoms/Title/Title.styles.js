@@ -1,16 +1,16 @@
-import styled from 'styled-components';
-
+import styled from "styled-components";
+import { theme } from "assets/styles/theme";
 export const StyledTitle = styled.h1`
   ${({ pageType }) => {
-    if (pageType === 'loginPage') {
+    if (pageType === "loginPage") {
       return `
-        font-size: ${({ theme }) => theme.font.size.heading};
+        font-size: ${theme.font.size.heading};
         color: white;
         `;
-    } else if (pageType === 'startPage') {
+    } else if (pageType === "startPage") {
       return `
-        font-size: ${({ theme }) => theme.font.size.heading};
-        color: ${({ theme }) => theme.color.fontGreen};
+        font-size: ${theme.font.size.heading};
+        color: ${theme.color.fontGreen};
         `;
     }
   }}
