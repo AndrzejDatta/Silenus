@@ -39,6 +39,17 @@ export const dataPL = [
   {
     pageName: "KontoUżytkownika",
     headings: ["Profil", "Ustawienia"],
+    status: [
+      {
+        name: "Doniczki",
+        number: 1,
+      },
+      {
+        name: "Rośliny",
+        number: 1,
+      },
+    ],
+
     options: [
       {
         option: "Edytuj profil",
@@ -111,8 +122,34 @@ export const dataPL = [
     ],
     buttonText: "Zrób zdjęcie",
   },
+  {
+    name: "Navbar",
+    icons: [
+      {
+        name: "plant",
+        src: "potted_plant.svg",
+        isClicked: false,
+      },
+      {
+        name: "calendar",
+        src: "calendar.svg",
+        isClicked: false,
+      },
+      {
+        name: "camera",
+        src: "camera.svg",
+        isClicked: false,
+      },
+      {
+        name: "user",
+        src: "accountCircle.svg",
+        isClicked: false,
+      },
+    ],
+  },
 ];
 
+//TODO:update dataAng array
 export const dataAng = [
   {
     pageName: "StartPage",
