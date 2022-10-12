@@ -10,5 +10,6 @@ export const StyledUserAccountText = styled.p`
       : "black"};
   font-family: ${({ theme }) => theme.font.family.poppins};
   font-weight: ${(props) => (props.isHeadling ? "bold" : "normal")};
-  padding: ${(props) => (props.isUser ? " 0 10px" : "0 0 0 10px")}; ;
+  padding: ${(props) =>
+    props.isUser ? (props.isHeadling ? " 0" : "0px 8px") : "0 0 0 10px"}; ;
 `;
