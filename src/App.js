@@ -12,8 +12,9 @@ const App = (props) => {
     //     <Route path="/" to={<StartPage />} />
     //   </Routes>
     // </BrowserRouter>
-    // <StartPage />
-    <UserAccount />
+    <StartPage />
+    //<LoginPage />
+    // <UserAccount />
   );
 };
 
