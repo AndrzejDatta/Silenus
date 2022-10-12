@@ -1,9 +1,6 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const StyledLoginPageContainer = styled.div`
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
   padding-top: 35%;
   width: 100%;
   height: 100vh;
