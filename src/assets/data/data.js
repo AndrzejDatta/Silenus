@@ -25,7 +25,7 @@ export const dataPL = [
           },
           {
             src: "waterGlass.svg",
-            text: "uzu[elnij zbiornik",
+            text: "uzupelnij zbiornik",
           },
           {
             src: "plant.svg",
