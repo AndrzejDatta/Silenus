@@ -3,7 +3,8 @@ import PropTypes from "prop-types";
 import { dataContext } from "providers/DataProvider";
 import PotStatus from "components/molecules/PotStatus/PotStatus";
 import { StyledPotSection } from "./PotSection.styles";
-const PotSection = (props) => {
+import Headline from "components/molecules/Headline/Headline";
+const PotSection = ({ headline }) => {
   const {
     Dashboard: { plants },
   } = useContext(dataContext);
@@ -11,7 +12,12 @@ const PotSection = (props) => {
   const elements = plants?.map(({ state, name }) => {
     return <PotStatus state={state} name={name} />;
   });
-  return <StyledPotSection>{elements}</StyledPotSection>;
+  return (
+    <StyledPotSection>
+      <Headline text={headline} isBackground={true} />
+      {elements}
+    </StyledPotSection>
+  );
 };
 
 PotSection.propTypes = {};
