@@ -4,9 +4,9 @@ import Navbar from "components/molecules/Navbar/Navbar";
 import { StyledMainTemplate } from "./MainTemplate.styles";
 import UserAccountInfo from "components/organisms/UserAccountInfo/UserAccountInfo";
 import UserAccountOptions from "components/molecules/UserAccountOptions/UserAccountOptions";
-const MainTemplate = ({ children }) => {
+const MainTemplate = ({ children, inBackground }) => {
   return (
-    <StyledMainTemplate>
+    <StyledMainTemplate inBackground>
       {children}
       <Navbar />
     </StyledMainTemplate>
