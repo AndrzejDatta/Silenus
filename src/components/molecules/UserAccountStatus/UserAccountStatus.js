@@ -20,14 +20,14 @@ const UserAccountStatus = (props) => {
       <StyledUserAccountStatusSection isInfo={true}>
         <UserAccountText
           text={name}
-          isHeadling={false}
+          isHeading={false}
           isLogout={false}
           isOption={true}
           isUser={true}
         />
         <UserAccountText
           text={number}
-          isHeadling={true}
+          isHeading={true}
           isLogout={false}
           isOption={false}
           isUser={true}
@@ -42,7 +42,7 @@ const UserAccountStatus = (props) => {
         <Icon icon={plantUser} color="green" size="small" />
         <UserAccountText
           text="Piotr"
-          isHeadling={true}
+          isHeading={true}
           isLogout={false}
           isOption={false}
         />

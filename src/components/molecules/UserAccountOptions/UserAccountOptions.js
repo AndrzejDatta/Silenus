@@ -21,7 +21,7 @@ const UserAccountOptions = (props) => {
           <UserAccountText
             text={option}
             isLogout={true}
-            isHeadling={false}
+            isHeading={false}
             isOption={false}
           />
         </StyledUserAccountOptions>
@@ -33,7 +33,7 @@ const UserAccountOptions = (props) => {
           <UserAccountText
             text={option}
             isLogout={false}
-            isHeadling={false}
+            isHeading={false}
             isOption={true}
           />
         </StyledUserAccountOptions>
@@ -45,7 +45,7 @@ const UserAccountOptions = (props) => {
       <UserAccountText
         text={item}
         isLogout={false}
-        isHeadling={true}
+        isHeading={true}
         isOption={false}
         isUser={true}
       />

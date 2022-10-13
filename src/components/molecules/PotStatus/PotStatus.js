@@ -19,7 +19,7 @@ const PotStatus = ({ state, name }) => {
         <UserAccountText
           text={name}
           isLogout={false}
-          isHeadling={true}
+          isHeading={true}
           isOption={false}
           isUser={true}
         />
@@ -30,7 +30,7 @@ const PotStatus = ({ state, name }) => {
               <UserAccountText
                 text={text}
                 isLogout={false}
-                isHeadling={false}
+                isHeading={false}
                 isOption={true}
               />
             </StyledPotStatusText>
