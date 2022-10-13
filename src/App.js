@@ -4,6 +4,7 @@ import StartPage from "pages/StartPage/StartPage";
 import { Routes, Route, BrowserRouter } from "react-router-dom";
 import LoginPage from "pages/loginPage/loginPage.component";
 import Img from "components/atoms/Img/Img";
+import PotSection from "components/organisms/PotSection/PotSection";
 import PotStatus from "components/molecules/PotStatus/PotStatus";
 import UserAccount from "pages/UserAccount/UserAccount";
 const App = (props) => {
@@ -17,7 +18,7 @@ const App = (props) => {
     //<LoginPage />
     //<UserAccount />
     <>
-      <PotStatus />
+      <PotSection />
     </>
   );
 };
