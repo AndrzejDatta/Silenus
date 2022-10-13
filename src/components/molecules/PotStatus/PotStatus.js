@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import PropTypes from "prop-types";
+import PropTypes, { shape } from "prop-types";
 import UserAccountText from "components/atoms/UserAccountText/UserAccountText";
 import {
   StyledPotStatus,
@@ -44,6 +44,11 @@ const PotStatus = ({ state, name }) => {
   return element;
 };
 
-PotStatus.propTypes = {};
+PotStatus.propTypes = {
+  /**name of plant */
+  name: PropTypes.string.isRequired,
+  /**objct with info about plant */
+  state: PropTypes.arrayOf(shape),
+};
 
 export default PotStatus;
