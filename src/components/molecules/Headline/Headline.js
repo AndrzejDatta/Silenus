@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import Icon from "components/atoms/icon/icon.component";
 import HeadlineText from "components/atoms/HeadlineText/HeadlineText";
 import { StyledHeadline } from "./Headline.styles";
-import arrow from "assets/icons/arrow_green.svg";
+import arrow from "assets/icons/arrow green.svg";
 const Headline = ({ text, isBackground }) => {
   return (
     <StyledHeadline>
