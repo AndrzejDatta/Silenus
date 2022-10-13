@@ -45,9 +45,7 @@ Default.args = {
   color: "black",
   size: "small",
   icon: google,
-  click: () => {
-    console.log("clciked");
-  },
+  click: () => {},
 };
 Navicon.args = {
   ...Default.args,
