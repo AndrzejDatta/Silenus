@@ -1,27 +1,25 @@
-import React from "react";
+import React, { useContext } from "react";
 import PropTypes from "prop-types";
 import MyPlant from "components/molecules/MyPlant/MyPlant";
-import { StyledPlantSection } from "./PlantSection.styles";
+import {
+  StyledPlantSection,
+  StyledPlantElementsSection,
+} from "./PlantSection.styles";
 import Headline from "components/molecules/Headline/Headline";
-const PlantSection = ({ plants, headline }) => {
-  plants = [
-    {
-      name: "Ola",
-      src: "src",
-    },
-    {
-      name: "Ola",
-      src: "src",
-    },
-  ];
+import { dataContext } from "providers/DataProvider";
+const PlantSection = ({ headline }) => {
+  const {
+    Dashboard: { plants },
+  } = useContext(dataContext);
 
-  const plantElements = plants?.map(({ src, name }) => {
-    return <MyPlant src={src} name={name} />;
+  const plantElements = plants?.map(({ name }) => {
+    console.log(name);
+    return <MyPlant src="src" name={name} />;
   });
   return (
     <StyledPlantSection>
       <Headline text={headline} isBackground={false} />
-      {plantElements}
+      <StyledPlantElementsSection>{plantElements}</StyledPlantElementsSection>
     </StyledPlantSection>
   );
 };
