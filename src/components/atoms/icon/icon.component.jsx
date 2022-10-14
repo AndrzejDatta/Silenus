@@ -2,8 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { StyledIcon } from './icon.styles';
 
-const Icon = ({ icon, size, color,click }) => {
-  return <StyledIcon src={icon} size={size} color={color} onClick={click}/>;
+const Icon = ({ icon, size, color,click,isSearchBar,isRight }) => {
+  return <StyledIcon src={icon} size={size} color={color} onClick={click} isSearchBar={isSearchBar} isRight={isRight}/>;
 };
 
 Icon.propTypes = {
@@ -13,6 +13,8 @@ Icon.propTypes = {
   color: PropTypes.string.isRequired,
   /** icon svg injection*/
   icon: PropTypes.string.isRequired,
+
+  isSearchBar:PropTypes.bool,
 };
 
 export default Icon;

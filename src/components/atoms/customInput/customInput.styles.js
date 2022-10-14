@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const StyledInput = styled.input`
   ${({ color, fontSize }) => {
@@ -7,10 +7,16 @@ export const StyledInput = styled.input`
             `;
   }};
   ${({ size }) => {
-    if (size === 'medium') {
+    if (size === "medium") {
       return `
         width: 285px;
         height: 45px;
+        line-height: 20px;
+        `;
+    } else if (size === "small") {
+      return `
+        width: 285px;
+        height: 35px;
         line-height: 20px;
         `;
     }
@@ -18,9 +24,22 @@ export const StyledInput = styled.input`
   font-family: ${({ theme }) => theme.font.family.roboto};
   font-weight: 500;
   border: 1px solid ${({ theme }) => theme.color.grey};
-  box-sizing: border-box;
   border-radius: 10px;
-  text-align: center;
-  margin: 0;
-  padding: 0;
+
+  ${({ isSearchBar }) => {
+    if (isSearchBar) {
+      return `
+        background-color: #f9f9f9;
+        text-align:left;
+        display:flex;
+        justify-content-space-between;
+        color:red;
+        height: 35px;
+        `;
+    } else {
+      return `
+      text-align: center;
+      `;
+    }
+  }}
 `;
