@@ -11,9 +11,10 @@ export const StyledUserActivity = styled.div`
 
 export const StyledUserActivityInfo = styled.div`
   display: flex;
-  flex-direction: column;
+  flex-direction: ${({ isActicity }) => (isActicity ? "row" : "column")};
   justify-content: space-around;
-  align-items: center;
+  align-items: flex-start;
+  width: 60%;
 `;
 
 export const StyledUserActivityText = styled.div`
