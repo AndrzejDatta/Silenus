@@ -5,4 +5,5 @@ export const StyledPotSection = styled.div`
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
+  height: 80vh;
 `;

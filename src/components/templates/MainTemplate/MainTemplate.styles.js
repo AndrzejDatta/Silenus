@@ -7,7 +7,7 @@ export const StyledMainTemplate = styled.div`
   flex-direction: column;
   align-items: stretch;
   justify-content: space-between;
-  padding: 10px 10px 0px 10px;
+  padding: 20px 10px 0px 10px;
 
   ${(props) => {
     if (props.inBackground) {

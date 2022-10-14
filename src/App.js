@@ -5,8 +5,16 @@ import { Routes, Route, BrowserRouter } from "react-router-dom";
 import LoginPage from "pages/loginPage/loginPage.component";
 import Img from "components/atoms/Img/Img";
 import PotSection from "components/organisms/PotSection/PotSection";
+import UserActivity from "components/molecules/UserActivity/UserActivity";
 import PotStatus from "components/molecules/PotStatus/PotStatus";
 import UserAccount from "pages/UserAccount/UserAccount";
+import Filter from "components/atoms/Filter/Filter";
+import Filters from "components/molecules/Filters/Filters";
+import facebookIcon from "assets/icons/facebook.svg";
+import ActivityText from "components/atoms/ActivityText/ActivityText";
+import UserActivitiesSection from "components/organisms/UserActivitiesSection/UserActivitiesSection";
+import Dashboard from "pages/Dashboard/Dashboard";
+import MainTemplate from "components/templates/MainTemplate/MainTemplate";
 const App = (props) => {
   return (
     // <BrowserRouter>
@@ -17,9 +25,7 @@ const App = (props) => {
     //<StartPage />
     //<LoginPage />
     //<UserAccount />
-    <>
-      <PotSection />
-    </>
+    <Dashboard />
   );
 };
 
