@@ -29,5 +29,23 @@ export const StyledIcon = styled.img`
       return `filter: ${theme.color.filterGreen}`;
     }
   }};
+  ${(props) => {
+    if (props.isSearchBar && props.isRight) {
+      return `
+      position:absolute;
+      right:10px;
+      top:50%;
+      transform:translateY(-50%);
+      `;
+    } else if (props.isSearchBar) {
+      return `
+     position:absolute;
+     left:10px;
+     top:50%;
+     transform:translateY(-50%);
+      
+      `;
+    }
+  }};
   cursor: pointer;
 `;
