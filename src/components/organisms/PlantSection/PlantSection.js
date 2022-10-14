@@ -7,7 +7,7 @@ import {
 } from "./PlantSection.styles";
 import Headline from "components/molecules/Headline/Headline";
 import { dataContext } from "providers/DataProvider";
-const PlantSection = ({ headline }) => {
+const PlantSection = ({ headline = "Headline" }) => {
   const {
     Dashboard: { plants },
   } = useContext(dataContext);
@@ -24,6 +24,8 @@ const PlantSection = ({ headline }) => {
   );
 };
 
-PlantSection.propTypes = {};
+PlantSection.propTypes = {
+  headline: PropTypes.string.isRequired,
+};
 
 export default PlantSection;

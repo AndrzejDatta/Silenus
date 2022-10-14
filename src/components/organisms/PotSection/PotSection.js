@@ -4,7 +4,7 @@ import { dataContext } from "providers/DataProvider";
 import PotStatus from "components/molecules/PotStatus/PotStatus";
 import { StyledPotSection } from "./PotSection.styles";
 import Headline from "components/molecules/Headline/Headline";
-const PotSection = ({ headline }) => {
+const PotSection = ({ headline = "Headline" }) => {
   const {
     Dashboard: { plants },
   } = useContext(dataContext);
@@ -14,12 +14,14 @@ const PotSection = ({ headline }) => {
   });
   return (
     <StyledPotSection>
-      <Headline text={headline} isBackground={true} isMyPots />
+      <Headline text={headline} isBackground isMyPots />
       {elements}
     </StyledPotSection>
   );
 };
 
-PotSection.propTypes = {};
+PotSection.propTypes = {
+  headline: PropTypes.string.isRequired,
+};
 
 export default PotSection;

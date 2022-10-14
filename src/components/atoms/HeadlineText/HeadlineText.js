@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { StyledHeadlineText } from "./HeadlineText.styles";
-const HeadlineText = ({ text = "Healine", isBackground }) => {
+const HeadlineText = ({ text = "Headline", isBackground }) => {
   return (
     <StyledHeadlineText isBackground={isBackground}>{text}</StyledHeadlineText>
   );
@@ -9,6 +9,7 @@ const HeadlineText = ({ text = "Healine", isBackground }) => {
 
 HeadlineText.propTypes = {
   text: PropTypes.string.isRequired,
+  isBackground: PropTypes.bool,
 };
 
 export default HeadlineText;

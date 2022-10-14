@@ -8,7 +8,7 @@ import UserActivity from "components/molecules/UserActivity/UserActivity";
 import Headline from "components/molecules/Headline/Headline";
 import Filters from "components/molecules/Filters/Filters";
 import { dataContext } from "providers/DataProvider";
-const UserActivitiesSection = ({ headline }) => {
+const UserActivitiesSection = ({ headline = "Headline" }) => {
   const {
     Dashboard: { activities },
   } = useContext(dataContext);
@@ -30,6 +30,8 @@ const UserActivitiesSection = ({ headline }) => {
   );
 };
 
-UserActivitiesSection.propTypes = {};
+UserActivitiesSection.propTypes = {
+  headline: PropTypes.string.isRequired,
+};
 
 export default UserActivitiesSection;

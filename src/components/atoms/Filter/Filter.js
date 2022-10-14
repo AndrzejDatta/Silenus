@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { StyledFilter, StyledFilterText } from "./Filter.styles";
 import Icon from "components/atoms/icon/icon.component";
-import UserAccountText from "../UserAccountText/UserAccountText";
+
 const Filter = ({
   text = "Filter",
   icon,

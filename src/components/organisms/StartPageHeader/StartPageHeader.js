@@ -13,7 +13,11 @@ const StartPageHeader = ({ logoSize, logoColor, pageType }) => {
   );
 };
 
-StartPageHeader.propTypes = {};
+StartPageHeader.propTypes = {
+  pageType: PropTypes.bool,
+  logoSize: PropTypes.string,
+  logoColor: PropTypes.string,
+};
 
 export default StartPageHeader;
 //TODO:dynamically set value of size in logo, to upgrade

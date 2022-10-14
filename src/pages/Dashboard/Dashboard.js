@@ -1,6 +1,5 @@
 import React, { useContext } from "react";
 import PropTypes from "prop-types";
-import { StyledDashboard } from "./Dashboard.styles";
 import { dataContext } from "providers/DataProvider";
 import SearchBar from "components/molecules/SearchBar/SearchBar";
 import MainTemplate from "components/templates/MainTemplate/MainTemplate";

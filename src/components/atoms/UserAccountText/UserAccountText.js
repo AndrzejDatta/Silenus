@@ -21,6 +21,7 @@ UserAccountText.propTypes = {
   isHeading: PropTypes.bool.isRequired,
   /** bool which decides about color */
   isLogout: PropTypes.bool.isRequired,
+  isOption: PropTypes.bool.isRequired,
 };
 
 export default UserAccountText;

@@ -9,7 +9,7 @@ import Img from "components/atoms/Img/Img";
 import Icon from "components/atoms/icon/icon.component";
 import facebookIcon from "assets/icons/facebook.svg";
 import ActivityText from "components/atoms/ActivityText/ActivityText";
-const UserActivity = ({ name, src, activities }) => {
+const UserActivity = ({ name = "name", src, activities }) => {
   return (
     <StyledUserActivity>
       <Img url={src} size="tiny" />
@@ -31,6 +31,10 @@ const UserActivity = ({ name, src, activities }) => {
   );
 };
 
-UserActivity.propTypes = {};
+UserActivity.propTypes = {
+  name: PropTypes.string.isRequired,
+  src: PropTypes.string,
+  activities: PropTypes.shape,
+};
 
 export default UserActivity;

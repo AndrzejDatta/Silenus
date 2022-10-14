@@ -5,7 +5,7 @@ import HeadlineText from "components/atoms/HeadlineText/HeadlineText";
 import { StyledHeadline } from "./Headline.styles";
 import arrow from "assets/icons/arrow green.svg";
 import plus from "assets/icons/plus.svg";
-const Headline = ({ text, isBackground, isMyPots }) => {
+const Headline = ({ text = "text", isBackground, isMyPots }) => {
   return (
     <StyledHeadline>
       <HeadlineText text={text} isBackground={isBackground} />
@@ -18,6 +18,10 @@ const Headline = ({ text, isBackground, isMyPots }) => {
   );
 };
 
-Headline.propTypes = {};
+Headline.propTypes = {
+  text: PropTypes.string.isRequired,
+  isBackground: PropTypes.bool,
+  isMyPots: PropTypes.bool,
+};
 
 export default Headline;

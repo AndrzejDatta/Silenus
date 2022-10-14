@@ -28,6 +28,8 @@ const SearchBar = ({ isSearchBar }) => {
   );
 };
 
-SearchBar.propTypes = {};
+SearchBar.propTypes = {
+  isSearchBar: PropTypes.bool,
+};
 
 export default SearchBar;

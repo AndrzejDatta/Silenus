@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { StyledActivityText } from "./ActivityText.styles";
-const ActivityText = ({ text, isDetails, isHeadline }) => {
+const ActivityText = ({ text = "text", isDetails, isHeadline }) => {
   return (
     <StyledActivityText isDetails={isDetails} isHeadline={isHeadline}>
       {text}
@@ -9,6 +9,10 @@ const ActivityText = ({ text, isDetails, isHeadline }) => {
   );
 };
 
-ActivityText.propTypes = {};
+ActivityText.propTypes = {
+  text: PropTypes.string.isRequired,
+  isDetails: PropTypes.bool,
+  isHeadline: PropTypes.bool,
+};
 
 export default ActivityText;

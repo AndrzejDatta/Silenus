@@ -1,9 +1,9 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import PropTypes from "prop-types";
 import Icon from "components/atoms/icon/icon.component";
 import { dataContext } from "providers/DataProvider";
 import { StyledNavbar } from "./Navbar.styles";
-const Navbar = (props) => {
+const Navbar = () => {
   const { navIconsColor, changeColor } = useContext(dataContext);
 
   const { navIcons } = useContext(dataContext);
