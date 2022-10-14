@@ -3,9 +3,9 @@ import PropTypes from "prop-types";
 import { StyledActivityText } from "./ActivityText.styles";
 const ActivityText = ({ text, isDetails, isHeadline }) => {
   return (
-    <ActivityText isDetails={isDetails} isHeadline={isHeadline}>
+    <StyledActivityText isDetails={isDetails} isHeadline={isHeadline}>
       {text}
-    </ActivityText>
+    </StyledActivityText>
   );
 };
 
