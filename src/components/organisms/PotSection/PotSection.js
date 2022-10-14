@@ -14,7 +14,7 @@ const PotSection = ({ headline }) => {
   });
   return (
     <StyledPotSection>
-      <Headline text={headline} isBackground={true} />
+      <Headline text={headline} isBackground={true} isMyPots />
       {elements}
     </StyledPotSection>
   );

@@ -15,6 +15,7 @@ import ActivityText from "components/atoms/ActivityText/ActivityText";
 import UserActivitiesSection from "components/organisms/UserActivitiesSection/UserActivitiesSection";
 import Dashboard from "pages/Dashboard/Dashboard";
 import MainTemplate from "components/templates/MainTemplate/MainTemplate";
+import MyPotsPage from "pages/MyPotsPage/MyPotsPage";
 const App = (props) => {
   return (
     // <BrowserRouter>
@@ -25,7 +26,7 @@ const App = (props) => {
     //<StartPage />
     //<LoginPage />
     //<UserAccount />
-    <Dashboard />
+    <MyPotsPage />
   );
 };
 
