@@ -36,6 +36,12 @@ export const StyledIcon = styled.img`
             height:164px;
             position:absolute;
             `;
+    } else if (props.size === "cameraBig") {
+      return `
+            width:60px;
+            height:35px;
+            position:absolute;
+            `;
     }
   }};
   ${(props) => {
@@ -54,25 +60,25 @@ export const StyledIcon = styled.img`
       case 1:
         return `
         top:20%;
-        left:-13%;
+        left:-17%;
         `;
 
       case 2:
         return `
-        top:60%;
-        left:10%;
+        top:47%;
+        left:0%;
         transform: scaleX(-1);
         `;
       case 3:
         return `
         top:15%;
-        right:10%;
+        right:3%;
         
         `;
       case 4:
         return `
-        top:50%;
-        right:-15%;
+        top:43%;
+        right:-20%;
         transform: scaleX(-1);
         `;
       default:

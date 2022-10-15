@@ -5,6 +5,9 @@ export const StyledIndentifySection = styled.div`
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
+  min-height: 45vh;
+  margin-top: 5%;
+  z-index: 5;
 `;
 export const StyledCircle = styled.div`
   border-radius: 50%;
@@ -15,16 +18,16 @@ export const StyledCircle = styled.div`
     switch (props.number) {
       case 1: {
         return `
-            width:74px;
-            height:74px;
+            width:67px;
+            height:67px;
             border: 2px solid ;
             border: 2px solid rgba(66, 166, 134,1);
             `;
       }
       case 2: {
         return `
-            width:83px;
-            height:83px;
+            width:80px;
+            height:80px;
             border: 2px solid rgba(66, 166, 134,0.4);
             `;
       }

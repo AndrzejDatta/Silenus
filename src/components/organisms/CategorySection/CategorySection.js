@@ -3,11 +3,7 @@ import PropTypes from "prop-types";
 import Filter from "components/atoms/Filter/Filter";
 import Headline from "components/molecules/Headline/Headline";
 import { dataContext } from "providers/DataProvider";
-import {
-  StyledCategorySection,
-  StyledSection,
-  tyledCategorySection,
-} from "./CategorySection.styles";
+import { StyledCategorySection, StyledSection } from "./CategorySection.styles";
 import UserAccountText from "components/atoms/UserAccountText/UserAccountText";
 const CategorySection = (props) => {
   const {

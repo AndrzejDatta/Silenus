@@ -9,7 +9,6 @@ import CustomButton from "components/atoms/customButton/customButton.component";
 const IdentifySection = (props) => {
   const {
     ZidentyfikujRośline: { headings, buttonText },
-    categoryIcons,
   } = useContext(dataContext);
   return (
     <StyledIndentifySection>
@@ -17,7 +16,7 @@ const IdentifySection = (props) => {
       <StyledCircle number={3}>
         <StyledCircle number={2}>
           <StyledCircle number={1}>
-            <Icon icon={camera} color="green" size="medium" />
+            <Icon icon={camera} color="green" size="cameraBig" />
           </StyledCircle>
         </StyledCircle>
       </StyledCircle>
