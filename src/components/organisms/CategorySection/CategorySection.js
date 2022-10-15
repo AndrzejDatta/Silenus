@@ -11,7 +11,7 @@ import {
 import UserAccountText from "components/atoms/UserAccountText/UserAccountText";
 const CategorySection = (props) => {
   const {
-    ZidentyfikujRośline: { headings, filters, buttonText },
+    ZidentyfikujRośline: { headings, filters },
     categoryIcons,
   } = useContext(dataContext);
 
