@@ -210,10 +210,22 @@ export const dataPL = [
     pageName: "ZidentyfikujRoslinę",
     headings: ["identyfikuj roslinę", "Popularne kategorie"],
     filters: [
-      "bezpieczne dla zwierząt",
-      "rośliny zielone",
-      "rosliny jonizujące",
-      "rośliny biurowe",
+      {
+        text: "bezpieczne dla zwierząt",
+        src: "pet.svg",
+      },
+      {
+        text: "rośliny zielone",
+        src: "plant.svg",
+      },
+      {
+        text: "rosliny jonizujące",
+        src: "airware.svg",
+      },
+      {
+        text: "rośliny biurowe",
+        src: "office.svg",
+      },
     ],
     buttonText: "Zrób zdjęcie",
   },

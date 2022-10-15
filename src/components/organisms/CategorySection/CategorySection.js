@@ -12,13 +12,18 @@ import UserAccountText from "components/atoms/UserAccountText/UserAccountText";
 const CategorySection = (props) => {
   const {
     ZidentyfikujRośline: { headings, filters, buttonText },
+    categoryIcons,
   } = useContext(dataContext);
 
-  const categoryElements = filters?.map(item);
+  const categoryElements = filters?.map(({ text, src }) => {
+    return (
+      <Filter text={text} icon={categoryIcons[src]} isBig={true} isCategory />
+    );
+  });
   return (
     <StyledSection>
       <UserAccountText text={headings[1]} isHeading />
-      <StyledCategorySection></StyledCategorySection>
+      <StyledCategorySection>{categoryElements}</StyledCategorySection>
     </StyledSection>
   );
 };

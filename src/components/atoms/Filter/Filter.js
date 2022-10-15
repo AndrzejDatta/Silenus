@@ -8,11 +8,16 @@ const Filter = ({
   icon,
   isBig = true,
   isDashboard = true,
+  isCategory,
 }) => {
   return (
-    <StyledFilter>
+    <StyledFilter isCategory={isCategory}>
       {icon && <Icon icon={icon} size="tiny" color="green" />}
-      <StyledFilterText isBig={isBig} isDashboard={isDashboard}>
+      <StyledFilterText
+        isCategory={isCategory}
+        isBig={isBig}
+        isDashboard={isDashboard}
+      >
         {text}
       </StyledFilterText>
     </StyledFilter>

@@ -7,6 +7,8 @@ import Dashboard from "pages/Dashboard/Dashboard";
 import MainTemplate from "components/templates/MainTemplate/MainTemplate";
 import MyPotsPage from "pages/MyPotsPage/MyPotsPage";
 import MyPlantsPage from "pages/MyPlantsPage/MyPlantsPage";
+import IdentifyPage from "pages/IdentifyPage/IdentifyPage";
+import StartTemplate from "components/templates/StartTemplate/StartTemplate";
 const App = (props) => {
   return (
     // <BrowserRouter>
@@ -17,7 +19,7 @@ const App = (props) => {
     //<StartPage />
     //<LoginPage />
     //<UserAccount />
-    <MyPlantsPage />
+    <IdentifyPage />
     //<MyPotsPage />
   );
 };

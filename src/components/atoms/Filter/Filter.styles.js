@@ -11,6 +11,8 @@ export const StyledFilter = styled.button`
   border-radius: 8px;
   min-width: 112px;
   margin: 0px 5px;
+  max-width: 140px;
+  ${({ isCategory }) => isCategory && `padding:5px 10px`}
 `;
 
 export const StyledFilterText = styled.p`
