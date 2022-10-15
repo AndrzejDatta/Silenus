@@ -29,12 +29,14 @@ export const StyledInput = styled.input`
   ${({ isSearchBar }) => {
     if (isSearchBar) {
       return `
-        background-color: #f9f9f9;
+        background-color: white;
         text-align:left;
         display:flex;
         justify-content-space-between;
-        color:red;
+        color:black;
         height: 35px;
+        border: 3px solid #F9F9F9;
+        padding:0px 30px;
         `;
     } else {
       return `

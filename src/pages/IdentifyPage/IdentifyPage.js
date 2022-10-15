@@ -7,7 +7,7 @@ import CategorySection from "components/organisms/CategorySection/CategorySectio
 const IdentifyPage = (props) => {
   return (
     <MainTemplate isIdentifyPlant>
-      <SearchBar />
+      <SearchBar isSearchBar />
       <IdentifySection />
       <CategorySection />
     </MainTemplate>

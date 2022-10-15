@@ -27,6 +27,7 @@ const IdentifySection = (props) => {
         backgroundColor={"#42A686"}
         color="white"
         fontSize="20px"
+        type="submit"
       />
     </StyledIndentifySection>
   );

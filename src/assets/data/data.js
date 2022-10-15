@@ -208,7 +208,7 @@ export const dataPL = [
   },
   {
     pageName: "ZidentyfikujRoslinę",
-    headings: ["identyfikuj roslinę", "Popularne kategorie"],
+    headings: ["Zidentyfikuj roslinę", "Popularne kategorie"],
     filters: [
       {
         text: "bezpieczne dla zwierząt",
