@@ -27,7 +27,7 @@ export const dataPL = [
   },
   {
     pageName: 'DodajDoniczke',
-    headings: ['Dodaj doniczkę'],
+    headings: 'Dodaj doniczkę',
     infoText: 'Wyszukiwanie urządzenia bluetooth w pobliżu',
     buttonText: 'Skanuj',
   },
