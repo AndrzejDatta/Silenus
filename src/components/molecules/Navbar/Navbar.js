@@ -25,4 +25,3 @@ const Navbar = () => {
 Navbar.propTypes = {};
 
 export default Navbar;
-//TODO: zastawnoic sie czy jak oplote to Link to bedzie spoko
