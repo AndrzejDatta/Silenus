@@ -2,8 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { StyledIcon } from './icon.styles';
 
-const Icon = ({ icon, size, color,click,isSearchBar,isRight }) => {
-  return <StyledIcon src={icon} size={size} color={color} onClick={click} isSearchBar={isSearchBar} isRight={isRight}/>;
+const Icon = ({ icon, size, color,click,isSearchBar,isRight , location}) => {
+  return <StyledIcon src={icon} size={size} color={color} onClick={click} isSearchBar={isSearchBar} isRight={isRight} location={location}/>;
 };
 
 Icon.propTypes = {

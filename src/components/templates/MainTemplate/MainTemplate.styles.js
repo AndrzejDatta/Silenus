@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import background from "assets/icons/background.svg";
+
 export const StyledMainTemplate = styled.div`
   width: 100%;
   min-height: 100vh;
