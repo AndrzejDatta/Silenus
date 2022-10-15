@@ -7,7 +7,8 @@ import {
 } from "./PlantSection.styles";
 import Headline from "components/molecules/Headline/Headline";
 import { dataContext } from "providers/DataProvider";
-const PlantSection = ({ headline = "Headline" }) => {
+import Filters from "components/molecules/Filters/Filters";
+const PlantSection = ({ headline = "Headline", isMyPots }) => {
   const {
     Dashboard: { plants },
   } = useContext(dataContext);
@@ -19,6 +20,8 @@ const PlantSection = ({ headline = "Headline" }) => {
   return (
     <StyledPlantSection>
       <Headline text={headline} isBackground={false} />
+      {isMyPots && <Filters isBig={true} isDashboard={true} />}
+      <Headline text={"Moje ulubione"} isBackground={false} />
       <StyledPlantElementsSection>{plantElements}</StyledPlantElementsSection>
     </StyledPlantSection>
   );

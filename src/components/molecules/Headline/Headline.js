@@ -9,11 +9,13 @@ const Headline = ({ text = "text", isBackground, isMyPots }) => {
   return (
     <StyledHeadline>
       <HeadlineText text={text} isBackground={isBackground} />
-      <Icon
-        icon={isMyPots ? plus : arrow}
-        color={isBackground ? "white" : "green"}
-        size="tiny"
-      />
+      {text !== "Moje ulubione" && (
+        <Icon
+          icon={isMyPots ? plus : arrow}
+          color={isBackground ? "white" : "green"}
+          size="tiny"
+        />
+      )}
     </StyledHeadline>
   );
 };

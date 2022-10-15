@@ -5,7 +5,7 @@ import { StyledMainTemplate } from "./MainTemplate.styles";
 
 const MainTemplate = ({ children, inBackground }) => {
   return (
-    <StyledMainTemplate inBackground>
+    <StyledMainTemplate inBackground={inBackground}>
       {children}
       <Navbar />
     </StyledMainTemplate>

@@ -10,6 +10,7 @@ export const StyledFilter = styled.button`
   border: none;
   border-radius: 8px;
   min-width: 112px;
+  margin: 0px 5px;
 `;
 
 export const StyledFilterText = styled.p`

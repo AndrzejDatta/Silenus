@@ -6,6 +6,7 @@ import LoginPage from "pages/loginPage/loginPage.component";
 import Dashboard from "pages/Dashboard/Dashboard";
 import MainTemplate from "components/templates/MainTemplate/MainTemplate";
 import MyPotsPage from "pages/MyPotsPage/MyPotsPage";
+import MyPlantsPage from "pages/MyPlantsPage/MyPlantsPage";
 const App = (props) => {
   return (
     // <BrowserRouter>
@@ -16,7 +17,8 @@ const App = (props) => {
     //<StartPage />
     //<LoginPage />
     //<UserAccount />
-    <MyPotsPage />
+    <MyPlantsPage />
+    //<MyPotsPage />
   );
 };
 

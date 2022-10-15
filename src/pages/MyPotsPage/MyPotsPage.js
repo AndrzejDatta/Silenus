@@ -4,7 +4,7 @@ import MainTemplate from "components/templates/MainTemplate/MainTemplate";
 import PotSection from "components/organisms/PotSection/PotSection";
 const MyPots = (props) => {
   return (
-    <MainTemplate isBackground={true}>
+    <MainTemplate inBackground={true}>
       <PotSection headline={"Dodaj doniczki"} />
     </MainTemplate>
   );
