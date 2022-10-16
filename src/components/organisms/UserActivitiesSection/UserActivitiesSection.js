@@ -8,7 +8,8 @@ import UserActivity from "components/molecules/UserActivity/UserActivity";
 import Headline from "components/molecules/Headline/Headline";
 import Filters from "components/molecules/Filters/Filters";
 import { dataContext } from "providers/DataProvider";
-const UserActivitiesSection = ({ headline = "Headline" }) => {
+import ActivityText from "components/atoms/ActivityText/ActivityText";
+const UserActivitiesSection = ({ headline = "Headline", isCalendar }) => {
   const {
     Dashboard: { activities },
   } = useContext(dataContext);
@@ -17,14 +18,20 @@ const UserActivitiesSection = ({ headline = "Headline" }) => {
   const activitiesElement = activities?.map(({ name, src, activity }) => {
     return (
       <StyledUserActivityElement>
-        <UserActivity name={name} src={src} activities={activity} />
+        <ActivityText text="when" />
+        <UserActivity
+          name={name}
+          src={src}
+          activities={activity}
+          isCalendar={isCalendar}
+        />
       </StyledUserActivityElement>
     );
   });
   return (
     <StyledUserActivitySection>
-      <Headline text={headline} isBackground={false} />
-      <Filters isBig={true} isDashboard={true} />
+      {!isCalendar && <Headline text={headline} isBackground={false} />}
+      {!isCalendar && <Filters isBig={true} isDashboard={true} />}
       {activitiesElement}
     </StyledUserActivitySection>
   );
@@ -32,6 +39,7 @@ const UserActivitiesSection = ({ headline = "Headline" }) => {
 
 UserActivitiesSection.propTypes = {
   headline: PropTypes.string.isRequired,
+  isCalendar: PropTypes.bool,
 };
 
 export default UserActivitiesSection;
