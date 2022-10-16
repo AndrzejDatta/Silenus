@@ -15,6 +15,12 @@ export const StyledInput = styled.input`
         `;
     } else if (size === "small") {
       return `
+        width: 35px;
+        height: 22x;
+        line-height: 20px;
+        `;
+    } else if (size === "tiny") {
+      return `
         width: 285px;
         height: 35px;
         line-height: 20px;
@@ -26,6 +32,15 @@ export const StyledInput = styled.input`
   border: 1px solid ${({ theme }) => theme.color.grey};
   border-radius: 10px;
 
+  ${({ isToogle }) => {
+    if (isToogle) {
+      return `
+    display: none;
+            `;
+    }
+  }};
+  
+  isToogle
   ${({ isSearchBar }) => {
     if (isSearchBar) {
       return `

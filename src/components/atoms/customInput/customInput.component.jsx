@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { StyledInput } from './customInput.styles';
 
-const CustomInput = ({ type, placeholder, color, size, fontSize, isSearchBar }) => {
+const CustomInput = ({ type, placeholder, color, size, fontSize, isSearchBar,  isToogle }) => {
   return (
     <StyledInput
       type={type}
@@ -11,6 +11,7 @@ const CustomInput = ({ type, placeholder, color, size, fontSize, isSearchBar }) 
       size={size}
       fontSize={fontSize}
       isSearchBar={isSearchBar}
+      isToogle={isToogle}
     />
   );
 };
