@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { StyledInput } from './customInput.styles';
 
-const CustomInput = ({ type, placeholder, color, size, fontSize }) => {
+const CustomInput = ({ type, placeholder, color, size, fontSize, isSearchBar }) => {
   return (
     <StyledInput
       type={type}
@@ -10,6 +10,7 @@ const CustomInput = ({ type, placeholder, color, size, fontSize }) => {
       color={color}
       size={size}
       fontSize={fontSize}
+      isSearchBar={isSearchBar}
     />
   );
 };
@@ -19,6 +20,7 @@ CustomInput.propTypes = {
   placeholder: PropTypes.string.isRequired,
   size: PropTypes.string.isRequired,
   fontSize: PropTypes.string.isRequired,
+  isSearchBar:PropTypes.bool,
 };
 
 export default CustomInput;

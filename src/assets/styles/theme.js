@@ -9,6 +9,8 @@ export const theme = {
     lightGrey: "#F9F9F9",
     grey: "#EEF7F4",
     editGreen: "#CFE7E0",
+    filterLightGreen:
+      "filter: brightness(0) saturate(100%) invert(95%) sepia(6%) saturate(1860%) hue-rotate(95deg) brightness(85%) contrast(87%);",
     filterGreen:
       " invert(57%) sepia(93%) saturate(279%) hue-rotate(113deg) brightness(82%) contrast(87%)",
     filterWhite:

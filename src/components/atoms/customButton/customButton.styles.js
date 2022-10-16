@@ -1,10 +1,15 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const StyledButton = styled.button`
   ${({ size }) => {
-    if (size === 'medium') {
+    if (size === "medium") {
       return `
             width: 285px;
+            height: 45px;
+            `;
+    } else if (size === "small") {
+      return `
+            width: 200px;
             height: 45px;
             `;
     }

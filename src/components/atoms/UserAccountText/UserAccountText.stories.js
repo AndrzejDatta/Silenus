@@ -6,7 +6,7 @@ export default {
   title: `${storiesName.atoms}UserAccountText`,
   component: UserAccountText,
   argTypes: {
-    isHeadling: {
+    isHeading: {
       options: [true, false],
       control: { type: "boolean" },
     },
@@ -23,6 +23,6 @@ export const Default = Template.bind({});
 
 Default.args = {
   text: "Text",
-  isHeadling: false,
+  isHeading: false,
   isLogout: false,
 };

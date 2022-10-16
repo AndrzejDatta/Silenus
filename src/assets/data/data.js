@@ -14,7 +14,102 @@ export const dataPL = [
   {
     pageName: 'Dashboard',
     headings: ['Moje doniczki', 'Moje rośliny', 'Kalendarz opieki'],
-    filters: ['Podlewanie', 'Zraszanie', 'Nawożenie'],
+    filters: [
+      {
+        name: 'Podlewanie',
+        src: '',
+      },
+      {
+        name: 'Zraszanie',
+        src: '',
+      },
+      {
+        name: 'Nawożenie',
+        src: '',
+      },
+      {
+        name: 'Podlewanie',
+        src: '',
+      },
+    ],
+    activities: [
+      {
+        name: 'Ola',
+        src: '',
+        activity: {
+          iconSrc: 'src',
+          text: 'text',
+        },
+      },
+      {
+        name: 'Kuba',
+        src: '',
+        activity: {
+          iconSrc: 'src',
+          text: 'text',
+        },
+      },
+      {
+        name: 'Amelia',
+        src: '',
+        activity: {
+          iconSrc: 'src',
+          text: 'text',
+        },
+      },
+      {
+        name: 'Smokkkkk',
+        src: '',
+        activity: {
+          iconSrc: 'src',
+          text: 'text',
+        },
+      },
+    ],
+    plants: [
+      {
+        name: 'Paprotka Andrzej',
+        state: [
+          {
+            src: 'tear.svg',
+            text: '5',
+          },
+          {
+            src: 'waterGlass.svg',
+            text: 'uzupelnij zbiornik',
+          },
+          {
+            src: 'plant.svg',
+            text: '2 dni temu',
+          },
+          {
+            src: 'task_alt.svg',
+            text: 'zraszanie',
+          },
+        ],
+      },
+      {
+        name: 'Paprotka Ola',
+        state: [
+          {
+            src: 'tear.svg',
+            text: '1',
+          },
+          {
+            src: 'waterGlass.svg',
+            text: 'kocham cię, mam duzo wody',
+          },
+          {
+            src: 'plant.svg',
+            text: '100 dni temu',
+          },
+          {
+            src: 'task_alt.svg',
+            text: 'zraszanie',
+          },
+        ],
+      },
+    ],
   },
   {
     pageName: 'MojeDoniczki',
@@ -113,12 +208,24 @@ export const dataPL = [
   },
   {
     pageName: 'ZidentyfikujRoslinę',
-    headings: ['identyfikuj roslinę', 'Popularne kategorie'],
+    headings: ['Zidentyfikuj roslinę', 'Popularne kategorie'],
     filters: [
-      'bezpieczne dla zwierząt',
-      'rośliny zielone',
-      'rosliny jonizujące',
-      'rośliny biurowe',
+      {
+        text: 'bezpieczne dla zwierząt',
+        src: 'pet.svg',
+      },
+      {
+        text: 'rośliny zielone',
+        src: 'plant.svg',
+      },
+      {
+        text: 'rosliny jonizujące',
+        src: 'airware.svg',
+      },
+      {
+        text: 'rośliny biurowe',
+        src: 'office.svg',
+      },
     ],
     buttonText: 'Zrób zdjęcie',
   },

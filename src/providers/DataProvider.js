@@ -14,9 +14,12 @@ export const dataContext = createContext({
   Navbar: {},
   images: {},
   navIcons: {},
+  potIcons: {},
+  categoryIcons: {},
   navIconsColor: [],
   setNavIconColor: () => {},
   changeColor: () => {},
+  importAll: () => {},
 });
 
 export const DataProvider = ({ children }) => {
@@ -60,6 +63,14 @@ export const DataProvider = ({ children }) => {
   );
   const navIcons = importAll(
     require.context("assets/icons/navIcons", false, /\.(png|jpe?g|svg)$/)
+  );
+
+  const potIcons = importAll(
+    require.context("assets/icons/potStatus", false, /\.(png|jpe?g|svg)$/)
+  );
+
+  const categoryIcons = importAll(
+    require.context("assets/icons/categoryIcons", false, /\.(png|jpe?g|svg)$/)
   );
   const startPage = {
     ...dataPL[0],
@@ -125,9 +136,12 @@ export const DataProvider = ({ children }) => {
         Navbar,
         images,
         navIcons,
+        potIcons,
+        categoryIcons,
         navIconsColor,
         setNavIconColor,
         changeColor,
+        importAll,
       }}
     >
       {children}

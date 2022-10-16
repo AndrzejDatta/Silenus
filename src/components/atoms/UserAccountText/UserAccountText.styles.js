@@ -5,11 +5,11 @@ export const StyledUserAccountText = styled.p`
   line-height: 20px;
   font-size: ${({ theme }) => theme.font.size.big};
   color: ${(props) =>
-    props.isHeadling || props.isOption
+    props.isHeading || props.isOption
       ? ({ theme }) => theme.color.fontGreen
       : "black"};
   font-family: ${({ theme }) => theme.font.family.poppins};
-  font-weight: ${(props) => (props.isHeadling ? "bold" : "normal")};
+  font-weight: ${(props) => (props.isHeading ? "bold" : "normal")};
   padding: ${(props) =>
-    props.isUser ? (props.isHeadling ? " 0" : "0px 8px") : "0 0 0 10px"}; ;
+    props.isUser ? (props.isHeading ? " 0" : "0px 8px") : "0 0 0 10px"}; ;
 `;

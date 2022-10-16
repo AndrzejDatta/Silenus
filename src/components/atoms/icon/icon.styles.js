@@ -18,6 +18,30 @@ export const StyledIcon = styled.img`
             width: 22px;
             height:22px;
             `;
+    } else if (props.size === "big") {
+      return `
+            width:66px;
+            height:68px;
+            position:absolute;
+            `;
+    } else if (props.size === "large") {
+      return `
+            width:86px;
+            height:89px;
+            position:absolute;
+            `;
+    } else if (props.size === "great") {
+      return `
+            width:158px;
+            height:164px;
+            position:absolute;
+            `;
+    } else if (props.size === "cameraBig") {
+      return `
+            width:60px;
+            height:35px;
+            position:absolute;
+            `;
     }
   }};
   ${(props) => {
@@ -27,6 +51,67 @@ export const StyledIcon = styled.img`
       return `filter: ${theme.color.filterWhite}`;
     } else if (props.color === "green") {
       return `filter: ${theme.color.filterGreen}`;
+    } else if (props.color === "lightGreen") {
+      return `filter: ${theme.color.filterLightGreen}`;
+    }
+  }};
+  ${(props) => {
+    switch (props.location) {
+      case 1:
+        return `
+        top:20%;
+        left:-17%;
+        `;
+
+      case 2:
+        return `
+        top:47%;
+        left:0%;
+        transform: scaleX(-1);
+        `;
+      case 3:
+        return `
+        top:15%;
+        right:3%;
+        
+        `;
+      case 4:
+        return `
+        top:43%;
+        right:-20%;
+        transform: scaleX(-1);
+        `;
+      default:
+    }
+    if (props.location === 1) {
+      return `
+      top:20%;
+      left:-5%;
+      
+      `;
+    } else if (props.color === "white") {
+      return `filter: ${theme.color.filterWhite}`;
+    } else if (props.color === "green") {
+      return `filter: ${theme.color.filterGreen}`;
+    }
+  }};
+
+  ${(props) => {
+    if (props.isSearchBar && props.isRight) {
+      return `
+      position:absolute;
+      right:10px;
+      top:50%;
+      transform:translateY(-50%);
+      `;
+    } else if (props.isSearchBar) {
+      return `
+     position:absolute;
+     left:10px;
+     top:50%;
+     transform:translateY(-50%);
+      
+      `;
     }
   }};
   cursor: pointer;
