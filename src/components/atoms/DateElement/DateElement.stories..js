@@ -1,6 +1,6 @@
 import React from "react";
 import { storiesName } from "helpers/storiesName";
-import Date from "./Date";
+import Date from "./DateElement";
 
 export default {
   title: `${storiesName.atoms}Date`,

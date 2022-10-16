@@ -5,15 +5,21 @@ export const StyledDate = styled.div`
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  background-color: ${({ theme }) => theme.color.lightGrey};
+  background-color: ${(props) =>
+    props.isClicked || props.isNow
+      ? ({ theme }) => theme.color.fontGreen
+      : ({ theme }) => theme.color.lightGrey};
   border-radius: 8px;
   width: 40px;
+  height: 56px;
 `;
 export const StyledDateText = styled.p`
   letter-spacing: 1px;
   font-size: ${({ theme }) => theme.font.size.medium};
   color: ${(props) =>
-    props.isClicked ? "white" : ({ theme }) => theme.color.fontGreen};
+    props.isClicked || props.isNow
+      ? "white"
+      : ({ theme }) => theme.color.fontGreen};
   font-family: ${({ theme }) => theme.font.family.poppins};
   font-weight: ${(props) => (props.isNumber ? "bold" : "normal")};
 `;
