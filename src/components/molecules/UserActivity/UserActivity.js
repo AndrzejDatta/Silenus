@@ -19,7 +19,7 @@ const UserActivity = ({ name = "name", src, activities, isCalendar }) => {
       <Img url={src} size="tiny" />
       <StyledUserActivityInfo>
         <StyledUserActivityEdit>
-          <ActivityText text={name} isHeadline={true} isDetails={false} />
+          <ActivityText text={name} isHeadline={true} color="#3AA688" />
           {isCalendar && <Icon color="#CFE7E0" size="tiny" icon={pen} />}
         </StyledUserActivityEdit>
         <StyledUserActivityText>

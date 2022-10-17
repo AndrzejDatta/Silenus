@@ -11,10 +11,10 @@ const AddSection = (props) => {
 
   return (
     <StyledAddSection>
-      <ActivityText text={infoText} />
+      <ActivityText text={infoText} color="white" />
       <CustomButton
         type="button"
-        size="medium"
+        size="small"
         text={buttonText}
         color="#3AA688"
         backgroundColor="#EEF6F4"

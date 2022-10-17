@@ -8,15 +8,15 @@ import PotSection from "components/organisms/PotSection/PotSection";
 import UserActivitiesSection from "components/organisms/UserActivitiesSection/UserActivitiesSection";
 const Dashboard = () => {
   const {
-    Dashboard: { headings },
+    Dashboard: { headings, toPath },
   } = useContext(dataContext);
 
   return (
     <MainTemplate inBackground={true}>
       <SearchBar isSearchBar={true} />
-      <PotSection headline={headings[0]} />
-      <PlantSection headline={headings[1]} />
-      <UserActivitiesSection headline={headings[2]} />
+      <PotSection headline={headings[0]} path={toPath[0]} />
+      <PlantSection headline={headings[1]} path={toPath[1]} />
+      <UserActivitiesSection headline={headings[2]} path={toPath[2]} />
     </MainTemplate>
   );
 };

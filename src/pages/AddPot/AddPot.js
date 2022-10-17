@@ -6,12 +6,19 @@ import Headline from "components/molecules/Headline/Headline";
 import AddSection from "components/molecules/AddSection/AddSection";
 const AddPot = (props) => {
   const {
-    DodajDoniczke: { headings },
+    DodajDoniczke: { headings, returnPath },
   } = useContext(dataContext);
 
   return (
-    <MainTemplate isBackground>
-      <Headline text={headings[0]} isBackground />
+    <MainTemplate inBackground>
+      <Headline
+        text={headings}
+        isBackground
+        icon
+        isMyPots
+        isReturn
+        returnPath={returnPath}
+      />
       <AddSection />
     </MainTemplate>
   );

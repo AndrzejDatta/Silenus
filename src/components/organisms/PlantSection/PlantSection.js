@@ -8,20 +8,27 @@ import {
 import Headline from "components/molecules/Headline/Headline";
 import { dataContext } from "providers/DataProvider";
 import Filters from "components/molecules/Filters/Filters";
-const PlantSection = ({ headline = "Headline", isMyPots }) => {
+const PlantSection = ({ headline = "Headline", isMyPots, isReturn, path }) => {
   const {
     Dashboard: { plants },
+    MojeRośliny: { returnPath },
   } = useContext(dataContext);
 
+  console.log(returnPath);
   const plantElements = plants?.map(({ name }) => {
-    console.log(name);
     return <MyPlant src="src" name={name} />;
   });
   return (
     <StyledPlantSection>
-      <Headline text={headline} isBackground={false} icon />
-      {isMyPots && <Filters isBig={true} isDashboard={true} />}
-      {isMyPots && <Headline text={"Moje ulubione"} isBackground={false} />}
+      <Headline
+        text={headline}
+        icon
+        path={path}
+        isReturn={isReturn}
+        returnPath={returnPath}
+      />
+      {isMyPots && <Filters isBig />}
+      {isMyPots && <Headline text={"Moje ulubione"} />}
       <StyledPlantElementsSection>{plantElements}</StyledPlantElementsSection>
     </StyledPlantSection>
   );

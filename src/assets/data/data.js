@@ -115,22 +115,21 @@ export const dataPL = [
   {
     pageName: "MojeDoniczki",
     headings: ["Moje doniczki"],
-    toPath: ["/addpot"],
-    toReturn: ["/"],
+    toPath: "/addpot",
+    returnPath: "/",
   },
   {
     pageName: "DodajDoniczke",
-    headings: ["Dodaj doniczkę"],
+    headings: "Dodaj doniczkę",
     infoText: "Wyszukiwanie urządzenia bluetooth w pobliżu",
     buttonText: "Skanuj",
-    toReturn: ["/mypots"],
+    returnPath: "/mypots",
   },
   {
     pageName: "MojeRośliny",
     headings: ["Moje rośliny", "Pielęgnacja", "Pamietnik rośliny"],
     filters: ["Podlewanie", "Zraszanie", "Nawożenie"],
-    toPath: ["/myplants"],
-    toReturn: ["/"],
+    returnPath: "/",
   },
   {
     pageName: "KontoUżytkownika",

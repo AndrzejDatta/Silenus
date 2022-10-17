@@ -5,7 +5,7 @@ import PotSection from "components/organisms/PotSection/PotSection";
 const MyPots = (props) => {
   return (
     <MainTemplate inBackground={true}>
-      <PotSection headline={"Dodaj doniczki"} />
+      <PotSection headline={"Dodaj doniczki"} isReturn />
     </MainTemplate>
   );
 };
