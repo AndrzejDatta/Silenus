@@ -14,6 +14,7 @@ export const dataPL = [
   {
     pageName: "Dashboard",
     headings: ["Moje doniczki", "Moje rośliny", "Kalendarz opieki"],
+    toPath: ["/mypots", "/myplants", "/calendar"],
     filters: [
       {
         name: "Podlewanie",
@@ -113,23 +114,23 @@ export const dataPL = [
   },
   {
     pageName: "MojeDoniczki",
-    headings: [
-      "Moje doniczki",
-      "Parametry doniczki",
-      "Pielęgnacja",
-      "Pamietnik rośliny",
-    ],
+    headings: ["Moje doniczki"],
+    toPath: ["/addpot"],
+    toReturn: ["/"],
   },
   {
     pageName: "DodajDoniczke",
     headings: ["Dodaj doniczkę"],
     infoText: "Wyszukiwanie urządzenia bluetooth w pobliżu",
     buttonText: "Skanuj",
+    toReturn: ["/mypots"],
   },
   {
     pageName: "MojeRośliny",
     headings: ["Moje rośliny", "Pielęgnacja", "Pamietnik rośliny"],
     filters: ["Podlewanie", "Zraszanie", "Nawożenie"],
+    toPath: ["/myplants"],
+    toReturn: ["/"],
   },
   {
     pageName: "KontoUżytkownika",
