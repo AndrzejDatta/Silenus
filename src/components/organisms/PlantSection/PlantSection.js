@@ -19,9 +19,9 @@ const PlantSection = ({ headline = "Headline", isMyPots }) => {
   });
   return (
     <StyledPlantSection>
-      <Headline text={headline} isBackground={false} />
+      <Headline text={headline} isBackground={false} icon />
       {isMyPots && <Filters isBig={true} isDashboard={true} />}
-      <Headline text={"Moje ulubione"} isBackground={false} />
+      {isMyPots && <Headline text={"Moje ulubione"} isBackground={false} />}
       <StyledPlantElementsSection>{plantElements}</StyledPlantElementsSection>
     </StyledPlantSection>
   );

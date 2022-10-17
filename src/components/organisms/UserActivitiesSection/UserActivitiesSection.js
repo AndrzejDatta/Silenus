@@ -9,7 +9,7 @@ import Headline from "components/molecules/Headline/Headline";
 import Filters from "components/molecules/Filters/Filters";
 import { dataContext } from "providers/DataProvider";
 import ActivityText from "components/atoms/ActivityText/ActivityText";
-const UserActivitiesSection = ({ headline = "Headline", isCalendar }) => {
+const UserActivitiesSection = ({ headline = "Headline", isCalendar, icon }) => {
   const {
     Dashboard: { activities },
   } = useContext(dataContext);
@@ -30,7 +30,7 @@ const UserActivitiesSection = ({ headline = "Headline", isCalendar }) => {
   });
   return (
     <StyledUserActivitySection>
-      {!isCalendar && <Headline text={headline} isBackground={false} />}
+      {!isCalendar && <Headline text={headline} isBackground={false} icon />}
       {!isCalendar && <Filters isBig={true} isDashboard={true} />}
       {activitiesElement}
     </StyledUserActivitySection>

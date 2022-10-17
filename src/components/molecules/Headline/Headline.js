@@ -5,18 +5,17 @@ import HeadlineText from "components/atoms/HeadlineText/HeadlineText";
 import { StyledHeadline } from "./Headline.styles";
 import arrow from "assets/icons/arrow green.svg";
 import plus from "assets/icons/plus.svg";
-const Headline = ({ text = "text", isBackground, isMyPots, isCalendar }) => {
+const Headline = ({ text = "text", isBackground, isMyPots, icon }) => {
   return (
     <StyledHeadline>
       <HeadlineText text={text} isBackground={isBackground} />
-      {text !== "Moje ulubione" ||
-        (isCalendar && (
-          <Icon
-            icon={isMyPots ? plus : arrow}
-            color={isBackground ? "white" : "green"}
-            size="tiny"
-          />
-        ))}
+      {icon && (
+        <Icon
+          icon={isMyPots ? plus : arrow}
+          color={isBackground ? "white" : "green"}
+          size="tiny"
+        />
+      )}
     </StyledHeadline>
   );
 };
