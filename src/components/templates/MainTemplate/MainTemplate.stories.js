@@ -1,14 +1,14 @@
 import React from 'react';
 import { storiesName } from 'helpers/storiesName';
-import SearchBar from './SearchBar';
+import MainTemplate from './MainTemplate';
 
 export default {
-  title: `${storiesName.molecules}SearchBar`,
-  component: SearchBar,
+  title: `${storiesName.templates}MainTemplate`,
+  component: MainTemplate,
   argTypes: {},
 };
 
-const Template = (args) => <SearchBar {...args} />;
+const Template = (args) => <MainTemplate {...args} />;
 
 export const Default = Template.bind({});
 
