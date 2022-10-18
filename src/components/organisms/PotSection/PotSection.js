@@ -22,7 +22,7 @@ const PotSection = ({ headline = "Headline", isDashboard, path, isReturn }) => {
           click={handleOpenModal}
           key={index}
         />
-        <Modal isOpen={isOpen} handleClose={handleCloseModal}>
+        <Modal isOpen={isOpen} handleClose={handleCloseModal} key={index + 1}>
           <PotStatus state={state} name={name} key={index} />
         </Modal>
       </>
