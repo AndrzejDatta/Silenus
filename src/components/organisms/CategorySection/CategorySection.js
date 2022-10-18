@@ -1,29 +1,36 @@
-import React, { useContext } from "react";
-import PropTypes from "prop-types";
-import Filter from "components/atoms/Filter/Filter";
-import Headline from "components/molecules/Headline/Headline";
-import { dataContext } from "providers/DataProvider";
-import { StyledCategorySection, StyledSection } from "./CategorySection.styles";
-import UserAccountText from "components/atoms/UserAccountText/UserAccountText";
+import React, { useContext } from 'react';
+import Filter from 'components/atoms/Filter/Filter';
+import { dataContext } from 'providers/DataProvider';
+import { StyledCategorySection, StyledSection } from './CategorySection.styles';
+import UserAccountText from 'components/atoms/UserAccountText/UserAccountText';
 const CategorySection = (props) => {
   const {
     ZidentyfikujRośline: { headings, filters },
     categoryIcons,
   } = useContext(dataContext);
 
-  const categoryElements = filters?.map(({ text, src }) => {
+  const categoryElements = filters?.map(({ text, src }, index) => {
     return (
-      <Filter text={text} icon={categoryIcons[src]} isBig={true} isCategory />
+      <Filter
+        key={index}
+        text={text}
+        icon={categoryIcons[src]}
+        isBig={true}
+        isCategory
+      />
     );
   });
   return (
     <StyledSection>
-      <UserAccountText text={headings[1]} isHeading />
+      <UserAccountText
+        text={headings[1]}
+        isHeading={false}
+        isLogout={false}
+        isOption={true}
+      />
       <StyledCategorySection>{categoryElements}</StyledCategorySection>
     </StyledSection>
   );
 };
-
-CategorySection.propTypes = {};
 
 export default CategorySection;

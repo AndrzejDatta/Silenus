@@ -12,10 +12,10 @@ const UserAccountOptions = (props) => {
     KontoUżytkownika: { options, headings },
     images,
   } = useContext(dataContext);
-  const optionsElement = options?.map(({ option, iconSrc }) => {
+  const optionsElement = options?.map(({ option, iconSrc }, index) => {
     if (option === 'Wyloguj się') {
       return (
-        <StyledUserAccountOptions>
+        <StyledUserAccountOptions key={index}>
           <Icon icon={images[iconSrc]} size="tiny" color="black" />
           <UserAccountText
             text={option}
@@ -27,7 +27,7 @@ const UserAccountOptions = (props) => {
       );
     } else {
       return (
-        <StyledUserAccountOptions>
+        <StyledUserAccountOptions key={index + 'a'}>
           <Icon icon={images[iconSrc]} size="tiny" color="green" />
           <UserAccountText
             text={option}
@@ -39,9 +39,10 @@ const UserAccountOptions = (props) => {
       );
     }
   });
-  const headingElements = headings?.map((item) => {
+  const headingElements = headings?.map((item, index) => {
     return (
       <UserAccountText
+        key={index}
         text={item}
         isLogout={false}
         isHeading={true}
@@ -59,7 +60,5 @@ const UserAccountOptions = (props) => {
     </StyledUserAccountOptionsSection>
   );
 };
-
-UserAccountOptions.propTypes = {};
 
 export default UserAccountOptions;
