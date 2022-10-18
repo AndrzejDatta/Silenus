@@ -25,7 +25,7 @@ const Headline = ({
           icon={returnSvg}
           color={isBackground ? "white" : "green"}
           size="tiny"
-          path={"/"}
+          path={returnPath}
         />
       )}
       <HeadlineText text={text} isBackground={isBackground} />

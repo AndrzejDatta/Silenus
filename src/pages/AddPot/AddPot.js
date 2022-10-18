@@ -9,6 +9,7 @@ const AddPot = (props) => {
     DodajDoniczke: { headings, returnPath },
   } = useContext(dataContext);
 
+  console.log(returnPath);
   return (
     <MainTemplate inBackground>
       <Headline
