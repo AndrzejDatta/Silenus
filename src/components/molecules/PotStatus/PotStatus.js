@@ -9,11 +9,11 @@ import {
 import { dataContext } from "providers/DataProvider";
 import Icon from "components/atoms/icon/icon.component";
 import Img from "components/atoms/Img/Img";
-const PotStatus = ({ state, name }) => {
+const PotStatus = ({ state, name, click }) => {
   const { potIcons } = useContext(dataContext);
 
   const element = (
-    <StyledPotStatus>
+    <StyledPotStatus onClick={click}>
       <Img size="small" src={"1"} />
       <StyledPotStatusInfo>
         <UserAccountText

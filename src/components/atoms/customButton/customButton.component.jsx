@@ -9,6 +9,7 @@ const CustomButton = ({
   type,
   color,
   backgroundColor,
+  click,
 }) => {
   return (
     <StyledButton
@@ -17,6 +18,7 @@ const CustomButton = ({
       type={type}
       color={color}
       backgroundColor={backgroundColor}
+      onClick={click}
     >
       {text}
     </StyledButton>

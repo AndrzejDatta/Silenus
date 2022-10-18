@@ -21,19 +21,22 @@ const UserActivitiesSection = ({
   } = useContext(dataContext);
 
   console.log(activities);
-  const activitiesElement = activities?.map(({ name, src, activity }) => {
-    return (
-      <StyledUserActivityElement>
-        <ActivityText text="when" color="#3AA688" />
-        <UserActivity
-          name={name}
-          src={src}
-          activities={activity}
-          isCalendar={isCalendar}
-        />
-      </StyledUserActivityElement>
-    );
-  });
+  const activitiesElement = activities?.map(
+    ({ name, src, activity }, index) => {
+      return (
+        <StyledUserActivityElement>
+          <ActivityText text="when" color="#3AA688" />
+          <UserActivity
+            name={name}
+            src={src}
+            activities={activity}
+            isCalendar={isCalendar}
+            key={index}
+          />
+        </StyledUserActivityElement>
+      );
+    }
+  );
   return (
     <StyledUserActivitySection>
       {!isCalendar && <Headline text={headline} icon path={path} />}

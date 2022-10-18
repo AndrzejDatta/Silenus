@@ -22,7 +22,36 @@ export const dataContext = createContext({
   importAll: () => {},
 });
 
+const objectName = [
+  "startPage",
+  "loginPage",
+  "Dashboard",
+  "MojeDoniczki",
+  "DodajDoniczke",
+  "MojeRośliny",
+  "KalendarzOpieki",
+  "KontoUżytkownika",
+  "ZidentyfikujRośline",
+  "Navbar",
+];
+
 export const DataProvider = ({ children }) => {
+  for (let i = 0; i < dataPL.length; i++) {
+    objectName[i] = { ...dataPL[i] };
+  }
+  const [
+    startPage,
+    loginPage,
+    Dashboard,
+    MojeDoniczki,
+    DodajDoniczke,
+    MojeRośliny,
+    KalendarzOpieki,
+    KontoUżytkownika,
+    ZidentyfikujRośline,
+    Navbar,
+  ] = objectName;
+
   const [navIconsColor, setNavIconColor] = useState([
     {
       name: "plant",
@@ -72,36 +101,6 @@ export const DataProvider = ({ children }) => {
   const categoryIcons = importAll(
     require.context("assets/icons/categoryIcons", false, /\.(png|jpe?g|svg)$/)
   );
-  const startPage = {
-    ...dataPL[0],
-  };
-  const loginPage = {
-    ...dataPL[1],
-  };
-  const Dashboard = {
-    ...dataPL[2],
-  };
-  const MojeDoniczki = {
-    ...dataPL[3],
-  };
-  const DodajDoniczke = {
-    ...dataPL[4],
-  };
-  const MojeRośliny = {
-    ...dataPL[5],
-  };
-  const KalendarzOpieki = {
-    ...dataPL[7],
-  };
-  const KontoUżytkownika = {
-    ...dataPL[6],
-  };
-  const ZidentyfikujRośline = {
-    ...dataPL[8],
-  };
-  const Navbar = {
-    ...dataPL[9],
-  };
 
   function changeColor(nameElement) {
     setNavIconColor((prevData) =>
