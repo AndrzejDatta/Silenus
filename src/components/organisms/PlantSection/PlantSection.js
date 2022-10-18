@@ -14,9 +14,8 @@ const PlantSection = ({ headline = "Headline", isMyPots, isReturn, path }) => {
     MojeRośliny: { returnPath },
   } = useContext(dataContext);
 
-  console.log(returnPath);
-  const plantElements = plants?.map(({ name }) => {
-    return <MyPlant src="src" name={name} />;
+  const plantElements = plants?.map(({ name }, index) => {
+    return <MyPlant key={index} src="src" name={name} />;
   });
   return (
     <StyledPlantSection>

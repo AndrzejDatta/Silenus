@@ -1,14 +1,14 @@
 import React from 'react';
 import { storiesName } from 'helpers/storiesName';
-import SearchBar from './SearchBar';
+import PotSection from './PotSection';
 
 export default {
-  title: `${storiesName.molecules}SearchBar`,
-  component: SearchBar,
+  title: `${storiesName.organisms}PotSection`,
+  component: PotSection,
   argTypes: {},
 };
 
-const Template = (args) => <SearchBar {...args} />;
+const Template = (args) => <PotSection {...args} />;
 
 export const Default = Template.bind({});
 

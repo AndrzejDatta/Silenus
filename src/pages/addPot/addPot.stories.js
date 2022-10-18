@@ -1,14 +1,14 @@
 import React from 'react';
 import { storiesName } from 'helpers/storiesName';
-import SearchBar from './SearchBar';
+import AddPot from './addPot.component';
 
 export default {
-  title: `${storiesName.molecules}SearchBar`,
-  component: SearchBar,
+  title: `${storiesName.pages}AddPot`,
+  component: AddPot,
   argTypes: {},
 };
 
-const Template = (args) => <SearchBar {...args} />;
+const Template = (args) => <AddPot {...args} />;
 
 export const Default = Template.bind({});
 

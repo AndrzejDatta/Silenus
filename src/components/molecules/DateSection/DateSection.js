@@ -1,12 +1,11 @@
-import React, { useState } from "react";
-import PropTypes from "prop-types";
-import { StyledDateSection } from "./DateSection.styles";
-import DateElement from "components/atoms/DateElement/DateElement";
+import React from 'react';
+import { StyledDateSection } from './DateSection.styles';
+import DateElement from 'components/atoms/DateElement/DateElement';
 const DateSection = (props) => {
   //TODO:sprawdzic sktory ang
   //Tutaj za pomoca dataContext chce wyciągać czy jest ang czy pol
-  const days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
-  const dni = ["Ndz", "Pon", "Wt", "Śr", "Czw", "Pt", "Sob"];
+  const days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+  const dni = ['Ndz', 'Pon', 'Wt', 'Śr', 'Czw', 'Pt', 'Sob'];
   let daysNames = [];
   let daysBeforeToday = [...days];
   let daysAfterToday = [...days];
@@ -21,9 +20,7 @@ const DateSection = (props) => {
   const dayName = dni[date.getDay()];
 
   for (let i = length; i < length + 7; i++) {
-    console.log(i);
     daysNumbers[j] = i;
-    console.log(daysNumbers[i]);
     j++;
   }
 
@@ -31,21 +28,23 @@ const DateSection = (props) => {
   daysBeforeToday = dni.slice(0, 3);
   daysNames = daysAfterToday.concat(daysBeforeToday);
 
-  console.log(daysNames);
-
   const dateElements = daysNames.map((item, index) => {
-    console.log(index);
-    console.log(daysNumbers);
     if (item === dayName) {
-      return <DateElement dayName={item} dayNumber={dayNumber} isNow />;
+      return (
+        <DateElement key={index} dayName={item} dayNumber={dayNumber} isNow />
+      );
     } else {
-      return <DateElement dayName={item} dayNumber={daysNumbers[index]} />;
+      return (
+        <DateElement
+          key={index}
+          dayName={item}
+          dayNumber={daysNumbers[index]}
+        />
+      );
     }
   });
 
   return <StyledDateSection>{dateElements}</StyledDateSection>;
 };
-
-DateSection.propTypes = {};
 
 export default DateSection;

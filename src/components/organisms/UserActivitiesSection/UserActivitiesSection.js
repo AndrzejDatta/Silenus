@@ -24,14 +24,13 @@ const UserActivitiesSection = ({
   const activitiesElement = activities?.map(
     ({ name, src, activity }, index) => {
       return (
-        <StyledUserActivityElement>
+        <StyledUserActivityElement key={index}>
           <ActivityText text="when" color="#3AA688" />
           <UserActivity
             name={name}
             src={src}
             activities={activity}
             isCalendar={isCalendar}
-            key={index}
           />
         </StyledUserActivityElement>
       );
@@ -49,6 +48,10 @@ const UserActivitiesSection = ({
 UserActivitiesSection.propTypes = {
   headline: PropTypes.string.isRequired,
   isCalendar: PropTypes.bool,
+};
+
+UserActivitiesSection.defaultProps = {
+  headline: "Headline",
 };
 
 export default UserActivitiesSection;

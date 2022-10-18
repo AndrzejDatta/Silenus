@@ -9,8 +9,10 @@ const Filters = ({ icons, isBig = true, isDashboard = true }) => {
     Dashboard: { filters },
   } = useContext(dataContext);
 
-  const filterElements = filters?.map(({ name }) => {
-    return <Filter text={name} isBig={isBig} isDashboard={isDashboard} />;
+  const filterElements = filters?.map(({ name }, index) => {
+    return (
+      <Filter key={index} text={name} isBig={isBig} isDashboard={isDashboard} />
+    );
   });
   return <StyledFilters>{filterElements}</StyledFilters>;
 };

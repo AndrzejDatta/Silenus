@@ -257,7 +257,7 @@ export const dataPL = [
 ];
 
 //TODO:update dataAng array
-export const dataAng = [
+export const dataEng = [
   {
     pageName: "StartPage",
     title: "Sielnus",
@@ -267,62 +267,52 @@ export const dataAng = [
     pageName: "LoginPage",
     title: "Sielnus",
     subtitle: "smart plants",
-    infoText: "Nie masz jeszcze konta?",
-    linkText: "Załóż konto",
+    infoText: "Don't have an account?",
+    linkText: "SignUp",
   },
   {
     pageName: "Dashboard",
-    headings: ["Moje doniczki", "Moje rośliny", "Kalendarz opieki"],
-    filters: ["Podlewanie", "Zraszanie", "Nawożenie"],
+    headings: ["My pots", "My plants", "Care calendar"],
+    filters: ["Watering", "Sprinkling", "Fertilization"],
   },
   {
     pageName: "MojeDoniczki",
-    headings: [
-      "Moje doniczki",
-      "Parametry doniczki",
-      "Pielęgnacja",
-      "Pamietnik rośliny",
-    ],
+    headings: ["My pots", "Pot parameters", "Care", "Plant diary"],
   },
   {
     pageName: "DodajDoniczke",
-    headings: ["Dodaj doniczkę"],
-    infoText: "Wyszukiwanie urządzenia bluetooth w pobliżu",
-    buttonText: "Skanuj",
+    headings: ["Add Plant"],
+    infoText: "Searching for a bluetooth device near you",
+    buttonText: "Search",
   },
   {
     pageName: "MojeRośliny",
-    headings: ["Moje rośliny", "Pielęgnacja", "Pamietnik rośliny"],
-    filters: ["Podlewanie", "Zraszanie", "Nawożenie"],
+    headings: ["My plants", "Care", "Plant diary"],
+    filters: ["Watering", "Sprinkling", "Fertilization"],
   },
   {
     pageName: "KontoUżytkownika",
-    headings: ["Profil", "Ustawienia"],
+    headings: ["Profile", "Settings"],
     options: [
-      "Edytuj profil",
-      "Udostępnij",
-      "Powiadomienia",
-      "Zabezpieczenia",
-      "Pomoc",
-      "O aplikacji",
-      "Oceń",
-      "Wyloguj sie",
+      "Edit profile",
+      "Share",
+      "Notifications",
+      "Safeguards",
+      "Help",
+      "About application",
+      "Rate",
+      "Log out",
     ],
   },
   {
     pageName: "KalendarzOpieki",
-    headings: ["Kalendarz opieki"],
-    filters: ["Podlewanie", "Zraszanie", "Nawożenie"],
+    headings: ["Care calendar"],
+    filters: ["Watering", "Sprinkling", "Fertilization"],
   },
   {
     pageName: "ZidentyfikujRoslinę",
-    headings: ["identyfikuj roslinę", "Popularne kategorie"],
-    filters: [
-      "bezpieczne dla zwierząt",
-      "rośliny zielone",
-      "rosliny jonizujące",
-      "rośliny biurowe",
-    ],
-    buttonText: "Zrób zdjęcie",
+    headings: ["Identify your plant", "Popular categories"],
+    filters: ["pet safe", "houseplants", "ionizing plants", "office plants"],
+    buttonText: "Take a picture",
   },
 ];

@@ -14,7 +14,7 @@ const PotStatus = ({ state, name, click }) => {
 
   const element = (
     <StyledPotStatus onClick={click}>
-      <Img size="small" src={"1"} />
+      <Img size="small" url={"1"} />
       <StyledPotStatusInfo>
         <UserAccountText
           text={name}
@@ -23,9 +23,9 @@ const PotStatus = ({ state, name, click }) => {
           isOption={false}
           isUser={true}
         />
-        {state.map(({ src, text }) => {
+        {state.map(({ src, text }, index) => {
           return (
-            <StyledPotStatusText>
+            <StyledPotStatusText key={index}>
               <Icon icon={potIcons[src]} size="tiny" color="green" />
               <UserAccountText
                 text={text}

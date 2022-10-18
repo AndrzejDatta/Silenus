@@ -1,23 +1,22 @@
-import React, { useContext } from "react";
-import PropTypes from "prop-types";
-import UserAccountText from "components/atoms/UserAccountText/UserAccountText";
+import React, { useContext } from 'react';
+import UserAccountText from 'components/atoms/UserAccountText/UserAccountText';
 import {
   StyledUserAccountStatus,
   StyledUserAccountStatusSection,
   StyledUserAccountSection,
   StyledUserAccountName,
-} from "./UserAccountStatus.styles";
-import Icon from "components/atoms/icon/icon.component";
-import { dataContext } from "providers/DataProvider";
-import plantUser from "assets/icons/plantUser.svg";
+} from './UserAccountStatus.styles';
+import Icon from 'components/atoms/icon/icon.component';
+import { dataContext } from 'providers/DataProvider';
+import plantUser from 'assets/icons/plantUser.svg';
 const UserAccountStatus = (props) => {
   const {
     KontoUżytkownika: { status },
   } = useContext(dataContext);
 
-  const statusElement = status?.map(({ name, number }) => {
+  const statusElement = status?.map(({ name, number }, index) => {
     return (
-      <StyledUserAccountStatusSection isInfo={true}>
+      <StyledUserAccountStatusSection key={index} isInfo={true}>
         <UserAccountText
           text={name}
           isHeading={false}
@@ -26,7 +25,7 @@ const UserAccountStatus = (props) => {
           isUser={true}
         />
         <UserAccountText
-          text={number}
+          text={number.toString()}
           isHeading={true}
           isLogout={false}
           isOption={false}
@@ -51,7 +50,5 @@ const UserAccountStatus = (props) => {
     </StyledUserAccountSection>
   );
 };
-
-UserAccountStatus.propTypes = {};
 
 export default UserAccountStatus;
