@@ -179,27 +179,6 @@ export const dataPL = [
         iconSrc: "logout.svg",
       },
     ],
-
-    // options: [
-    //   "Edytuj profil",
-    //   "Udostępnij",
-    //   "Powiadomienia",
-    //   "Zabezpieczenia",
-    //   "Pomoc",
-    //   "O aplikacji",
-    //   "Oceń",
-    //   "Wyloguj się",
-    // ],
-    // iconSrc: [
-    //   "assets/icons/edit.svg",
-    //   "assets/icons/return.svg",
-    //   "assets/icons/notifications.svg",
-    //   "assets/icons/lockOpen.svg",
-    //   "assets/icons/support.svg",
-    //   "assets/icons/info.svg",
-    //   "assets/icons/star.svg",
-    //   "assets/icons/logout.svg",
-    // ],
   },
   {
     pageName: "KalendarzOpieki",
@@ -228,6 +207,42 @@ export const dataPL = [
       },
     ],
     buttonText: "Zrób zdjęcie",
+  },
+  {
+    pageName: "PotDetails",
+    headings: "Parametry doniczki",
+    parameters: [
+      {
+        text: "Zbiornik",
+        src: "waterGlass.svg",
+        infoText: "Zbornik pusty",
+      },
+      {
+        text: "Wilgotność gleby",
+        src: "tear.svg",
+        infoText: "Zbornik pusty",
+      },
+    ],
+  },
+
+  {
+    pageName: "PlantDetails",
+    headings: ["Pielęgnacja", "Pamiętnik rośliny"],
+    insolation: {
+      text: "Nasłonecznienie",
+      src: "sun.svg",
+      infoText: "dużo słońca",
+    },
+    humidity: {
+      text: "Wilgotność gleby",
+      src: "tear.svg",
+      infoText: "50-60%",
+    },
+    fertilization: {
+      text: "Nawożenie",
+      src: "plant.svg",
+      infoText: "50-60%",
+    },
   },
   {
     name: "Navbar",
