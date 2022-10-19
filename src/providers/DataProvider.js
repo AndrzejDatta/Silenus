@@ -11,8 +11,7 @@ export const dataContext = createContext({
   KalendarzOpieki: {},
   KontoUżytkownika: {},
   ZidentyfikujRośline: {},
-  PotDetails: {},
-  PlantDetails: {},
+  Details: {},
   Navbar: {},
   images: {},
   navIcons: {},
@@ -34,8 +33,7 @@ const objectName = [
   "KalendarzOpieki",
   "KontoUżytkownika",
   "ZidentyfikujRośline",
-  "PotDetails",
-  "PlantDetails",
+  "Details",
   "Navbar",
 ];
 
@@ -53,8 +51,7 @@ export const DataProvider = ({ children }) => {
     KalendarzOpieki,
     KontoUżytkownika,
     ZidentyfikujRośline,
-    PotDetails,
-    PlantDetails,
+    Details,
     Navbar,
   ] = objectName;
 
@@ -138,8 +135,7 @@ export const DataProvider = ({ children }) => {
         KalendarzOpieki,
         KontoUżytkownika,
         ZidentyfikujRośline,
-        PotDetails,
-        PlantDetails,
+        Details,
         Navbar,
         images,
         navIcons,

@@ -209,41 +209,47 @@ export const dataPL = [
     buttonText: "Zrób zdjęcie",
   },
   {
-    pageName: "PotDetails",
-    headings: "Parametry doniczki",
-    parameters: [
-      {
-        text: "Zbiornik",
-        src: "waterGlass.svg",
-        infoText: "Zbornik pusty",
+    pageName: "Details",
+    pot: {
+      headline: "Parametry doniczki",
+      parameters: [
+        {
+          text: "Zbiornik",
+          src: "waterGlass.svg",
+          infoText: "Zbornik pusty",
+        },
+        {
+          text: "Wilgotność gleby",
+          src: "tear.svg",
+          infoText: "Zbornik pusty",
+        },
+      ],
+    },
+    plant: {
+      headline: "Pielęgnacja",
+      parameters: [
+        {
+          text: "Nasłonecznienie",
+          src: "sun.svg",
+          infoText: "dużo słońca",
+        },
+        {
+          text: "Wilgotność gleby",
+          src: "tear.svg",
+          infoText: "50-60%",
+        },
+        {
+          text: "Nawożenie",
+          src: "plant.svg",
+          infoText: "50-60%",
+        },
+      ],
+      caledar: {
+        headline: "Pamietnik rośliny",
       },
-      {
-        text: "Wilgotność gleby",
-        src: "tear.svg",
-        infoText: "Zbornik pusty",
-      },
-    ],
+    },
   },
 
-  {
-    pageName: "PlantDetails",
-    headings: ["Pielęgnacja", "Pamiętnik rośliny"],
-    insolation: {
-      text: "Nasłonecznienie",
-      src: "sun.svg",
-      infoText: "dużo słońca",
-    },
-    humidity: {
-      text: "Wilgotność gleby",
-      src: "tear.svg",
-      infoText: "50-60%",
-    },
-    fertilization: {
-      text: "Nawożenie",
-      src: "plant.svg",
-      infoText: "50-60%",
-    },
-  },
   {
     name: "Navbar",
     icons: [
