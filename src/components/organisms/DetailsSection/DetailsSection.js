@@ -2,16 +2,27 @@ import React, { useContext } from "react";
 import PropTypes from "prop-types";
 import { dataContext } from "providers/DataProvider";
 import { StyledPotDetailsSection } from "./DetailsSection.styles";
-
-import PotParameters from "components/molecules/DetailParameters/DetailParameters";
+import DetailParameters from "components/molecules/DetailParameters/DetailParameters";
 const PotDetailsSection = (props) => {
-  const { Details } = useContext(dataContext);
+  const {
+    Details: { pot, plant, calendar },
+  } = useContext(dataContext);
 
-  const PotParametersElement = Details?.map((detailsInfo) => {
-    return <PotParameters details={detailsInfo} />;
-  });
+  const potParametersElement = () => {
+    return <DetailParameters details={pot} />;
+  };
+  const plantParametersElement = () => {
+    return <DetailParameters details={plant} />;
+  };
+  const calendarParametersElement = () => {
+    return <DetailParameters details={calendar} />;
+  };
   return (
-    <StyledPotDetailsSection>{PotParametersElement}</StyledPotDetailsSection>
+    <StyledPotDetailsSection>
+      {potParametersElement}
+      {plantParametersElement}
+      {calendarParametersElement}
+    </StyledPotDetailsSection>
   );
 };
 

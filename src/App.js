@@ -10,6 +10,7 @@ import UserAccount from "pages/UserAccount/UserAccount";
 import Calendar from "pages/Calendar/Calendar";
 import MyPlantsPage from "pages/MyPlantsPage/MyPlantsPage";
 import MyPotsPage from "pages/MyPotsPage/MyPotsPage";
+import PotDetailsPage from "pages/PotDetailsPage/PotDetailsPage";
 const App = (props) => {
   return (
     <BrowserRouter>
@@ -21,6 +22,7 @@ const App = (props) => {
         <Route path="/mypots" element={<MyPotsPage />} />
         <Route path="/myplants" element={<MyPlantsPage />} />
         <Route path="/addpot" element={<AddPot />} />
+        <Route path="/potdetails" element={<PotDetailsPage />} />
       </Routes>
     </BrowserRouter>
   );

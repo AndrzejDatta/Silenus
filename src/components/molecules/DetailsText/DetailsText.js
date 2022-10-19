@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { StyledDetailsText } from "./DetailsText.styles";
 import Filter from "components/atoms/Filter/Filter";
 import HeadlineText from "components/atoms/HeadlineText/HeadlineText";
-const DetailsText = ([headline, filterText]) => {
+const DetailsText = ({ headline = "Headline", filterText }) => {
   return (
     <StyledDetailsText>
       <HeadlineText text={headline} />

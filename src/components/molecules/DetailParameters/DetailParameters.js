@@ -9,11 +9,12 @@ import {
   StyledDetailsTextSection,
   StyledSection,
 } from "./DetailParameters.styles";
-const DetailParameters = ({ details }) => {
+const DetailParameters = ({ details: { headline, parameters } }) => {
+  console.log(headline);
   const { potIcons } = useContext(dataContext);
 
-  const detailsElements = details.map(({ text, src, infoText }) => {
-    if (details.headine === "Pamietnik rośliny") {
+  const detailsElements = parameters.map(({ text, src, infoText }) => {
+    if (headline === "Pamietnik rośliny") {
       <h1>unique</h1>;
     }
     return (
@@ -28,7 +29,7 @@ const DetailParameters = ({ details }) => {
   });
   return (
     <StyledSection>
-      <ActivityText text={details.headine} isHeadline color="#3AA688" />
+      <ActivityText text={headline} isHeadline color="#3AA688" />
       {detailsElements}
     </StyledSection>
   );

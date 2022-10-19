@@ -4,28 +4,29 @@ import { dataContext } from "providers/DataProvider";
 import PotStatus from "components/molecules/PotStatus/PotStatus";
 import { StyledPotSection } from "./PotSection.styles";
 import Headline from "components/molecules/Headline/Headline";
-import Modal from "../Modal/Modal";
-import useModal from "../Modal/useModal";
+import { Link } from "react-router-dom";
+// import Modal from "../Modal/Modal";
+// import useModal from "../Modal/useModal";
 const PotSection = ({ headline = "Headline", isDashboard, path, isReturn }) => {
   const {
     Dashboard: { plants },
     MojeDoniczki: { returnPath, toPath },
   } = useContext(dataContext);
 
-  const { isOpen, handleOpenModal, handleCloseModal } = useModal();
+  // const { isOpen, handleOpenModal, handleCloseModal } = useModal();
   const elements = plants?.map(({ state, name }, index) => {
     return (
-      <>
+      <Link to="/potdetails">
         <PotStatus
           state={state}
           name={name}
-          click={handleOpenModal}
+          click={() => console.log("click")}
           key={index}
         />
-        <Modal isOpen={isOpen} handleClose={handleCloseModal} key={index + 1}>
+        {/* <Modal isOpen={isOpen} handleClose={handleCloseModal} key={index + 1}>
           <PotStatus state={state} name={name} key={index} />
-        </Modal>
-      </>
+        </Modal> */}
+      </Link>
     );
   });
   return (
