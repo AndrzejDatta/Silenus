@@ -6,4 +6,5 @@ export const StyledDetailsHeadlineSection = styled.div`
   width: 100%;
   justify-content: flex-start;
   align-items: center;
+  position: relative;
 `;
