@@ -2,8 +2,8 @@ import { createContext, useState } from "react";
 import { dataPL } from "assets/data/data";
 
 export const dataContext = createContext({
-  startPage: {},
-  loginPage: {},
+  StartPage: {},
+  LoginPage: {},
   Dashboard: {},
   MojeDoniczki: {},
   DodajDoniczke: {},
@@ -24,14 +24,14 @@ export const dataContext = createContext({
 });
 
 const objectName = [
-  "startPage",
-  "loginPage",
+  "StartPage",
+  "LoginPage",
   "Dashboard",
   "MojeDoniczki",
   "DodajDoniczke",
   "MojeRośliny",
-  "KalendarzOpieki",
   "KontoUżytkownika",
+  "KalendarzOpieki",
   "ZidentyfikujRośline",
   "Details",
   "Navbar",
@@ -42,14 +42,14 @@ export const DataProvider = ({ children }) => {
     objectName[i] = { ...dataPL[i] };
   }
   const [
-    startPage,
-    loginPage,
+    StartPage,
+    LoginPage,
     Dashboard,
     MojeDoniczki,
     DodajDoniczke,
     MojeRośliny,
-    KalendarzOpieki,
     KontoUżytkownika,
+    KalendarzOpieki,
     ZidentyfikujRośline,
     Details,
     Navbar,
@@ -126,8 +126,8 @@ export const DataProvider = ({ children }) => {
   return (
     <dataContext.Provider
       value={{
-        startPage,
-        loginPage,
+        StartPage,
+        LoginPage,
         Dashboard,
         DodajDoniczke,
         MojeDoniczki,
