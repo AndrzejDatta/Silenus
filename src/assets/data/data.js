@@ -244,9 +244,26 @@ export const dataPL = [
           infoText: "50-60%",
         },
       ],
-      caledar: {
-        headline: "Pamietnik rośliny",
-      },
+    },
+    calendar: {
+      headline: "Pamiętnik rośliny",
+      parameters: [
+        {
+          text: "2 nowe listki",
+          src: "",
+          infoText: "Moje rośliny",
+        },
+        {
+          text: "2 nowe listki",
+          src: "",
+          infoText: "Moje rośliny",
+        },
+        {
+          text: "2 nowe listki",
+          src: "",
+          infoText: "Moje rośliny",
+        },
+      ],
     },
   },
 
