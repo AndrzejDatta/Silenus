@@ -10,6 +10,7 @@ const Link = ({
   isSearchBar,
   isRight,
   location,
+  isDetailsPage,
 }) => {
   console.log(path);
   return (
@@ -22,6 +23,7 @@ const Link = ({
         isSearchBar={isSearchBar}
         isRight={isRight}
         location={location}
+        isDetailsPage={isDetailsPage}
       />
     </StyledLinkElement>
   );

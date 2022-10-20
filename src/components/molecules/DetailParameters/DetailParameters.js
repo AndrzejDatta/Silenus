@@ -11,21 +11,23 @@ import {
 } from "./DetailParameters.styles";
 const DetailParameters = ({ details: { headline, parameters } }) => {
   console.log(headline);
+  console.log(parameters);
   const { potIcons } = useContext(dataContext);
 
-  const detailsElements = parameters.map(({ text, src, infoText }) => {
-    if (headline === "Pamietnik rośliny") {
-      <h1>unique</h1>;
+  const detailsElements = parameters.map(({ text, src, infoText }, index) => {
+    if (headline === "Pamiętnik rośliny") {
+      return <UserActivity name={text} activities={infoText} src={src} />;
+    } else {
+      return (
+        <StyledDetailSection key={index}>
+          <Icon color="green" size="tiny" icon={potIcons[src]} />
+          <StyledDetailsTextSection>
+            <ActivityText text={text} isHeadline color="black" />
+            <ActivityText text={infoText} color="black" />
+          </StyledDetailsTextSection>
+        </StyledDetailSection>
+      );
     }
-    return (
-      <StyledDetailSection>
-        <Icon color="green" size="tiny" icon={potIcons[src]} />
-        <StyledDetailsTextSection>
-          <ActivityText text={text} isHeadline color="black" />
-          <ActivityText text={infoText} color="black" />
-        </StyledDetailsTextSection>
-      </StyledDetailSection>
-    );
   });
   return (
     <StyledSection>

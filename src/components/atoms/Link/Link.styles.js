@@ -115,6 +115,17 @@ export const StyledIcon = styled.img`
       `;
     }
   }};
+
+  ${(props) => {
+    if (props.isDetailsPage) {
+      return `
+      position:absolute;
+     left:10px;
+      top:10%;
+      transform:translateY(-50%);
+      `;
+    }
+  }};
   cursor: pointer;
 `;
 

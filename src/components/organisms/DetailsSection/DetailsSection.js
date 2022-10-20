@@ -3,25 +3,17 @@ import PropTypes from "prop-types";
 import { dataContext } from "providers/DataProvider";
 import { StyledPotDetailsSection } from "./DetailsSection.styles";
 import DetailParameters from "components/molecules/DetailParameters/DetailParameters";
-const PotDetailsSection = (props) => {
+const PotDetailsSection = (isPlant) => {
   const {
     Details: { pot, plant, calendar },
   } = useContext(dataContext);
 
-  const potParametersElement = () => {
-    return <DetailParameters details={pot} />;
-  };
-  const plantParametersElement = () => {
-    return <DetailParameters details={plant} />;
-  };
-  const calendarParametersElement = () => {
-    return <DetailParameters details={calendar} />;
-  };
+  console.log(calendar);
   return (
     <StyledPotDetailsSection>
-      {potParametersElement}
-      {plantParametersElement}
-      {calendarParametersElement}
+      {!isPlant && <DetailParameters details={pot} />}
+      <DetailParameters details={plant} />
+      <DetailParameters details={calendar} />
     </StyledPotDetailsSection>
   );
 };

@@ -5,7 +5,7 @@ import HeadlineDetailSection from "components/organisms/HeadlineDetailSection/He
 import MainTemplate from "components/templates/MainTemplate/MainTemplate";
 const PotDetailsPage = (props) => {
   return (
-    <MainTemplate>
+    <MainTemplate isDetailsPage>
       <HeadlineDetailSection />
       <DetailsSection />
     </MainTemplate>

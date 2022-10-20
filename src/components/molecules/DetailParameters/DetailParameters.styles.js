@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const StyledDetailSection = styled.div`
+  width: 100%;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -13,13 +14,13 @@ export const StyledDetailsTextSection = styled.div`
   flex-direction: column;
   justify-content: space-around;
   align-items: flex-start;
-  width: 60%;
+  width: 80%;
 `;
 
 export const StyledSection = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  align-items: flex-start;
+  align-items: stretch;
   width: 100%;
 `;
