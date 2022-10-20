@@ -4,6 +4,7 @@ import MyPlant from "components/molecules/MyPlant/MyPlant";
 import {
   StyledPlantSection,
   StyledPlantElementsSection,
+  StyledLink,
 } from "./PlantSection.styles";
 import Headline from "components/molecules/Headline/Headline";
 import { dataContext } from "providers/DataProvider";
@@ -15,7 +16,11 @@ const PlantSection = ({ headline = "Headline", isMyPots, isReturn, path }) => {
   } = useContext(dataContext);
 
   const plantElements = plants?.map(({ name }, index) => {
-    return <MyPlant key={index} src="src" name={name} />;
+    return (
+      <StyledLink to="/plantdetails">
+        <MyPlant key={index} src="src" name={name} />;
+      </StyledLink>
+    );
   });
   return (
     <StyledPlantSection>
