@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const StyledCircleGradientTemplate = styled.div`
   width: 100%;
@@ -6,6 +6,7 @@ export const StyledCircleGradientTemplate = styled.div`
 `;
 
 export const StyledGradientCircle = styled.div`
+  z-index: -1;
   position: absolute;
   height: 150vw;
   width: 200vw;

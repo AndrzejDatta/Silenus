@@ -4,12 +4,20 @@ import Navbar from "components/molecules/Navbar/Navbar";
 import { StyledMainTemplate } from "./MainTemplate.styles";
 import Icon from "components/atoms/icon/icon.component";
 import leaf from "assets/icons/leaf.svg";
-const MainTemplate = ({ children, inBackground, isIdentifyPlant }) => {
+import { StyledGradientCircle } from "components/templates/circleGradientTemplate/circleGradientTemplate.styles";
+
+const MainTemplate = ({
+  children,
+  inBackground,
+  isIdentifyPlant,
+  isDetailsPage,
+}) => {
   return (
     <StyledMainTemplate
-      inBackground={inBackground}
       isIdentifyPlant={isIdentifyPlant}
+      isDetailsPage={isDetailsPage}
     >
+      {inBackground && <StyledGradientCircle />}
       {isIdentifyPlant && (
         <>
           <Icon icon={leaf} size="great" color="lightGreen" location={4} />
@@ -19,7 +27,8 @@ const MainTemplate = ({ children, inBackground, isIdentifyPlant }) => {
         </>
       )}
       {children}
-      <Navbar />
+
+      {!isDetailsPage && <Navbar />}
     </StyledMainTemplate>
   );
 };

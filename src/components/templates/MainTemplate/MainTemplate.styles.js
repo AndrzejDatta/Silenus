@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import background from "assets/icons/background.svg";
 
 export const StyledMainTemplate = styled.div`
   width: 100%;
@@ -11,14 +10,14 @@ export const StyledMainTemplate = styled.div`
   padding: 20px 10px 0px 10px;
 
   ${(props) => {
-    if (props.inBackground) {
+    if (props.isDetailsPage) {
       return `
-        background-image: url(${background});
-        background-repeat: no-repeat;
-        `;
+      padding: 0px;
+      justify-content: flex-start;
+      `;
     } else {
       return `
-      background-color:white;
+      padding: 20px 10px 0px 10px;
       `;
     }
   }};
