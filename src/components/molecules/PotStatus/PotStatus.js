@@ -40,7 +40,6 @@ const PotStatus = ({ state, name, click }) => {
     </StyledPotStatus>
   );
 
-  console.log(element);
   return element;
 };
 

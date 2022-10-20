@@ -16,8 +16,6 @@ const Headline = ({
   path,
   returnPath,
 }) => {
-  console.log(returnPath);
-  console.log(path);
   return (
     <StyledHeadline>
       {isReturn && (
