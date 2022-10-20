@@ -20,7 +20,6 @@ const UserActivitiesSection = ({
     Dashboard: { activities },
   } = useContext(dataContext);
 
-  console.log(activities);
   const activitiesElement = activities?.map(
     ({ name, src, activity }, index) => {
       return (

@@ -10,8 +10,6 @@ import {
   StyledSection,
 } from "./DetailParameters.styles";
 const DetailParameters = ({ details: { headline, parameters } }) => {
-  console.log(headline);
-  console.log(parameters);
   const { potIcons } = useContext(dataContext);
 
   const detailsElements = parameters.map(({ text, src, infoText }, index) => {

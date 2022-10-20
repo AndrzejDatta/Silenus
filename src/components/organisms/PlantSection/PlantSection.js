@@ -17,8 +17,8 @@ const PlantSection = ({ headline = "Headline", isMyPots, isReturn, path }) => {
 
   const plantElements = plants?.map(({ name }, index) => {
     return (
-      <StyledLink to="/plantdetails">
-        <MyPlant key={index} src="src" name={name} />;
+      <StyledLink to="/plantdetails" key={index}>
+        <MyPlant src="src" name={name} />;
       </StyledLink>
     );
   });

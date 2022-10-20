@@ -12,7 +12,6 @@ const Link = ({
   location,
   isDetailsPage,
 }) => {
-  console.log(path);
   return (
     <StyledLinkElement to={path}>
       <StyledIcon

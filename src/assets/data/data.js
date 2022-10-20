@@ -182,7 +182,7 @@ export const dataPL = [
   },
   {
     pageName: "KalendarzOpieki",
-    headings: ["Kalendarz opieki"],
+    headings: "Kalendarz opieki",
     filters: ["Podlewanie", "Zraszanie", "Nawożenie"],
   },
   {

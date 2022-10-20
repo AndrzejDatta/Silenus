@@ -16,12 +16,11 @@ const PotSection = ({ headline = "Headline", isDashboard, path, isReturn }) => {
   // const { isOpen, handleOpenModal, handleCloseModal } = useModal();
   const elements = plants?.map(({ state, name }, index) => {
     return (
-      <StyledLink to="/potdetails">
+      <StyledLink to="/potdetails" key={index}>
         <PotStatus
           state={state}
           name={name}
           click={() => console.log("click")}
-          key={index}
         />
         {/* <Modal isOpen={isOpen} handleClose={handleCloseModal} key={index + 1}>
           <PotStatus state={state} name={name} key={index} />

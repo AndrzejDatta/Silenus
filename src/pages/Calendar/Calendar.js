@@ -13,7 +13,7 @@ const Calendar = (props) => {
   } = useContext(dataContext);
   return (
     <MainTemplate>
-      <Headline text={headings[0]} isHeading isCalendar />
+      <Headline text={headings} isHeading isCalendar />
       <DateSection />
       <Filters />
       <UserActivitiesSection isCalendar />
