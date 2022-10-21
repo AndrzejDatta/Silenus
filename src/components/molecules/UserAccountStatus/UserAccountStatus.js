@@ -1,14 +1,14 @@
-import React, { useContext } from 'react';
-import UserAccountText from 'components/atoms/UserAccountText/UserAccountText';
+import React, { useContext } from "react";
+import UserAccountText from "components/atoms/UserAccountText/UserAccountText";
 import {
   StyledUserAccountStatus,
   StyledUserAccountStatusSection,
   StyledUserAccountSection,
   StyledUserAccountName,
-} from './UserAccountStatus.styles';
-import Icon from 'components/atoms/icon/icon.component';
-import { dataContext } from 'providers/DataProvider';
-import plantUser from 'assets/icons/plantUser.svg';
+} from "./UserAccountStatus.styles";
+import Icon from "components/atoms/icon/icon.component";
+import { dataContext } from "providers/DataProvider";
+import plantUser from "assets/icons/plantUser.svg";
 const UserAccountStatus = (props) => {
   const {
     KontoUżytkownika: { status },
@@ -20,16 +20,14 @@ const UserAccountStatus = (props) => {
         <UserAccountText
           text={name}
           isHeading={false}
-          isLogout={false}
-          isOption={true}
           isUser={true}
+          color="#3AA688"
         />
         <UserAccountText
           text={number.toString()}
           isHeading={true}
-          isLogout={false}
-          isOption={false}
           isUser={true}
+          color="#3AA688"
         />
       </StyledUserAccountStatusSection>
     );
@@ -39,12 +37,7 @@ const UserAccountStatus = (props) => {
     <StyledUserAccountSection>
       <StyledUserAccountName>
         <Icon icon={plantUser} color="green" size="small" />
-        <UserAccountText
-          text="Piotr"
-          isHeading={true}
-          isLogout={false}
-          isOption={false}
-        />
+        <UserAccountText text="Piotr" isHeading={true} color="#3AA688" />
       </StyledUserAccountName>
       <StyledUserAccountStatus>{statusElement}</StyledUserAccountStatus>
     </StyledUserAccountSection>

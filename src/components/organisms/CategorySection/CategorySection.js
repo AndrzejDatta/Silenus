@@ -18,14 +18,7 @@ const CategorySection = ({ headline, filters }) => {
   });
   return (
     <StyledSection>
-      {headline && (
-        <UserAccountText
-          text={headline}
-          isHeading={false}
-          isLogout={false}
-          isOption={true}
-        />
-      )}
+      {headline && <UserAccountText text={headline} color="#3AA688" />}
       <StyledCategorySection>{categoryElements}</StyledCategorySection>
     </StyledSection>
   );
