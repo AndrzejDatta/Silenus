@@ -11,7 +11,9 @@ const MyPlant = ({ src, name = "Plant" }) => {
 };
 
 MyPlant.propTypes = {
+  /**src of image */
   src: PropTypes.string,
+  /**name of plant */
   name: PropTypes.string,
 };
 

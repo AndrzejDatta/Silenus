@@ -29,7 +29,7 @@ const PotStatus = ({ state, name, click }) => {
               <UserAccountText
                 text={text}
                 isHeading={false}
-                isOption={true}
+                isUser={false}
                 color="#3AA688"
               />
             </StyledPotStatusText>
@@ -47,6 +47,8 @@ PotStatus.propTypes = {
   name: PropTypes.string.isRequired,
   /**objct with info about plant */
   state: PropTypes.arrayOf(shape),
+  /** function to onClick event*/
+  click: PropTypes.func,
 };
 
 export default PotStatus;

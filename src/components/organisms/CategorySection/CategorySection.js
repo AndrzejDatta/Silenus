@@ -18,7 +18,9 @@ const CategorySection = ({ headline, filters }) => {
   });
   return (
     <StyledSection>
-      {headline && <UserAccountText text={headline} color="#3AA688" />}
+      {headline && (
+        <UserAccountText text={headline} isUser={false} color="#3AA688" />
+      )}
       <StyledCategorySection>{categoryElements}</StyledCategorySection>
     </StyledSection>
   );

@@ -1,6 +1,5 @@
 import React from "react";
 import PropTypes from "prop-types";
-
 import HeadlineText from "components/atoms/HeadlineText/HeadlineText";
 import { StyledHeadline } from "./Headline.styles";
 import arrow from "assets/icons/arrow green.svg";
@@ -40,9 +39,18 @@ const Headline = ({
 };
 
 Headline.propTypes = {
+  /** text in headline*/
   text: PropTypes.string.isRequired,
+  /**color of text */
   isBackground: PropTypes.bool,
+  /**bool which decides about svg (arrow or plus) */
   isMyPots: PropTypes.bool,
+  /**icon in headline */
+  icon: PropTypes.string,
+  /**bool decides about showing return arrow */
+  isReturn: PropTypes.bool,
+  /**path to return to page */
+  returnPath: PropTypes.string,
 };
 
 export default Headline;

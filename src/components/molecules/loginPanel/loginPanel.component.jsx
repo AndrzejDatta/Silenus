@@ -3,7 +3,7 @@ import { StyledLoginPanelContainer } from './loginPanel.styles';
 import CustomInput from 'components/atoms/customInput/customInput.component';
 import CustomButton from 'components/atoms/customButton/customButton.component';
 
-const LoginPanel = ({}) => {
+const LoginPanel = () => {
   return (
     <StyledLoginPanelContainer>
       <CustomInput

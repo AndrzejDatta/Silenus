@@ -12,6 +12,11 @@ const DetailsText = ({ headline = "Headline", filterText }) => {
   );
 };
 
-DetailsText.propTypes = {};
+DetailsText.propTypes = {
+  /**text in headline */
+  headline: PropTypes.string.isRequired,
+  /**text in filter */
+  filter: PropTypes.string.isRequired,
+};
 
 export default DetailsText;

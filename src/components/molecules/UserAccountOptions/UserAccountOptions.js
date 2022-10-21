@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import PropTypes from "prop-types";
+import PropTypes, { shape } from "prop-types";
 import { dataContext } from "providers/DataProvider";
 import UserAccountText from "components/atoms/UserAccountText/UserAccountText";
 import Icon from "components/atoms/icon/icon.component";
@@ -21,7 +21,7 @@ const UserAccountOptions = ({ headline, options }) => {
         <UserAccountText
           text={option}
           isHeading={false}
-          isOption={true}
+          isUser={false}
           color={option === "Wyloguj się" ? "black" : "#3AA688"}
         />
       </StyledUserAccountOptions>
@@ -45,7 +45,7 @@ UserAccountOptions.propTypes = {
   /**name of plant */
   headline: PropTypes.string.isRequired,
   /**objct with info about plant */
-  options: PropTypes.arrayOf(),
+  options: PropTypes.arrayOf(shape),
 };
 
 export default UserAccountOptions;

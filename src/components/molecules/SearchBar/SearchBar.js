@@ -29,6 +29,7 @@ const SearchBar = ({ isSearchBar }) => {
 };
 
 SearchBar.propTypes = {
+  /**bool decides about icons in input */
   isSearchBar: PropTypes.bool,
 };
 

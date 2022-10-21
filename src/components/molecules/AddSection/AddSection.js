@@ -1,5 +1,4 @@
 import React, { useContext } from "react";
-import PropTypes from "prop-types";
 import { StyledAddSection } from "./AddSection.styles";
 import { dataContext } from "providers/DataProvider";
 import ActivityText from "components/atoms/ActivityText/ActivityText";
@@ -23,7 +22,5 @@ const AddSection = (props) => {
     </StyledAddSection>
   );
 };
-
-AddSection.propTypes = {};
 
 export default AddSection;

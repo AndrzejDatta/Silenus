@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import PropTypes from "prop-types";
+import PropTypes, { shape } from "prop-types";
 import { dataContext } from "providers/DataProvider";
 import Icon from "components/atoms/icon/icon.component";
 import UserActivity from "../UserActivity/UserActivity";
@@ -35,6 +35,11 @@ const DetailParameters = ({ details: { headline, parameters } }) => {
   );
 };
 
-DetailParameters.propTypes = {};
+DetailParameters.propTypes = {
+  /**text in headline */
+  headline: PropTypes.string.isRequired,
+  /**parameters - object */
+  parameters: PropTypes.arrayOf(shape),
+};
 
 export default DetailParameters;
