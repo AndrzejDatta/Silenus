@@ -145,7 +145,7 @@ export const dataPL = [
       },
     ],
 
-    options: [
+    optionsProfil: [
       {
         option: "Edytuj profil",
         iconSrc: "edit.svg",
@@ -154,6 +154,8 @@ export const dataPL = [
         option: "Udostępnij",
         iconSrc: "return.svg",
       },
+    ],
+    optionsSettings: [
       {
         option: "Powiadomienia",
         iconSrc: "notifications.svg",
