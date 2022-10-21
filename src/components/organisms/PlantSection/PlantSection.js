@@ -1,26 +1,38 @@
-import React, { useContext } from 'react';
-import PropTypes from 'prop-types';
-import MyPlant from 'components/molecules/MyPlant/MyPlant';
+import React, { useContext } from "react";
+import PropTypes from "prop-types";
+import MyPlant from "components/molecules/MyPlant/MyPlant";
 import {
   StyledPlantSection,
   StyledPlantElementsSection,
-} from './PlantSection.styles';
-import Headline from 'components/molecules/Headline/Headline';
-import { dataContext } from 'providers/DataProvider';
-import Filters from 'components/molecules/Filters/Filters';
-const PlantSection = ({ headline = 'Headline', isMyPots }) => {
+  StyledLink,
+} from "./PlantSection.styles";
+import Headline from "components/molecules/Headline/Headline";
+import { dataContext } from "providers/DataProvider";
+import Filters from "components/molecules/Filters/Filters";
+const PlantSection = ({ headline = "Headline", isMyPots, isReturn, path }) => {
   const {
     Dashboard: { plants },
+    MojeRośliny: { returnPath },
   } = useContext(dataContext);
 
   const plantElements = plants?.map(({ name }, index) => {
-    return <MyPlant key={index} src="src" name={name} />;
+    return (
+      <StyledLink to="/plantdetails" key={index}>
+        <MyPlant src="src" name={name} />;
+      </StyledLink>
+    );
   });
   return (
     <StyledPlantSection>
-      <Headline text={headline} isBackground={false} />
-      {isMyPots && <Filters isBig={true} isDashboard={true} />}
-      <Headline text={'Moje ulubione'} isBackground={false} />
+      <Headline
+        text={headline}
+        icon
+        path={path}
+        isReturn={isReturn}
+        returnPath={returnPath}
+      />
+      {isMyPots && <Filters isBig />}
+      {isMyPots && <Headline text={"Moje ulubione"} />}
       <StyledPlantElementsSection>{plantElements}</StyledPlantElementsSection>
     </StyledPlantSection>
   );

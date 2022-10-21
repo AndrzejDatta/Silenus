@@ -7,8 +7,8 @@ const DateSection = (props) => {
   const days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
   const dni = ['Ndz', 'Pon', 'Wt', 'Śr', 'Czw', 'Pt', 'Sob'];
   let daysNames = [];
-  let daysBefore = [...days];
-  let daysAfter = [...days];
+  let daysBeforeToday = [...days];
+  let daysAfterToday = [...days];
   let daysNumbers = [];
   const date = new Date();
   //const year = date.getFullYear();
@@ -24,9 +24,9 @@ const DateSection = (props) => {
     j++;
   }
 
-  daysAfter = dni.slice(3, 7);
-  daysBefore = dni.slice(0, 3);
-  daysNames = daysAfter.concat(daysBefore);
+  daysAfterToday = dni.slice(3, 7);
+  daysBeforeToday = dni.slice(0, 3);
+  daysNames = daysAfterToday.concat(daysBeforeToday);
 
   const dateElements = daysNames.map((item, index) => {
     if (item === dayName) {

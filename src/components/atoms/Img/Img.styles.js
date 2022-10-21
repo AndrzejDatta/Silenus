@@ -3,7 +3,6 @@ import styled from "styled-components";
 export const StyledImg = styled.div`
   background-image: url(${({ url }) => url});
   background-repeat: no-repeat;
-  background-color: red;
   background-size: cover;
   //to cover usune, jak zobaczymy z tym dopasowywanie zdjęc
   ${(props) => {

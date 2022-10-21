@@ -1,15 +1,21 @@
-import React, { useContext } from 'react';
-import PropTypes from 'prop-types';
+import React, { useContext } from "react";
+import PropTypes from "prop-types";
 import {
   StyledUserActivitySection,
   StyledUserActivityElement,
-} from './UserActivitiesSection.styles';
-import UserActivity from 'components/molecules/UserActivity/UserActivity';
-import Headline from 'components/molecules/Headline/Headline';
-import Filters from 'components/molecules/Filters/Filters';
-import { dataContext } from 'providers/DataProvider';
-import ActivityText from 'components/atoms/ActivityText/ActivityText';
-const UserActivitiesSection = ({ headline, isCalendar }) => {
+} from "./UserActivitiesSection.styles";
+import UserActivity from "components/molecules/UserActivity/UserActivity";
+import Headline from "components/molecules/Headline/Headline";
+import Filters from "components/molecules/Filters/Filters";
+import { dataContext } from "providers/DataProvider";
+import ActivityText from "components/atoms/ActivityText/ActivityText";
+const UserActivitiesSection = ({
+  headline = "Headline",
+  isCalendar,
+  isDashboard,
+  icon,
+  path,
+}) => {
   const {
     Dashboard: { activities },
   } = useContext(dataContext);
@@ -18,7 +24,7 @@ const UserActivitiesSection = ({ headline, isCalendar }) => {
     ({ name, src, activity }, index) => {
       return (
         <StyledUserActivityElement key={index}>
-          <ActivityText text="when" />
+          <ActivityText text="when" color="#3AA688" />
           <UserActivity
             name={name}
             src={src}
@@ -31,8 +37,8 @@ const UserActivitiesSection = ({ headline, isCalendar }) => {
   );
   return (
     <StyledUserActivitySection>
-      {!isCalendar && <Headline text={headline} isBackground={false} />}
-      {!isCalendar && <Filters isBig={true} isDashboard={true} />}
+      {!isCalendar && <Headline text={headline} icon path={path} />}
+      {!isCalendar && <Filters isBig />}
       {activitiesElement}
     </StyledUserActivitySection>
   );
@@ -44,7 +50,7 @@ UserActivitiesSection.propTypes = {
 };
 
 UserActivitiesSection.defaultProps = {
-  headline: 'Headline',
+  headline: "Headline",
 };
 
 export default UserActivitiesSection;

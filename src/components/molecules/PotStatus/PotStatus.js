@@ -1,20 +1,20 @@
-import React, { useContext } from 'react';
-import PropTypes, { shape } from 'prop-types';
-import UserAccountText from 'components/atoms/UserAccountText/UserAccountText';
+import React, { useContext } from "react";
+import PropTypes, { shape } from "prop-types";
+import UserAccountText from "components/atoms/UserAccountText/UserAccountText";
 import {
   StyledPotStatus,
   StyledPotStatusInfo,
   StyledPotStatusText,
-} from './PotStatus.styles';
-import { dataContext } from 'providers/DataProvider';
-import Icon from 'components/atoms/icon/icon.component';
-import Img from 'components/atoms/Img/Img';
-const PotStatus = ({ state, name }) => {
+} from "./PotStatus.styles";
+import { dataContext } from "providers/DataProvider";
+import Icon from "components/atoms/icon/icon.component";
+import Img from "components/atoms/Img/Img";
+const PotStatus = ({ state, name, click }) => {
   const { potIcons } = useContext(dataContext);
 
   const element = (
-    <StyledPotStatus>
-      <Img size="small" url={'1'} />
+    <StyledPotStatus onClick={click}>
+      <Img size="small" url={"1"} />
       <StyledPotStatusInfo>
         <UserAccountText
           text={name}
@@ -40,7 +40,6 @@ const PotStatus = ({ state, name }) => {
     </StyledPotStatus>
   );
 
-  console.log(element);
   return element;
 };
 

@@ -2,8 +2,8 @@ import { createContext, useState } from "react";
 import { dataPL } from "assets/data/data";
 
 export const dataContext = createContext({
-  startPage: {},
-  loginPage: {},
+  StartPage: {},
+  LoginPage: {},
   Dashboard: {},
   MojeDoniczki: {},
   DodajDoniczke: {},
@@ -11,6 +11,7 @@ export const dataContext = createContext({
   KalendarzOpieki: {},
   KontoUżytkownika: {},
   ZidentyfikujRośline: {},
+  Details: {},
   Navbar: {},
   images: {},
   navIcons: {},
@@ -22,7 +23,38 @@ export const dataContext = createContext({
   importAll: () => {},
 });
 
+const objectName = [
+  "StartPage",
+  "LoginPage",
+  "Dashboard",
+  "MojeDoniczki",
+  "DodajDoniczke",
+  "MojeRośliny",
+  "KontoUżytkownika",
+  "KalendarzOpieki",
+  "ZidentyfikujRośline",
+  "Details",
+  "Navbar",
+];
+
 export const DataProvider = ({ children }) => {
+  for (let i = 0; i < dataPL.length; i++) {
+    objectName[i] = { ...dataPL[i] };
+  }
+  const [
+    StartPage,
+    LoginPage,
+    Dashboard,
+    MojeDoniczki,
+    DodajDoniczke,
+    MojeRośliny,
+    KontoUżytkownika,
+    KalendarzOpieki,
+    ZidentyfikujRośline,
+    Details,
+    Navbar,
+  ] = objectName;
+
   const [navIconsColor, setNavIconColor] = useState([
     {
       name: "plant",
@@ -72,36 +104,6 @@ export const DataProvider = ({ children }) => {
   const categoryIcons = importAll(
     require.context("assets/icons/categoryIcons", false, /\.(png|jpe?g|svg)$/)
   );
-  const startPage = {
-    ...dataPL[0],
-  };
-  const loginPage = {
-    ...dataPL[1],
-  };
-  const Dashboard = {
-    ...dataPL[2],
-  };
-  const MojeDoniczki = {
-    ...dataPL[3],
-  };
-  const DodajDoniczke = {
-    ...dataPL[4],
-  };
-  const MojeRośliny = {
-    ...dataPL[5],
-  };
-  const KalendarzOpieki = {
-    ...dataPL[7],
-  };
-  const KontoUżytkownika = {
-    ...dataPL[6],
-  };
-  const ZidentyfikujRośline = {
-    ...dataPL[8],
-  };
-  const Navbar = {
-    ...dataPL[9],
-  };
 
   function changeColor(nameElement) {
     setNavIconColor((prevData) =>
@@ -124,8 +126,8 @@ export const DataProvider = ({ children }) => {
   return (
     <dataContext.Provider
       value={{
-        startPage,
-        loginPage,
+        StartPage,
+        LoginPage,
         Dashboard,
         DodajDoniczke,
         MojeDoniczki,
@@ -133,6 +135,7 @@ export const DataProvider = ({ children }) => {
         KalendarzOpieki,
         KontoUżytkownika,
         ZidentyfikujRośline,
+        Details,
         Navbar,
         images,
         navIcons,
