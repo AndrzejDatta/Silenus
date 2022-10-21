@@ -10,7 +10,7 @@ export default {
       options: [true, false],
       control: { type: "boolean" },
     },
-    isLogout: {
+    isUser: {
       options: [true, false],
       control: { type: "boolean" },
     },
@@ -25,4 +25,5 @@ Default.args = {
   text: "Text",
   isHeading: false,
   isLogout: false,
+  color: "black",
 };

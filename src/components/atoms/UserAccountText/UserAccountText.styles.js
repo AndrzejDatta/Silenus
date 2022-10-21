@@ -4,10 +4,7 @@ export const StyledUserAccountText = styled.p`
   letter-spacing: 1px;
   line-height: 20px;
   font-size: ${({ theme }) => theme.font.size.big};
-  color: ${(props) =>
-    props.isHeading || props.isOption
-      ? ({ theme }) => theme.color.fontGreen
-      : "black"};
+  color: ${(props) => props.color};
   font-family: ${({ theme }) => theme.font.family.poppins};
   font-weight: ${(props) => (props.isHeading ? "bold" : "normal")};
   padding: ${(props) =>
