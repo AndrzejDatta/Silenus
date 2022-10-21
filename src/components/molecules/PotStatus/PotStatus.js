@@ -18,10 +18,9 @@ const PotStatus = ({ state, name, click }) => {
       <StyledPotStatusInfo>
         <UserAccountText
           text={name}
-          isLogout={false}
           isHeading={true}
-          isOption={false}
           isUser={true}
+          color="#3AA688"
         />
         {state.map(({ src, text }, index) => {
           return (
@@ -29,9 +28,9 @@ const PotStatus = ({ state, name, click }) => {
               <Icon icon={potIcons[src]} size="tiny" color="green" />
               <UserAccountText
                 text={text}
-                isLogout={false}
                 isHeading={false}
                 isOption={true}
+                color="#3AA688"
               />
             </StyledPotStatusText>
           );
