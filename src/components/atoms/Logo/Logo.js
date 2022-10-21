@@ -7,7 +7,9 @@ const Logo = ({ color = "#3AA688", logoSize = "small" }) => {
 };
 
 Logo.propTypes = {
+  /** color of logo */
   color: PropTypes.string.isRequired,
+  /** size of logo */
   logoSize: PropTypes.string.isRequired,
 };
 

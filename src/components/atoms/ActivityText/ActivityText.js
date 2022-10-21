@@ -10,7 +10,9 @@ const ActivityText = ({ text = "text", isHeadline, color }) => {
 };
 
 ActivityText.propTypes = {
+  /**text in element */
   text: PropTypes.string.isRequired,
+  /** bool which decides about font-weight and font-size */
   isHeadline: PropTypes.bool,
 };
 

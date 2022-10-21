@@ -18,6 +18,8 @@ const UserImg = ({ url = userImg }) => {
   );
 };
 
-UserImg.propTypes = {};
+UserImg.propTypes = {
+  url: PropTypes.string.isRequired,
+};
 //TODO:dopisac Proptypes dla url, jak juz bedzie prawdziwy
 export default UserImg;

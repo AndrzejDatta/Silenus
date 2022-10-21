@@ -1,17 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { StyledLinkElement, StyledIcon } from "./Link.styles";
-const Link = ({
-  icon,
-  size,
-  color,
-  click,
-  path,
-  isSearchBar,
-  isRight,
-  location,
-  isDetailsPage,
-}) => {
+const Link = ({ icon, size, color, click, path, isDetailsPage }) => {
   return (
     <StyledLinkElement to={path}>
       <StyledIcon
@@ -19,9 +9,6 @@ const Link = ({
         size={size}
         color={color}
         onClick={click}
-        isSearchBar={isSearchBar}
-        isRight={isRight}
-        location={location}
         isDetailsPage={isDetailsPage}
       />
     </StyledLinkElement>
@@ -35,8 +22,12 @@ Link.propTypes = {
   color: PropTypes.string.isRequired,
   /** icon svg injection*/
   icon: PropTypes.string.isRequired,
-
-  isSearchBar: PropTypes.bool,
+  /** click is a function */
+  click: PropTypes.func,
+  /** path url to page */
+  path: PropTypes.string.isRequired,
+  /** setting of return arrow  */
+  isDetailsPage: PropTypes.bool,
 };
 
 export default Link;

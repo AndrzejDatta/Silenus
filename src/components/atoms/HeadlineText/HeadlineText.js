@@ -8,7 +8,9 @@ const HeadlineText = ({ text = "Headline", isBackground }) => {
 };
 
 HeadlineText.propTypes = {
+  /** text of headline */
   text: PropTypes.string.isRequired,
+  /** bool which decides about color (white (if inBackground) or green) */
   isBackground: PropTypes.bool,
 };
 
