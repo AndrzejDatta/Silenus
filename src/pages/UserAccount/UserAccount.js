@@ -1,17 +1,20 @@
-import React from "react";
-import PropTypes from "prop-types";
+import React, { useContext } from "react";
+import { dataContext } from "providers/DataProvider";
 import UserAccountInfo from "components/organisms/UserAccountInfo/UserAccountInfo";
 import UserAccountOptions from "components/molecules/UserAccountOptions/UserAccountOptions";
 import MainTemplate from "components/templates/MainTemplate/MainTemplate";
-const UserAccount = (props) => {
+const UserAccount = () => {
+  const {
+    KontoUżytkownika: { optionsProfil, optionsSettings, headings },
+  } = useContext(dataContext);
+
   return (
     <MainTemplate>
       <UserAccountInfo />
-      <UserAccountOptions />
+      <UserAccountOptions headline={headings[0]} options={optionsProfil} />
+      <UserAccountOptions headline={headings[1]} options={optionsSettings} />
     </MainTemplate>
   );
 };
-
-UserAccount.propTypes = {};
 
 export default UserAccount;
