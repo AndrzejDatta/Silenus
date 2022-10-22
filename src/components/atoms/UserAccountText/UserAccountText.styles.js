@@ -8,5 +8,6 @@ export const StyledUserAccountText = styled.p`
   font-family: ${({ theme }) => theme.font.family.poppins};
   font-weight: ${(props) => (props.isHeading ? "bold" : "normal")};
   padding: ${(props) =>
-    props.isUser ? (props.isHeading ? " 0" : "0px 8px") : "0 0 0 10px"}; ;
+    props.isUser ? (props.isHeading ? " 0" : "0px 8px") : "0 0 0 10px"};
+  width: 100%;
 `;

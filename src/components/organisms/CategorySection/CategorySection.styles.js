@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const StyledCategorySection = styled.div`
   display: flex;
@@ -7,6 +7,7 @@ export const StyledCategorySection = styled.div`
   flex-wrap: wrap;
   gap: 10px 0%;
   z-index: 5;
+  margin-bottom: 5vh;
 `;
 export const StyledSection = styled.div`
   display: flex;

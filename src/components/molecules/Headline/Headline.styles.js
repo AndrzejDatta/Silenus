@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const StyledHeadline = styled.div`
   display: flex;
@@ -6,5 +6,5 @@ export const StyledHeadline = styled.div`
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  padding: 10px;
+  padding: 10px 3px 0px 3px;
 `;

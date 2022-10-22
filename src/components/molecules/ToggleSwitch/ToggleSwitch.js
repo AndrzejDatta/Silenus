@@ -1,6 +1,8 @@
 import React, { useState } from "react";
+import PropTypes from "prop-types";
 import Switch from "react-js-switch";
-const ToggleSwitch = () => {
+import { theme } from "assets/styles/theme";
+const ToggleSwitch = (props) => {
   const [isSwitchOn, setIsSwitchOn] = useState(true);
   const switch_onChange_handle = () => {
     setIsSwitchOn(!isSwitchOn);
@@ -9,7 +11,11 @@ const ToggleSwitch = () => {
     <Switch
       value={isSwitchOn}
       onChange={switch_onChange_handle}
-      backgroundColor="black"
+      backgroundColor={{
+        on: theme.color.backgroundGreen,
+        off: "grey",
+      }}
+      borderColor={{ on: "none", off: "none" }}
     />
   );
 };
