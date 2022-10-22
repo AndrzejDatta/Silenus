@@ -13,7 +13,7 @@ const HeadlineDetailSection = ({ url, headline, filterText }) => {
         icon={returnSvg}
         color={"green"}
         size="tiny"
-        path={"/"}
+        path={"/dashboard"}
         isDetailsPage={true}
       />
       <Img size="large" url={image} isDetailsPage={true} />
