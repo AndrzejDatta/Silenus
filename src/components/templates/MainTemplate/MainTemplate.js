@@ -1,10 +1,12 @@
 import React from "react";
 import PropTypes from "prop-types";
 import Navbar from "components/molecules/Navbar/Navbar";
-import { StyledMainTemplate } from "./MainTemplate.styles";
+import {
+  StyledMainTemplate,
+  StyledGradientCircle,
+} from "./MainTemplate.styles";
 import Icon from "components/atoms/icon/icon.component";
 import leaf from "assets/icons/leaf.svg";
-import { StyledGradientCircle } from "components/templates/circleGradientTemplate/circleGradientTemplate.styles";
 
 const MainTemplate = ({
   children,
