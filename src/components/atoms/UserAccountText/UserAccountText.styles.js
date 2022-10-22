@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const StyledUserAccountText = styled.p`
   letter-spacing: 1px;
@@ -7,9 +7,10 @@ export const StyledUserAccountText = styled.p`
   color: ${(props) =>
     props.isHeading || props.isOption
       ? ({ theme }) => theme.color.fontGreen
-      : "black"};
+      : 'black'};
   font-family: ${({ theme }) => theme.font.family.poppins};
-  font-weight: ${(props) => (props.isHeading ? "bold" : "normal")};
+  font-weight: ${(props) => (props.isHeading ? 'bold' : 'normal')};
   padding: ${(props) =>
-    props.isUser ? (props.isHeading ? " 0" : "0px 8px") : "0 0 0 10px"}; ;
+    props.isUser ? (props.isHeading ? ' 0' : '0px 8px') : '0 0 0 10px'};
+  width: 100%;
 `;

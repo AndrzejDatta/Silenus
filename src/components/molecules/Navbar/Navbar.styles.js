@@ -10,7 +10,8 @@ export const StyledNavbar = styled.nav`
   position: fixed;
   width: 100vw;
   height: 5%;
-  bottom: 10%;
+  bottom: 0%;
+  background-color: #fff;
 `;
 export const StyledNavbarElement = styled(Link)`
   display: flex;
