@@ -26,7 +26,6 @@ export const StyledMainTemplate = styled.div`
 
 export const StyledGradientCircle = styled.div`
   z-index: -1;
-
   position: absolute;
   height: 150vw;
   width: 200vw;
