@@ -1,13 +1,14 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const StyledIndentifySection = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  min-height: 45vh;
+  height: 60vh;
   margin-top: 5%;
   z-index: 5;
+  width: 90%;
 `;
 export const StyledCircle = styled.div`
   border-radius: 50%;

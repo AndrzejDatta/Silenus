@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const StyledFilter = styled.button`
   background-color: ${({ theme }) => theme.color.lightGrey};
@@ -21,6 +21,6 @@ export const StyledFilterText = styled.p`
       ? ({ theme }) => theme.font.size.big
       : ({ theme }) => theme.font.size.medium};
   color: ${(props) =>
-    props.isDashboard ? ({ theme }) => theme.color.fontGreen : "black"};
+    props.isDashboard ? ({ theme }) => theme.color.fontGreen : 'black'};
   font-family: ${({ theme }) => theme.font.family.poppins};
 `;

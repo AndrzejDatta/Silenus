@@ -6,7 +6,7 @@ export const StyledMainTemplate = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
   overflow-x: hidden;
   position: relative;
   gap: 15px;

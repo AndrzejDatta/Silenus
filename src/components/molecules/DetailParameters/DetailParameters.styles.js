@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const StyledDetailSection = styled.div`
   width: 100%;
@@ -23,4 +23,6 @@ export const StyledSection = styled.div`
   justify-content: space-around;
   align-items: stretch;
   width: 100%;
+  gap: 2vh;
+  margin-bottom: 1vh;
 `;
