@@ -28,15 +28,19 @@ const App = (props) => {
       <Routes>
         <Route path="/" element={<StartPage />} />
         <Route path="/login" element={<LoginPage />} />
-        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/dashboard">
+          <Route index element={<Dashboard />} />
+          <Route path="mypots">
+            <Route index element={<MyPotsPage />} />
+            <Route path="addpot" element={<AddPot />} />
+          </Route>
+          <Route path="myplants" element={<MyPlantsPage />} />
+          <Route path="potdetails" element={<PotDetailsPage />} />
+          <Route path="plantdetails" element={<PlantDetailsPage />} />
+        </Route>
         <Route path="/calendar" element={<Calendar />} />
         <Route path="/camera" element={<IdentifyPage />} />
         <Route path="/user" element={<UserAccount />} />
-        <Route path="/mypots" element={<MyPotsPage />} />
-        <Route path="/myplants" element={<MyPlantsPage />} />
-        <Route path="/potdetails" element={<PotDetailsPage />} />
-        <Route path="/plantdetails" element={<PlantDetailsPage />} />
-        <Route path="/addpot" element={<AddPot />} />
       </Routes>
     </BrowserRouter>
   );
