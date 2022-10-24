@@ -4,11 +4,11 @@ import Title from "components/atoms/Title/Title";
 import Subtitle from "components/atoms/Subtitle/Subtitle";
 import { StyledStartPageText } from "components/molecules/StartPageText/StartPageText.styles";
 
-const StartPageText = ({ pageType }) => {
+const StartPageText = ({ pageType, title, subtitle }) => {
   return (
     <StyledStartPageText>
-      <Title title="Silenus" pageType={pageType} />
-      <Subtitle subtitle="smart pots" pageType={pageType} />
+      <Title title={title} pageType={pageType} />
+      <Subtitle subtitle={subtitle} pageType={pageType} />
     </StyledStartPageText>
   );
 };

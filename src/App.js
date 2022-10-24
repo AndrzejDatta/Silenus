@@ -12,6 +12,7 @@ import MyPotsPage from "pages/MyPotsPage/MyPotsPage";
 import PotDetailsPage from "pages/PotDetailsPage/PotDetailsPage";
 import PlantDetailsPage from "pages/PlantDetailsPage/PlantDetailsPage";
 import AddPot from "pages/AddPot/AddPot";
+import NotFoundPage from "pages/NotFoundPage/NotFoundPage";
 // const AddPot = React.lazy(() => import("pages/AddPot/AddPot"));
 // const MyPlantsPage = React.lazy(() => import("pages/MyPotsPage/MyPotsPage"));
 // const MyPotsPage = React.lazy(() => import("pages/MyPotsPage/MyPotsPage"));
@@ -41,6 +42,7 @@ const App = (props) => {
         <Route path="/calendar" element={<Calendar />} />
         <Route path="/camera" element={<IdentifyPage />} />
         <Route path="/user" element={<UserAccount />} />
+        <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </BrowserRouter>
   );

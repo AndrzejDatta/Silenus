@@ -13,6 +13,7 @@ export const dataContext = createContext({
   ZidentyfikujRośline: {},
   Details: {},
   Navbar: {},
+  NotFoundPage: {},
   images: {},
   navIcons: {},
   potIcons: {},
@@ -35,6 +36,7 @@ const objectName = [
   "ZidentyfikujRośline",
   "Details",
   "Navbar",
+  "NotFoundPage",
 ];
 
 export const DataProvider = ({ children }) => {
@@ -53,6 +55,7 @@ export const DataProvider = ({ children }) => {
     ZidentyfikujRośline,
     Details,
     Navbar,
+    NotFoundPage,
   ] = objectName;
 
   const [navIconsColor, setNavIconColor] = useState([
@@ -137,6 +140,7 @@ export const DataProvider = ({ children }) => {
         ZidentyfikujRośline,
         Details,
         Navbar,
+        NotFoundPage,
         images,
         navIcons,
         potIcons,

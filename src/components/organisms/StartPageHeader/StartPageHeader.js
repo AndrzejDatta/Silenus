@@ -3,11 +3,17 @@ import PropTypes from "prop-types";
 import { StyledStartPageHeader } from "components/organisms/StartPageHeader/StartPageHeader.styles";
 import Logo from "components/atoms/Logo/Logo";
 import StartPageText from "components/molecules/StartPageText/StartPageText";
-const StartPageHeader = ({ logoSize, logoColor, pageType }) => {
+const StartPageHeader = ({
+  logoSize,
+  logoColor,
+  pageType,
+  title,
+  subtitle,
+}) => {
   return (
     <StyledStartPageHeader>
       <Logo logoSize={logoSize} color={logoColor} />
-      <StartPageText pageType={pageType} />
+      <StartPageText pageType={pageType} title={title} subtitle={subtitle} />
     </StyledStartPageHeader>
   );
 };

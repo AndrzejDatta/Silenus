@@ -23,6 +23,11 @@ export const StyledStartTemplate = styled.div`
         
         padding-top: 100px;
         `;
+    } else if (props.pageType === "notFoundPage") {
+      return `
+        
+        padding-top: 100px;
+        `;
     }
   }}
 `;

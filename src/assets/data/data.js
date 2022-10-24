@@ -294,6 +294,11 @@ export const dataPL = [
       },
     ],
   },
+  {
+    pageName: "NotFoundPage",
+    headline: "Bład 404",
+    textInfo: "Nie znaleziono strony",
+  },
 ];
 
 //TODO:update dataAng array
