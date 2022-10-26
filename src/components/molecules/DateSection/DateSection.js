@@ -20,6 +20,7 @@ const DateSection = (props) => {
   const dayName = dni[date.getDay()];
 
   for (let i = length; i < length + 7; i++) {
+    console.log(i);
     daysNumbers[j] = i;
     j++;
   }
@@ -29,9 +30,14 @@ const DateSection = (props) => {
   daysNames = daysAfterToday.concat(daysBeforeToday);
 
   const dateElements = daysNames.map((item, index) => {
-    if (item === dayName) {
+    if (daysNumbers[index] === dayNumber) {
       return (
-        <DateElement key={index} dayName={item} dayNumber={dayNumber} isNow />
+        <DateElement
+          key={index}
+          dayName={item}
+          dayNumber={daysNumbers[index]}
+          isNow={true}
+        />
       );
     } else {
       return (
