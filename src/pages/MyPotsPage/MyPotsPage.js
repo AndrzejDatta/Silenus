@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Suspense } from "react";
 import PropTypes from "prop-types";
 import MainTemplate from "components/templates/MainTemplate/MainTemplate";
 import PotSection from "components/organisms/PotSection/PotSection";

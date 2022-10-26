@@ -1,9 +1,9 @@
-import React, { Suspense } from "react";
+import React, { Suspense, lazy } from "react";
 import PropTypes from "prop-types";
 import StartPage from "pages/StartPage/StartPage";
 import { Routes, Route, BrowserRouter } from "react-router-dom";
 import LoginPage from "pages/loginPage/loginPage.component";
-import Dashboard from "pages/Dashboard/Dashboard";
+// import Dashboard from "pages/Dashboard/Dashboard";
 import IdentifyPage from "pages/IdentifyPage/IdentifyPage";
 import UserAccount from "pages/UserAccount/UserAccount";
 import Calendar from "pages/Calendar/Calendar";
@@ -13,10 +13,11 @@ import PotDetailsPage from "pages/PotDetailsPage/PotDetailsPage";
 import PlantDetailsPage from "pages/PlantDetailsPage/PlantDetailsPage";
 import AddPot from "pages/AddPot/AddPot";
 import NotFoundPage from "pages/NotFoundPage/NotFoundPage";
-// const AddPot = React.lazy(() => import("pages/AddPot/AddPot"));
-// const MyPlantsPage = React.lazy(() => import("pages/MyPotsPage/MyPotsPage"));
-// const MyPotsPage = React.lazy(() => import("pages/MyPotsPage/MyPotsPage"));
-// const PotDetailsPage = React.lazy(() =>
+const Dashboard = lazy(() => import("pages/Dashboard/Dashboard"));
+// const AddPot = lazy(() => import("pages/AddPot/AddPot"));
+// const MyPlantsPage = lazy(() => import("pages/MyPlantsPage/MyPlantsPage"));
+// const MyPotsPage = lazy(() => import("pages/MyPotsPage/MyPotsPage"));
+// const PotDetailsPage = lazy(() =>
 //   import("pages/PotDetailsPage/PotDetailsPage")
 // );
 // const PlantDetailsPage = React.lazy(() =>
