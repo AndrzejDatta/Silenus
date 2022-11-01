@@ -25,6 +25,16 @@ const CustomButton = ({
   );
 };
 
+CustomButton.defaultProps={
+  size:'small',
+  text:"Text",
+  fontSize:"14px",
+  type:"text",
+  color:"black",
+  backgroundColor:"green",
+  click:()=>{},
+};
+
 CustomButton.propTypes = {
   /**size of button */
   size: PropTypes.string.isRequired,
