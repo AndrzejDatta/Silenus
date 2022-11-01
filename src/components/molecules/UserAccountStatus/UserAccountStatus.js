@@ -16,13 +16,13 @@ const UserAccountStatus = ({ name, status }) => {
         <UserAccountText
           text={name}
           isHeading={false}
-          isUser={true}
+          isUseInUserAccountPage={true}
           color="#3AA688"
         />
         <UserAccountText
           text={number.toString()}
           isHeading={true}
-          isUser={true}
+          isUseInUserAccountPage={true}
           color="#3AA688"
         />
       </StyledUserAccountStatusSection>
@@ -36,7 +36,7 @@ const UserAccountStatus = ({ name, status }) => {
         <UserAccountText
           text={name}
           isHeading={true}
-          isUser={false}
+          isUseInUserAccountPage={false}
           color="#3AA688"
         />
       </StyledUserAccountName>

@@ -10,7 +10,7 @@ export default {
       options: [true, false],
       control: { type: "boolean" },
     },
-    isUser: {
+    isUseInUserAccountPage: {
       options: [true, false],
       control: { type: "boolean" },
     },
@@ -24,6 +24,6 @@ export const Default = Template.bind({});
 Default.args = {
   text: "Text",
   isHeading: false,
-  isLogout: false,
+  isUseInUserAccountPage: false,
   color: "black",
 };
