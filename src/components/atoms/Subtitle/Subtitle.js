@@ -4,6 +4,11 @@ import { StyledSubtitle } from "components/atoms/Subtitle/Subtitle.styles";
 const Subtitle = ({ subtitle, pageType }) => {
   return <StyledSubtitle pageType={pageType}>{subtitle}</StyledSubtitle>;
 };
+
+Subtitle.defaultProps = {
+  subtitle: "smart plants",
+  pageType: "loginPage",
+};
 Subtitle.propTypes = {
   /**text in Subtitle atom*/
   subtitle: PropTypes.string.isRequired,
