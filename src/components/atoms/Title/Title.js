@@ -5,6 +5,10 @@ const Title = ({ title, pageType }) => {
   return <StyledTitle pageType={pageType}>{title}</StyledTitle>;
 };
 
+Title.defaultProps = {
+  title: "Title",
+  pageType: "startPage",
+};
 Title.propTypes = {
   /**text in Title atom*/
   title: PropTypes.string.isRequired,
