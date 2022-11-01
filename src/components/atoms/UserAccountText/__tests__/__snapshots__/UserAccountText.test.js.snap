@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test UserAccountText component test default style 1`] = `
+.c0 {
+  -webkit-letter-spacing: 1px;
+  -moz-letter-spacing: 1px;
+  -ms-letter-spacing: 1px;
+  letter-spacing: 1px;
+  line-height: 20px;
+  font-size: 16px;
+  color: black;
+  font-family: "Poppins",sans-serif;
+  font-weight: normal;
+  padding: 0 0 0 10px;
+  width: 100%;
+}
+
+<p
+  className="c0"
+  color="black"
+>
+  text
+</p>
+`;
