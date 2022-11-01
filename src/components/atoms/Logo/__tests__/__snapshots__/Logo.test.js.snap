@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test Logo Component Test default style 1`] = `
+.c0 {
+  width: 150px;
+  height: 150px;
+}
+
+<svg
+  className="c0"
+  fill="#3AA688"
+  logoSize="small"
+>
+  logo.svg
+</svg>
+`;
