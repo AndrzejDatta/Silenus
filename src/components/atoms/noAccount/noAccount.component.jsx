@@ -16,11 +16,24 @@ const NoAccount = ({ text, buttonText, fontSize, color }) => {
   );
 };
 
-NoAccount.propTypes = {
+NoAccount.defaultProps = {
+  text: 'Text',
+  buttonText:'Button Text',
+  fontSize: '14px',
+  color:'black'
+};
+
+
+NoAccount.propTypes =  {
+  /**info text aboute account status */
   text: PropTypes.string.isRequired,
+  /**link text to navigate to page (sign in) */
   buttonText: PropTypes.string.isRequired,
+  /** font-size of text */
   fontSize: PropTypes.string.isRequired,
+  /**color of item */
   color: PropTypes.string.isRequired,
 };
+
 
 export default NoAccount;
