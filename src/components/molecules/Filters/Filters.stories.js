@@ -32,7 +32,7 @@ Default.args = {
     },
   ],
   color: "black",
-  icons: "",
+  icons: [],
   isBigFontSize: false,
 };
 
