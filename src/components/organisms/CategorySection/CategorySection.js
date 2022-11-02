@@ -1,4 +1,5 @@
 import React, { useContext } from "react";
+import PropTypes, { shape } from "prop-types";
 import Filter from "components/atoms/Filter/Filter";
 import { dataContext } from "providers/DataProvider";
 import { StyledCategorySection, StyledSection } from "./CategorySection.styles";
@@ -28,6 +29,23 @@ const CategorySection = ({ headline, filters }) => {
       <StyledCategorySection>{categoryElements}</StyledCategorySection>
     </StyledSection>
   );
+};
+
+CategorySection.defaultProps = {
+  headline: "Headline",
+  filters: [
+    {
+      text: "Src",
+      src: "info.svg",
+    },
+  ],
+};
+
+CategorySection.propTypes = {
+  /**name of plant */
+  headline: PropTypes.string.isRequired,
+  /**objct with info about plant */
+  filters: PropTypes.arrayOf(shape),
 };
 
 export default CategorySection;

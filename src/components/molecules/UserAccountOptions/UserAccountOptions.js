@@ -41,6 +41,16 @@ const UserAccountOptions = ({ headline, options }) => {
   );
 };
 
+UserAccountOptions.defaultProps = {
+  headline: "Headline",
+  options: [
+    {
+      src: "info.svg",
+      option: "Option",
+    },
+  ],
+};
+
 UserAccountOptions.propTypes = {
   /**name of plant */
   headline: PropTypes.string.isRequired,
