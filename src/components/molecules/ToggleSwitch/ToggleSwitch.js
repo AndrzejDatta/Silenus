@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import PropTypes from "prop-types";
 import Switch from "react-js-switch";
 import { theme } from "assets/styles/theme";
 const ToggleSwitch = (props) => {
@@ -20,8 +19,4 @@ const ToggleSwitch = (props) => {
   );
 };
 
-ToggleSwitch.propTypes = {};
-
 export default ToggleSwitch;
-
-// https://www.npmjs.com/package/react-js-switch
