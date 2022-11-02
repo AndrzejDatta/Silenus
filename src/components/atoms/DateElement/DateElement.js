@@ -1,24 +1,29 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { StyledDate, StyledDateText } from "./DateElement.styles.";
-const DateElement = ({ dayName = "Mon", dayNumber = 21, isNow = false }) => {
+const DateElement = ({ dayName, dayNumber, isToday }) => {
   return (
-    <StyledDate isNow={isNow}>
-      <StyledDateText isNow={isNow}>{dayName}</StyledDateText>
-      <StyledDateText isNumber isNow={isNow}>
+    <StyledDate isToday={isToday}>
+      <StyledDateText isToday={isToday}>{dayName}</StyledDateText>
+      <StyledDateText isNumber isToday={isToday}>
         {dayNumber}
       </StyledDateText>
     </StyledDate>
   );
 };
 
+DateElement.defaultProps = {
+  dayName: "Mon",
+  dayNumber: 21,
+  isToday: false,
+};
 DateElement.propTypes = {
   /**name of day */
   dayName: PropTypes.string.isRequired,
   /**number of day */
   dayNumber: PropTypes.number.isRequired,
   /**bool which decides about background color */
-  isNow: PropTypes.bool.isRequired,
+  isToday: PropTypes.bool.isRequired,
 };
 
 export default DateElement;

@@ -6,7 +6,7 @@ export const StyledDate = styled.div`
   justify-content: space-around;
   align-items: center;
   background-color: ${(props) =>
-    props.isClicked || props.isNow
+    props.isClicked || props.isToday
       ? ({ theme }) => theme.color.fontGreen
       : ({ theme }) => theme.color.lightGrey};
   border-radius: 8px;
@@ -17,7 +17,7 @@ export const StyledDateText = styled.p`
   letter-spacing: 1px;
   font-size: ${({ theme }) => theme.font.size.medium};
   color: ${(props) =>
-    props.isClicked || props.isNow
+    props.isClicked || props.isToday
       ? "white"
       : ({ theme }) => theme.color.fontGreen};
   font-family: ${({ theme }) => theme.font.family.poppins};

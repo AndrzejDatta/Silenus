@@ -36,7 +36,7 @@ const DateSection = (props) => {
           key={index}
           dayName={item}
           dayNumber={daysNumbers[index]}
-          isNow={true}
+          isToday={true}
         />
       );
     } else {
