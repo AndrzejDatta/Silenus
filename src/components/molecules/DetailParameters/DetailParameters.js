@@ -35,6 +35,16 @@ const DetailParameters = ({ details: { headline, parameters } }) => {
   );
 };
 
+DetailParameters.defaultProps = {
+  headline: "Headline",
+  parameters: [
+    {
+      text: "text",
+      src: "",
+      infoText: "infoText",
+    },
+  ],
+};
 DetailParameters.propTypes = {
   /**text in headline */
   headline: PropTypes.string.isRequired,
