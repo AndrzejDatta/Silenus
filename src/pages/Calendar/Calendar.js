@@ -1,13 +1,13 @@
-import React, { useContext } from 'react';
-import PropTypes from 'prop-types';
-import Date from 'components/atoms/DateElement/DateElement';
-import DateSection from 'components/molecules/DateSection/DateSection';
-import Headline from 'components/molecules/Headline/Headline';
-import { dataContext } from 'providers/DataProvider';
-import UserActivitiesSection from 'components/organisms/UserActivitiesSection/UserActivitiesSection';
-import MainTemplate from 'components/templates/MainTemplate/MainTemplate';
-import Filters from 'components/molecules/Filters/Filters';
-import { StyledCalendarWrapper } from './Calendar.styles';
+import React, { useContext } from "react";
+import PropTypes from "prop-types";
+import Date from "components/atoms/DateElement/DateElement";
+import DateSection from "components/molecules/DateSection/DateSection";
+import Headline from "components/molecules/Headline/Headline";
+import { dataContext } from "providers/DataProvider";
+import UserActivitiesSection from "components/organisms/UserActivitiesSection/UserActivitiesSection";
+import MainTemplate from "components/templates/MainTemplate/MainTemplate";
+import Filters from "components/molecules/Filters/Filters";
+import { StyledCalendarWrapper } from "./Calendar.styles";
 const Calendar = (props) => {
   const {
     KalendarzOpieki: { headings },
@@ -17,7 +17,7 @@ const Calendar = (props) => {
       <StyledCalendarWrapper>
         <Headline text={headings} isHeading isCalendar />
         <DateSection />
-        <Filters />
+        <Filters color="#3AA688" />
         <UserActivitiesSection isCalendar />
       </StyledCalendarWrapper>
     </MainTemplate>

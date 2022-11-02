@@ -6,11 +6,11 @@ export default {
   title: `${storiesName.atoms}Filter`,
   component: Filter,
   argTypes: {
-    isBig: {
+    isBigFontSize: {
       options: [true, false],
       control: { type: "radio" },
     },
-    isDashboard: {
+    isCategoryInIdentifyPage: {
       options: [true, false],
       control: { type: "radio" },
     },
@@ -22,7 +22,8 @@ const Template = (args) => <Filter {...args} />;
 export const Default = Template.bind({});
 
 Default.args = {
-  isBig: true,
-  isDashboard: true,
+  isBigFontSize: true,
   text: "Filter",
+  color: "black",
+  isCategoryInIdentifyPage: false,
 };

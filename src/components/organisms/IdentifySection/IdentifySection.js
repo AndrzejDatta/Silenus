@@ -11,7 +11,11 @@ const IdentifySection = (props) => {
   } = useContext(dataContext);
   return (
     <StyledIndentifySection>
-      <UserAccountText text={headings[0]} isUser={false} color="#3AA688" />
+      <UserAccountText
+        text={headings[0]}
+        isUseInUserAccountPage={false}
+        color="#3AA688"
+      />
       <StyledCircle number={3}>
         <StyledCircle number={2}>
           <StyledCircle number={1}>

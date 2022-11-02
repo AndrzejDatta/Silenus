@@ -4,24 +4,32 @@ import { StyledFilter, StyledFilterText } from "./Filter.styles";
 import Icon from "components/atoms/icon/icon.component";
 
 const Filter = ({
-  text = "Filter",
+  text,
   icon,
-  isBig = true,
-  isDashboard = true,
-  isCategory,
+  isBigFontSize,
+  color,
+  isCategoryInIdentifyPage,
 }) => {
   return (
-    <StyledFilter isCategory={isCategory}>
+    <StyledFilter isCategoryInIdentifyPage={isCategoryInIdentifyPage}>
       {icon && <Icon icon={icon} size="tiny" color="green" />}
       <StyledFilterText
-        isCategory={isCategory}
-        isBig={isBig}
-        isDashboard={isDashboard}
+        isCategoryInIdentifyPage={isCategoryInIdentifyPage}
+        isBigFontSize={isBigFontSize}
+        color={color}
       >
         {text}
       </StyledFilterText>
     </StyledFilter>
   );
+};
+
+Filter.defaultProps = {
+  text: "Filter",
+  icon: "",
+  isBigFontSize: false,
+  color: "black",
+  isCategoryInIdentifyPage: false,
 };
 
 Filter.propTypes = {
@@ -30,9 +38,11 @@ Filter.propTypes = {
   /**src to icon */
   icon: PropTypes.string,
   /**Size of text */
-  isBig: PropTypes.bool,
+  isBigFontSize: PropTypes.bool,
   /**Color of text */
-  isDashboard: PropTypes.bool,
+  color: PropTypes.string,
+  /**bool which decides about padding */
+  isCategoryInIdentifyPage: PropTypes.bool,
 };
 
 export default Filter;

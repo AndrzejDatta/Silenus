@@ -4,26 +4,37 @@ import PropTypes from "prop-types";
 import Filter from "components/atoms/Filter/Filter";
 import { StyledFilters } from "./Filters.styles";
 import Icon from "components/atoms/icon/icon.component";
-const Filters = ({ icons, isBig = true, isDashboard = true }) => {
+const Filters = ({ icons, isBigFontSize, color }) => {
   const {
     Dashboard: { filters },
   } = useContext(dataContext);
 
   const filterElements = filters?.map(({ name }, index) => {
     return (
-      <Filter key={index} text={name} isBig={isBig} isDashboard={isDashboard} />
+      <Filter
+        key={index}
+        text={name}
+        isBigFontSize={isBigFontSize}
+        color={color}
+      />
     );
   });
   return <StyledFilters>{filterElements}</StyledFilters>;
+};
+
+Filters.defaultProps = {
+  icons: "",
+  isBigFontSize: false,
+  color: "black",
 };
 
 Filters.propTypes = {
   // filters: PropTypes.array, docelowo bede przesyłać to
   icons: PropTypes.array,
   /**Size of text */
-  isBig: PropTypes.bool,
+  isBigFontSize: PropTypes.bool,
   /**Color of text */
-  isDashboard: PropTypes.bool,
+  color: PropTypes.bool,
 };
 
 export default Filters;

@@ -12,14 +12,18 @@ const CategorySection = ({ headline, filters }) => {
         text={text}
         icon={categoryIcons[src]}
         isBig={true}
-        isCategory
+        isCategoryInIdentifyPage
       />
     );
   });
   return (
     <StyledSection>
       {headline && (
-        <UserAccountText text={headline} isUser={false} color="#3AA688" />
+        <UserAccountText
+          text={headline}
+          isUseInUserAccountPage={false}
+          color="#3AA688"
+        />
       )}
       <StyledCategorySection>{categoryElements}</StyledCategorySection>
     </StyledSection>

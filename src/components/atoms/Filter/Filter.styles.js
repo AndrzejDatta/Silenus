@@ -12,15 +12,15 @@ export const StyledFilter = styled.button`
   min-width: 112px;
   margin: 0px 5px;
   max-width: 140px;
-  ${({ isCategory }) => isCategory && `padding:5px 10px`}
+  ${({ isCategoryInIdentifyPage }) =>
+    isCategoryInIdentifyPage && `padding:5px 10px`}
 `;
 
 export const StyledFilterText = styled.p`
   font-size: ${(props) =>
-    props.isBig
+    props.isBigFontSize
       ? ({ theme }) => theme.font.size.big
       : ({ theme }) => theme.font.size.medium};
-  color: ${(props) =>
-    props.isDashboard ? ({ theme }) => theme.color.fontGreen : "black"};
+  color: ${(props) => props.color};
   font-family: ${({ theme }) => theme.font.family.poppins};
 `;
