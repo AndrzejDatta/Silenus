@@ -21,7 +21,7 @@ const UserAccountOptions = ({ headline, options }) => {
         <UserAccountText
           text={option}
           isHeading={false}
-          isUser={false}
+          isUseInUserAccountPage={false}
           color={option === "Wyloguj się" ? "black" : "#3AA688"}
         />
       </StyledUserAccountOptions>
@@ -33,7 +33,7 @@ const UserAccountOptions = ({ headline, options }) => {
       <UserAccountText
         text={headline}
         isHeading={true}
-        isUser={true}
+        isUseInUserAccountPage={true}
         color="#3AA688"
       />
       {optionsElement}

@@ -13,7 +13,7 @@ const AddPot = (props) => {
     <MainTemplate inBackground>
       <Headline
         text={headings}
-        isBackground
+        isHeadlineTextOnBackground
         icon
         isMyPots
         isReturn

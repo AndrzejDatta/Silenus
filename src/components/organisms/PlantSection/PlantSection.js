@@ -31,7 +31,7 @@ const PlantSection = ({ headline = "Headline", isMyPots, isReturn, path }) => {
         isReturn={isReturn}
         returnPath={returnPath}
       />
-      {isMyPots && <Filters isBig />}
+      {isMyPots && <Filters isBigFontSize color="#3AA688" />}
       {isMyPots && <Headline text={"Moje ulubione"} />}
       <StyledPlantElementsSection>{plantElements}</StyledPlantElementsSection>
     </StyledPlantSection>

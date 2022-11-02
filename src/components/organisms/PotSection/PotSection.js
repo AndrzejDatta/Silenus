@@ -7,7 +7,7 @@ import Headline from "components/molecules/Headline/Headline";
 
 // import Modal from "../Modal/Modal";
 // import useModal from "../Modal/useModal";
-const PotSection = ({ headline = "Headline", isDashboard, path, isReturn }) => {
+const PotSection = ({ headline = "Headline", path, isReturn }) => {
   const {
     Dashboard: { plants },
     MojeDoniczki: { returnPath, toPath },
@@ -32,7 +32,7 @@ const PotSection = ({ headline = "Headline", isDashboard, path, isReturn }) => {
     <StyledPotSection>
       <Headline
         text={headline}
-        isBackground
+        isHeadlineTextOnBackground
         icon
         path={path ? path : toPath}
         returnPath={returnPath}

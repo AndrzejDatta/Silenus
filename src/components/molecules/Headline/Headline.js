@@ -8,7 +8,7 @@ import returnSvg from "assets/icons/return.svg";
 import Link from "components/atoms/Link/Link";
 const Headline = ({
   text = "text",
-  isBackground,
+  isHeadlineTextOnBackground,
   isMyPots,
   icon,
   isReturn,
@@ -20,16 +20,19 @@ const Headline = ({
       {isReturn && (
         <Link
           icon={returnSvg}
-          color={isBackground ? "white" : "green"}
+          color={isHeadlineTextOnBackground ? "white" : "green"}
           size="tiny"
           path={returnPath}
         />
       )}
-      <HeadlineText text={text} isBackground={isBackground} />
+      <HeadlineText
+        text={text}
+        isHeadlineTextOnBackground={isHeadlineTextOnBackground}
+      />
       {icon && (
         <Link
           icon={isMyPots ? plus : arrow}
-          color={isBackground ? "white" : "green"}
+          color={isHeadlineTextOnBackground ? "white" : "green"}
           size="tiny"
           path={path}
         />
@@ -42,7 +45,7 @@ Headline.propTypes = {
   /** text in headline*/
   text: PropTypes.string.isRequired,
   /**color of text */
-  isBackground: PropTypes.bool,
+  isHeadlineTextOnBackground: PropTypes.bool,
   /**bool which decides about svg (arrow or plus) */
   isMyPots: PropTypes.bool,
   /**icon in headline */

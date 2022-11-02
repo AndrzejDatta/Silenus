@@ -7,7 +7,7 @@ const DetailsText = ({ headline = "Headline", filterText }) => {
   return (
     <StyledDetailsText>
       <HeadlineText text={headline} />
-      <Filter text={filterText} isBig />
+      <Filter text={filterText} isBigFontSize />
     </StyledDetailsText>
   );
 };

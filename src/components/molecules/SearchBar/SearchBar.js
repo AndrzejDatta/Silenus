@@ -21,7 +21,7 @@ const SearchBar = ({ isSearchBar }) => {
         icon={scan}
         size="tiny"
         color="black"
-        isRight={true}
+        isOnRightSide={true}
         isSearchBar={true}
       />
     </StyledSearchBar>

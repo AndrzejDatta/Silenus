@@ -11,7 +11,7 @@ const CategorySection = ({ headline, filters }) => {
         key={index}
         text={text}
         icon={categoryIcons[src]}
-        isBig={true}
+        isBigFontSize={true}
         isCategoryInIdentifyPage
       />
     );

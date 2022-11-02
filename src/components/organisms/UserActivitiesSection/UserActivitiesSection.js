@@ -12,7 +12,6 @@ import ActivityText from "components/atoms/ActivityText/ActivityText";
 const UserActivitiesSection = ({
   headline = "Headline",
   isCalendar,
-  isDashboard,
   icon,
   path,
 }) => {
@@ -38,7 +37,7 @@ const UserActivitiesSection = ({
   return (
     <StyledUserActivitySection>
       {!isCalendar && <Headline text={headline} icon path={path} />}
-      {!isCalendar && <Filters isBig />}
+      {!isCalendar && <Filters isBigFontSize color="#3AA688" />}
       {activitiesElement}
     </StyledUserActivitySection>
   );
