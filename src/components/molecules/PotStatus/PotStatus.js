@@ -42,6 +42,16 @@ const PotStatus = ({ state, name, click }) => {
   return element;
 };
 
+PotStatus.defaultProps = {
+  name: "Name",
+  state: {
+    src: "plant",
+    text: "text",
+  },
+
+  click: () => {},
+};
+
 PotStatus.propTypes = {
   /**name of plant */
   name: PropTypes.string.isRequired,

@@ -44,6 +44,17 @@ const UserAccountStatus = ({ name, status }) => {
     </StyledUserAccountSection>
   );
 };
+UserAccountStatus.defaultProps = {
+  name: "Name",
+
+  status: [
+    {
+      name: "Name",
+      number: 1,
+    },
+  ],
+};
+
 UserAccountStatus.propTypes = {
   /**user name */
   name: PropTypes.string.isRequired,
