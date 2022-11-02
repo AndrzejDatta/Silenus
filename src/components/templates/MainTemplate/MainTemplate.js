@@ -22,10 +22,30 @@ const MainTemplate = ({
       {inBackground && <StyledGradientCircle />}
       {isIdentifyPlant && (
         <>
-          <Icon icon={leaf} size="great" color="lightGreen" location={4} />
-          <Icon icon={leaf} size="big" color="lightGreen" location={3} />
-          <Icon icon={leaf} size="large" color="lightGreen" location={2} />
-          <Icon icon={leaf} size="great" color="lightGreen" location={1} />
+          <Icon
+            icon={leaf}
+            size="great"
+            color="lightGreen"
+            locationLeaftInBackground={4}
+          />
+          <Icon
+            icon={leaf}
+            size="big"
+            color="lightGreen"
+            locationLeaftInBackground={3}
+          />
+          <Icon
+            icon={leaf}
+            size="large"
+            color="lightGreen"
+            locationLeaftInBackground={2}
+          />
+          <Icon
+            icon={leaf}
+            size="great"
+            color="lightGreen"
+            locationLeaftInBackground={1}
+          />
         </>
       )}
       {children}
