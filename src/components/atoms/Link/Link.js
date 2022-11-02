@@ -15,6 +15,21 @@ const Link = ({ icon, size, color, click, path, isDetailsPage }) => {
   );
 };
 
+Link.defaultProps = {
+  /**size of text inSubtitle atom*/
+  size: "small",
+  /**color of Subtitle atom*/
+  color: "green",
+  /** icon svg injection*/
+  icon: "",
+  /** click is a function */
+  click: () => {},
+  /** path url to page */
+  path: "/dashboard",
+  /** setting of return arrow  */
+  isDetailsPage: false,
+};
+
 Link.propTypes = {
   /**size of text inSubtitle atom*/
   size: PropTypes.string.isRequired,

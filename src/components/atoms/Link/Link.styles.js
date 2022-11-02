@@ -57,7 +57,7 @@ export const StyledIcon = styled.img`
     }
   }};
   ${(props) => {
-    switch (props.location) {
+    switch (props.locationLeaftInBackground) {
       case 1:
         return `
         top:20%;
@@ -84,7 +84,7 @@ export const StyledIcon = styled.img`
         `;
       default:
     }
-    if (props.location === 1) {
+    if (props.locationLeaftInBackground === 1) {
       return `
       top:20%;
       left:-5%;
@@ -98,7 +98,7 @@ export const StyledIcon = styled.img`
   }};
 
   ${(props) => {
-    if (props.isSearchBar && props.isRight) {
+    if (props.isSearchBar && props.isOnRightSide) {
       return `
       position:absolute;
       right:10px;
