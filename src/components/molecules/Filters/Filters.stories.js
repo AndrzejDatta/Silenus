@@ -1,15 +1,39 @@
-import React from 'react';
-import { storiesName } from 'helpers/storiesName';
-import FilterStories from 'components/atoms/Filter/Filter.stories';
-
+import React from "react";
+import { storiesName } from "helpers/storiesName";
+import Filters from "./Filters";
 export default {
-  title: `${storiesName.molecules}FilterStories`,
-  component: FilterStories,
-  argTypes: {},
+  title: `${storiesName.molecules}Filters`,
+  component: Filters,
+  argTypes: {
+    isBigFontSize: {
+      options: [true, false],
+      control: { type: "radio" },
+    },
+  },
 };
 
-const Template = (args) => <FilterStories {...args} />;
+const Template = (args) => <Filters {...args} />;
 
 export const Default = Template.bind({});
 
-Default.args = {};
+Default.args = {
+  filters: [
+    {
+      name: "Text",
+      src: "",
+    },
+    {
+      name: "Nawożenie",
+      src: "",
+    },
+    {
+      name: "Podlewanie",
+      src: "",
+    },
+  ],
+  color: "black",
+  icons: "",
+  isBigFontSize: false,
+};
+
+//TODO: nothing render, fix it

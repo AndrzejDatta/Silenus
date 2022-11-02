@@ -34,7 +34,7 @@ Filters.propTypes = {
   /**Size of text */
   isBigFontSize: PropTypes.bool,
   /**Color of text */
-  color: PropTypes.bool,
+  color: PropTypes.string,
 };
 
 export default Filters;
