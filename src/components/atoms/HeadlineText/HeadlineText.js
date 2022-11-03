@@ -16,7 +16,7 @@ HeadlineText.defaultProps = {
 HeadlineText.propTypes = {
   /** text of headline */
   text: PropTypes.string.isRequired,
-  /** bool which decides about color (white (if inBackground) or green) */
+  /** bool which decides about color (white (if isStyledBackground) or green) */
   isHeadlineTextOnBackground: PropTypes.bool,
 };
 

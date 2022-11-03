@@ -56,7 +56,7 @@ export const StyledIcon = styled.img`
     }
   }};
   ${(props) => {
-    switch (props.locationLeaftInBackground) {
+    switch (props.locationLeaftisStyledBackground) {
       case 1:
         return `
         top:20%;

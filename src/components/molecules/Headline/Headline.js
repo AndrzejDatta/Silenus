@@ -9,15 +9,15 @@ import Link from "components/atoms/Link/Link";
 const Headline = ({
   text = "text",
   isHeadlineTextOnBackground,
-  isMyPots,
+  isMyPotsPage,
   icon,
-  isReturn,
+  isPossibleToReturn,
   path,
   returnPath,
 }) => {
   return (
     <StyledHeadline>
-      {isReturn && (
+      {isPossibleToReturn && (
         <Link
           icon={returnSvg}
           color={isHeadlineTextOnBackground ? "white" : "green"}
@@ -31,7 +31,7 @@ const Headline = ({
       />
       {icon && (
         <Link
-          icon={isMyPots ? plus : arrow}
+          icon={isMyPotsPage ? plus : arrow}
           color={isHeadlineTextOnBackground ? "white" : "green"}
           size="tiny"
           path={path}
@@ -47,11 +47,11 @@ Headline.propTypes = {
   /**color of text */
   isHeadlineTextOnBackground: PropTypes.bool,
   /**bool which decides about svg (arrow or plus) */
-  isMyPots: PropTypes.bool,
+  isMyPotsPage: PropTypes.bool,
   /**icon in headline */
   icon: PropTypes.string,
   /**bool decides about showing return arrow */
-  isReturn: PropTypes.bool,
+  isPossibleToReturn: PropTypes.bool,
   /**path to return to page */
   returnPath: PropTypes.string,
 };

@@ -49,7 +49,11 @@ UserAccountStatus.defaultProps = {
 
   status: [
     {
-      name: "Name",
+      name: "Pots",
+      number: 1,
+    },
+    {
+      name: "Plants",
       number: 1,
     },
   ],

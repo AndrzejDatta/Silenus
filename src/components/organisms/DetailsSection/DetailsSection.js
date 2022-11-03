@@ -5,12 +5,11 @@ import CategorySection from "../CategorySection/CategorySection";
 import { StyledPotDetailsSection } from "./DetailsSection.styles";
 import DetailParameters from "components/molecules/DetailParameters/DetailParameters";
 
-const PotDetailsSection = (isPlant) => {
+const PotDetailsSection = ({ isPlant }) => {
   const {
     Details: { pot, plant, calendar },
   } = useContext(dataContext);
 
-  console.log(calendar);
   return (
     <StyledPotDetailsSection>
       {!isPlant && <DetailParameters details={pot} />}
@@ -34,6 +33,12 @@ const PotDetailsSection = (isPlant) => {
   );
 };
 
-PotDetailsSection.propTypes = {};
+PotDetailsSection.defaultProps = {
+  isPlant: false,
+};
+PotDetailsSection.propTypes = {
+  /**bool which decides about showing some components, says on which page user is  */
+  isPlant: PropTypes.bool,
+};
 
 export default PotDetailsSection;
