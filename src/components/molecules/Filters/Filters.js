@@ -23,7 +23,7 @@ const Filters = ({ icons, isBigFontSize, color }) => {
 };
 
 Filters.defaultProps = {
-  icons: "",
+  icons: [],
   isBigFontSize: false,
   color: "black",
 };

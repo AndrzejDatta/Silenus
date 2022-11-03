@@ -41,6 +41,15 @@ const Headline = ({
   );
 };
 
+Headline.defaultProps = {
+  text: "text",
+  isHeadlineTextOnBackground: false,
+  isMyPotsPage: false,
+  icon: false,
+  isPossibleToReturn: false,
+  returnPath: "/dashboard",
+};
+
 Headline.propTypes = {
   /** text in headline*/
   text: PropTypes.string.isRequired,
@@ -49,7 +58,7 @@ Headline.propTypes = {
   /**bool which decides about svg (arrow or plus) */
   isMyPotsPage: PropTypes.bool,
   /**icon in headline */
-  icon: PropTypes.string,
+  icon: PropTypes.bool,
   /**bool decides about showing return arrow */
   isPossibleToReturn: PropTypes.bool,
   /**path to return to page */
