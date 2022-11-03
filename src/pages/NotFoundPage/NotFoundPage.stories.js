@@ -1,14 +1,14 @@
 import React from "react";
-import UserAccount from "pages/UserAccount/UserAccount";
+import NotFoundPage from "pages/NotFoundPage/NotFoundPage";
 import { storiesName } from "helpers/storiesName";
 import { MemoryRouter } from "react-router";
 export default {
-  title: `${storiesName.pages}UserAccount`,
-  component: UserAccount,
+  title: `${storiesName.pages}NotFoundPage`,
+  component: NotFoundPage,
 };
 const Template = (args) => (
   <MemoryRouter>
-    <UserAccount {...args} />
+    <NotFoundPage {...args} />
   </MemoryRouter>
 );
 

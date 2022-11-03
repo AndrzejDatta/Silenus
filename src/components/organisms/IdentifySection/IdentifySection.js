@@ -5,7 +5,7 @@ import camera from "assets/icons/navIcons/camera.svg";
 import Icon from "components/atoms/icon/icon.component";
 import UserAccountText from "components/atoms/UserAccountText/UserAccountText";
 import CustomButton from "components/atoms/customButton/customButton.component";
-const IdentifySection = (props) => {
+const IdentifySection = () => {
   const {
     ZidentyfikujRośline: { headings, buttonText },
   } = useContext(dataContext);

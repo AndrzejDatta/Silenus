@@ -15,10 +15,10 @@ const Calendar = (props) => {
   return (
     <MainTemplate>
       <StyledCalendarWrapper>
-        <Headline text={headings} isHeading isCalendar />
+        <Headline text={headings} isHeading isCalendarPage />
         <DateSection />
         <Filters color="#3AA688" />
-        <UserActivitiesSection isCalendar />
+        <UserActivitiesSection isCalendarPage />
       </StyledCalendarWrapper>
     </MainTemplate>
   );

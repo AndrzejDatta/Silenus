@@ -22,6 +22,17 @@ const HeadlineDetailSection = ({ url, headline, filterText }) => {
   );
 };
 
-HeadlineDetailSection.propTypes = {};
+HeadlineDetailSection.propTypes = {
+  url: "",
+  headline: "Headline",
+  filterText: "filterText",
+};
+
+HeadlineDetailSection.propTypes = {
+  /** */
+  url: PropTypes.string,
+  headline: PropTypes.string,
+  filterText: PropTypes.string,
+};
 
 export default HeadlineDetailSection;

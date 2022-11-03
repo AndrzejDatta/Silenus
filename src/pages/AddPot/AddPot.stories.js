@@ -1,14 +1,14 @@
 import React from "react";
-import UserAccount from "pages/UserAccount/UserAccount";
+import AddPot from "pages/AddPot/AddPot";
 import { storiesName } from "helpers/storiesName";
 import { MemoryRouter } from "react-router";
 export default {
-  title: `${storiesName.pages}UserAccount`,
-  component: UserAccount,
+  title: `${storiesName.pages}AddPot`,
+  component: AddPot,
 };
 const Template = (args) => (
   <MemoryRouter>
-    <UserAccount {...args} />
+    <AddPot {...args} />
   </MemoryRouter>
 );
 

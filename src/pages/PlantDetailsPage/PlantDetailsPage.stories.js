@@ -1,14 +1,14 @@
 import React from "react";
-import UserAccount from "pages/UserAccount/UserAccount";
+import PlantDetailsPage from "pages/PlantDetailsPage/PlantDetailsPage";
 import { storiesName } from "helpers/storiesName";
 import { MemoryRouter } from "react-router";
 export default {
-  title: `${storiesName.pages}UserAccount`,
-  component: UserAccount,
+  title: `${storiesName.pages}PlantDetailsPage`,
+  component: PlantDetailsPage,
 };
 const Template = (args) => (
   <MemoryRouter>
-    <UserAccount {...args} />
+    <PlantDetailsPage {...args} />
   </MemoryRouter>
 );
 

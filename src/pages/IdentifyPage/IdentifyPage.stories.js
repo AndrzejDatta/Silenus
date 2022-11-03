@@ -1,14 +1,14 @@
 import React from "react";
-import UserAccount from "pages/UserAccount/UserAccount";
+import IdentifyPage from "pages/IdentifyPage/IdentifyPage";
 import { storiesName } from "helpers/storiesName";
 import { MemoryRouter } from "react-router";
 export default {
-  title: `${storiesName.pages}UserAccount`,
-  component: UserAccount,
+  title: `${storiesName.pages}IdentifyPage`,
+  component: IdentifyPage,
 };
 const Template = (args) => (
   <MemoryRouter>
-    <UserAccount {...args} />
+    <IdentifyPage {...args} />
   </MemoryRouter>
 );
 

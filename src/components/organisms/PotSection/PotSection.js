@@ -7,7 +7,7 @@ import Headline from "components/molecules/Headline/Headline";
 
 // import Modal from "../Modal/Modal";
 // import useModal from "../Modal/useModal";
-const PotSection = ({ headline = "Headline", path, isReturn }) => {
+const PotSection = ({ headline, path, isPossibleToReturn }) => {
   const {
     Dashboard: { plants },
     MojeDoniczki: { returnPath, toPath },
@@ -36,15 +36,26 @@ const PotSection = ({ headline = "Headline", path, isReturn }) => {
         icon
         path={path ? path : toPath}
         returnPath={returnPath}
-        isReturn={isReturn} //name to change
+        isPossibleToReturn={isPossibleToReturn} //name to change
       />
       {elements}
     </StyledPotSection>
   );
 };
 
+PotSection.defaultProps = {
+  headline: "Headline",
+  isPossibleToReturn: false,
+  path: "/dashboard",
+};
+
 PotSection.propTypes = {
+  /**text in headline */
   headline: PropTypes.string.isRequired,
+  /** bool which says that this page is MyPotsPage*/
+  isPossibleToReturn: PropTypes.bool,
+  /** path to next page*/
+  path: PropTypes.string,
 };
 
 export default PotSection;

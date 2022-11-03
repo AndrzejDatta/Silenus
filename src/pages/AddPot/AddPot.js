@@ -1,5 +1,4 @@
 import React, { useContext } from "react";
-import PropTypes from "prop-types";
 import MainTemplate from "components/templates/MainTemplate/MainTemplate";
 import { dataContext } from "providers/DataProvider";
 import Headline from "components/molecules/Headline/Headline";
@@ -10,20 +9,18 @@ const AddPot = (props) => {
   } = useContext(dataContext);
 
   return (
-    <MainTemplate inBackground>
+    <MainTemplate isStyledBackground>
       <Headline
         text={headings}
         isHeadlineTextOnBackground
         icon
         isMyPots
-        isReturn
+        isPossibleToReturn
         returnPath={returnPath}
       />
       <AddSection />
     </MainTemplate>
   );
 };
-
-AddPot.propTypes = {};
 
 export default AddPot;

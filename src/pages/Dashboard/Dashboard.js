@@ -12,7 +12,7 @@ const Dashboard = () => {
   } = useContext(dataContext);
 
   return (
-    <MainTemplate inBackground={true}>
+    <MainTemplate isStyledBackground={true}>
       <Suspense fallback={<div>Loading</div>}>
         <SearchBar isSearchBar={true} />
         <PotSection headline={headings[0]} path={toPath[0]} />

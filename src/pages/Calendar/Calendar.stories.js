@@ -1,14 +1,14 @@
 import React from "react";
-import UserAccount from "pages/UserAccount/UserAccount";
+import Calendar from "pages/Calendar/Calendar";
 import { storiesName } from "helpers/storiesName";
 import { MemoryRouter } from "react-router";
 export default {
-  title: `${storiesName.pages}UserAccount`,
-  component: UserAccount,
+  title: `${storiesName.pages}Calendar`,
+  component: Calendar,
 };
 const Template = (args) => (
   <MemoryRouter>
-    <UserAccount {...args} />
+    <Calendar {...args} />
   </MemoryRouter>
 );
 

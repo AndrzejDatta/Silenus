@@ -12,7 +12,7 @@ const IdentifyPage = (props) => {
   } = useContext(dataContext);
 
   return (
-    <MainTemplate isIdentifyPlant>
+    <MainTemplate isIdentifyPlantPage>
       <SearchBar isSearchBar />
       <IdentifySection />
       <CategorySection headline={headings[1]} filters={filters} />

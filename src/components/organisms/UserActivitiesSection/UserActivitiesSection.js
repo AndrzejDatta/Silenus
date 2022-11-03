@@ -9,12 +9,7 @@ import Headline from "components/molecules/Headline/Headline";
 import Filters from "components/molecules/Filters/Filters";
 import { dataContext } from "providers/DataProvider";
 import ActivityText from "components/atoms/ActivityText/ActivityText";
-const UserActivitiesSection = ({
-  headline = "Headline",
-  isCalendar,
-  icon,
-  path,
-}) => {
+const UserActivitiesSection = ({ headline, isCalendarPage, icon, path }) => {
   const {
     Dashboard: { activities },
   } = useContext(dataContext);
@@ -28,7 +23,7 @@ const UserActivitiesSection = ({
             name={name}
             src={src}
             activities={activity}
-            isCalendar={isCalendar}
+            isCalendarPage={isCalendarPage}
           />
         </StyledUserActivityElement>
       );
@@ -36,20 +31,29 @@ const UserActivitiesSection = ({
   );
   return (
     <StyledUserActivitySection>
-      {!isCalendar && <Headline text={headline} icon path={path} />}
-      {!isCalendar && <Filters isBigFontSize color="#3AA688" />}
+      {!isCalendarPage && <Headline text={headline} icon path={path} />}
+      {!isCalendarPage && <Filters isBigFontSize color="#3AA688" />}
       {activitiesElement}
     </StyledUserActivitySection>
   );
 };
 
 UserActivitiesSection.propTypes = {
+  /** */
   headline: PropTypes.string.isRequired,
-  isCalendar: PropTypes.bool,
+  /** */
+  isCalendarPage: PropTypes.bool,
+  /** */
+  icon: PropTypes.string,
+  /** */
+  path: PropTypes.string,
 };
 
 UserActivitiesSection.defaultProps = {
   headline: "Headline",
+  isCalendarPagePage: false,
+  icon: "",
+  path: "/dashbaord",
 };
 
 export default UserActivitiesSection;

@@ -10,41 +10,41 @@ import leaf from "assets/icons/leaf.svg";
 
 const MainTemplate = ({
   children,
-  inBackground,
-  isIdentifyPlant,
+  isStyledBackground,
+  isIdentifyPlantPage,
   isDetailsPage,
 }) => {
   return (
     <StyledMainTemplate
-      isIdentifyPlant={isIdentifyPlant}
+      isIdentifyPlantPage={isIdentifyPlantPage}
       isDetailsPage={isDetailsPage}
     >
-      {inBackground && <StyledGradientCircle />}
-      {isIdentifyPlant && (
+      {isStyledBackground && <StyledGradientCircle />}
+      {isIdentifyPlantPage && (
         <>
           <Icon
             icon={leaf}
             size="great"
             color="lightGreen"
-            locationLeaftInBackground={4}
+            locationLeaftisStyledBackground={4}
           />
           <Icon
             icon={leaf}
             size="big"
             color="lightGreen"
-            locationLeaftInBackground={3}
+            locationLeaftisStyledBackground={3}
           />
           <Icon
             icon={leaf}
             size="large"
             color="lightGreen"
-            locationLeaftInBackground={2}
+            locationLeaftisStyledBackground={2}
           />
           <Icon
             icon={leaf}
             size="great"
             color="lightGreen"
-            locationLeaftInBackground={1}
+            locationLeaftisStyledBackground={1}
           />
         </>
       )}
@@ -55,8 +55,21 @@ const MainTemplate = ({
   );
 };
 
+MainTemplate.defaultProps = {
+  isStyledBackground: false,
+  isIdentifyPlantPage: false,
+  isDetailsPage: false,
+};
+
 MainTemplate.propTypes = {
-  inBackground: PropTypes.bool,
+  /** children*/
+  children: PropTypes.node.isRequired,
+  /** bool which decides about be or not be rounded shape in background */
+  isStyledBackground: PropTypes.bool,
+  /** bool which says it is or isn't IndentifyPlantPage*/
+  isIdentifyPlantPage: PropTypes.bool,
+  /** bool which says it is or isn't DetailsPage*/
+  isDetailsPage: PropTypes.bool,
 };
 
 export default MainTemplate;

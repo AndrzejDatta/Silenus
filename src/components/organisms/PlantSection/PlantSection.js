@@ -9,7 +9,7 @@ import {
 import Headline from "components/molecules/Headline/Headline";
 import { dataContext } from "providers/DataProvider";
 import Filters from "components/molecules/Filters/Filters";
-const PlantSection = ({ headline = "Headline", isMyPots, isReturn, path }) => {
+const PlantSection = ({ headline, isMyPotsPage, isPossibleToReturn, path }) => {
   const {
     Dashboard: { plants },
     MojeRośliny: { returnPath },
@@ -28,18 +28,32 @@ const PlantSection = ({ headline = "Headline", isMyPots, isReturn, path }) => {
         text={headline}
         icon
         path={path}
-        isReturn={isReturn}
+        isPossibleToReturn={isPossibleToReturn}
         returnPath={returnPath}
       />
-      {isMyPots && <Filters isBigFontSize color="#3AA688" />}
-      {isMyPots && <Headline text={"Moje ulubione"} />}
+      {isMyPotsPage && <Filters isBigFontSize color="#3AA688" />}
+      {isMyPotsPage && <Headline text={"Moje ulubione"} />}
       <StyledPlantElementsSection>{plantElements}</StyledPlantElementsSection>
     </StyledPlantSection>
   );
 };
 
+PlantSection.defaultProps = {
+  headline: "Headline",
+  isMyPotsPage: false,
+  isPossibleToReturn: false,
+  path: "/dashboard",
+};
+
 PlantSection.propTypes = {
+  /**text in headline */
   headline: PropTypes.string.isRequired,
+  /** bool which says that this page is MyPotsPage*/
+  isMyPotsPage: PropTypes.bool,
+  /** bool which says that is possible to return to last page*/
+  isPossibleToReturn: PropTypes.bool,
+  /** path to next page*/
+  path: PropTypes.string,
 };
 
 export default PlantSection;
