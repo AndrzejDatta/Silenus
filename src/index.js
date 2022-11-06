@@ -4,14 +4,18 @@ import { AppStyles } from "providers/AppStyles";
 import App from "./App";
 import { DataProvider } from "providers/DataProvider";
 import * as serviceWorkerRegistration from "./serviceWorkerRegistration";
-const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(
-  <React.StrictMode>
-    <AppStyles>
-      <DataProvider>
-        <App />
-      </DataProvider>
-    </AppStyles>
-  </React.StrictMode>
-);
-serviceWorkerRegistration.register();
+import { worker } from "__mocks__/browser";
+
+worker.start().then(() => {
+  const root = ReactDOM.createRoot(document.getElementById("root"));
+  root.render(
+    <React.StrictMode>
+      <AppStyles>
+        <DataProvider>
+          <App />
+        </DataProvider>
+      </AppStyles>
+    </React.StrictMode>
+  );
+  serviceWorkerRegistration.register();
+});
