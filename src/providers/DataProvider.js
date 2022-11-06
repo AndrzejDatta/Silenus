@@ -1,5 +1,6 @@
-import { createContext, useState } from "react";
+import { createContext, useState, useEffect } from "react";
 import { dataPL } from "assets/data/data";
+import axios from "axios";
 
 export const dataContext = createContext({
   StartPage: {},
@@ -19,6 +20,7 @@ export const dataContext = createContext({
   potIcons: {},
   categoryIcons: {},
   navIconsColor: [],
+  plantsData: {},
   setNavIconColor: () => {},
   changeColor: () => {},
   importAll: () => {},
@@ -40,6 +42,18 @@ const objectName = [
 ];
 
 export const DataProvider = ({ children }) => {
+  const [plantsData, setPlantsData] = useState([]);
+  useEffect(() => {
+    axios
+      .get("/plants")
+      .then((data) => setPlantsData(data.data))
+      .then((data) => console.log(data.data))
+      .catch(function (error) {
+        console.log(error.toJSON());
+      });
+  }, []);
+
+  console.log(plantsData);
   for (let i = 0; i < dataPL.length; i++) {
     objectName[i] = { ...dataPL[i] };
   }
@@ -146,6 +160,7 @@ export const DataProvider = ({ children }) => {
         potIcons,
         categoryIcons,
         navIconsColor,
+        plantsData,
         setNavIconColor,
         changeColor,
         importAll,

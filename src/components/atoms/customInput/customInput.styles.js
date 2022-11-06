@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const StyledInput = styled.input`
   ${({ color, fontSize }) => {
@@ -7,19 +7,19 @@ export const StyledInput = styled.input`
             `;
   }};
   ${({ size }) => {
-    if (size === 'medium') {
+    if (size === "medium") {
       return `
         width: 285px;
         height: 45px;
         line-height: 20px;
         `;
-    } else if (size === 'small') {
+    } else if (size === "small") {
       return `
         width: 285px;
         height: 22x;
         line-height: 20px;
         `;
-    } else if (size === 'tiny') {
+    } else if (size === "tiny") {
       return `
         width: 35px;
         height: 22px;
@@ -33,15 +33,15 @@ export const StyledInput = styled.input`
   border-radius: 10px;
   width: 100%;
 
-  ${({ isToogle }) => {
-    if (isToogle) {
+  ${({ isToggleInput }) => {
+    if (isToggleInput) {
       return `
     display: none;
             `;
     }
   }};
   
-  isToogle
+  isToggleInput
   ${({ isSearchBar }) => {
     if (isSearchBar) {
       return `

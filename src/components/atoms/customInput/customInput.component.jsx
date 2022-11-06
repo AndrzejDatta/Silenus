@@ -2,7 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { StyledInput } from './customInput.styles';
 
-const CustomInput = ({ type, placeholder, color, size, fontSize, isSearchBar,  isToogle }) => {
+const CustomInput = ({ type, placeholder, color, size, fontSize, isSearchBar,  isToggleInput, typing }) => {
+  
   return (
     <StyledInput
       type={type}
@@ -11,9 +12,21 @@ const CustomInput = ({ type, placeholder, color, size, fontSize, isSearchBar,  i
       size={size}
       fontSize={fontSize}
       isSearchBar={isSearchBar}
-      isToogle={isToogle}
+      isToggleInput={isToggleInput}
+      onChange={typing}
     />
   );
+};
+
+CustomInput.defaultProps = {
+  type: 'text',
+  placeholder:'text' ,
+  size: 'small',
+  fontSize:'14px' ,
+  isSearchBar:false,
+  isToggleInput:false,
+  typing:()=>{},
+  
 };
 
 CustomInput.propTypes = {
@@ -27,6 +40,11 @@ CustomInput.propTypes = {
   fontSize: PropTypes.string.isRequired,
    /** bool whoch decides about being icon in input*/
   isSearchBar:PropTypes.bool,
+   /** bool whoch decides about being toggle switch in UserActivity in Calendar*/
+   isToggleInput:PropTypes.bool,
+   /** function to search plants (onChnage event)*/
+   typing:PropTypes.func,
+
 };
 
 export default CustomInput;
