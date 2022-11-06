@@ -4,7 +4,7 @@ import { StyledIcon } from './icon.styles';
 import plant from 'assets/icons/categoryIcons/plant.svg'
 
 const Icon = ({ icon, size, color,click,isSearchBar,isOnRightSide , locationLeaftisStyledBackground}) => {
-  return <StyledIcon src={icon} size={size} color={color} onClick={click} isSearchBar={isSearchBar} isOnRightSide={isOnRightSide} locationLeaftisStyledBackground={locationLeaftisStyledBackground}/>;
+  return <StyledIcon alt="icon" src={icon} size={size} color={color} onClick={click} isSearchBar={isSearchBar} isOnRightSide={isOnRightSide} locationLeaftisStyledBackground={locationLeaftisStyledBackground}/>;
 };
 
 Icon.defaultProps = {
