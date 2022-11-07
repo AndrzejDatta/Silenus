@@ -23,3 +23,9 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+Cypress.Commands.add("clickElement", (datacy) => {
+  cy.get(`[data-cy='${datacy}']`).first().click();
+});
+Cypress.Commands.add("clickNavElement", (datacy) => {
+  cy.get(`[data-cy='${datacy}Nav']`).first().click();
+});
