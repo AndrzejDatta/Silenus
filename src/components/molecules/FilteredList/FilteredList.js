@@ -1,25 +1,32 @@
-import React, { useContext } from "react";
+import React, { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 import FilteredItem from "components/atoms/FilteredItem/FilteredItem";
 import { StyledFilteredList } from "./FilteredList.styles";
-import { dataContext } from "providers/DataProvider";
+import axios from "axios";
 const FilteredList = ({ query }) => {
-  const {
-    plantsData: { plants },
-  } = useContext(dataContext);
+  const [plantsData, setPlantsData] = useState([]);
+  useEffect(() => {
+    axios
+      .get("/plants")
+      .then((data) => setPlantsData(data.data))
+      .then((data) => console.log(data.data))
+      .catch(function (error) {
+        console.log(error);
+      });
+  }, []);
 
   console.log(query);
-  const searchElementsByCoomon = plants?.map(({ common }) => {
+  const searchElementsByCommon = plantsData.plants?.map(({ common }, index) => {
     if (common.toLowerCase().includes(query.toLowerCase())) {
-      return <FilteredItem filteredText={common} />;
+      return <FilteredItem filteredText={common} key={index} />;
     }
   });
 
-  return <StyledFilteredList>{searchElementsByCoomon}</StyledFilteredList>;
+  return <StyledFilteredList>{searchElementsByCommon}</StyledFilteredList>;
 };
 
 FilteredList.defaultProps = {
-  query: "query",
+  query: "",
 };
 
 FilteredList.propTypes = {
