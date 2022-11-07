@@ -8,7 +8,7 @@ import DetailsText from "components/molecules/DetailsText/DetailsText";
 import returnSvg from "assets/icons/return.svg";
 const HeadlineDetailSection = ({ url, headline, filterText }) => {
   return (
-    <StyledDetailsHeadlineSection>
+    <StyledDetailsHeadlineSection data-cy="dashboard">
       <Link
         icon={returnSvg}
         color={"green"}

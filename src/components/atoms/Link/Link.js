@@ -10,6 +10,7 @@ const Link = ({ icon, size, color, click, path, isDetailsPage }) => {
         color={color}
         onClick={click}
         isDetailsPage={isDetailsPage}
+        data-cy={path}
       />
     </StyledLinkElement>
   );

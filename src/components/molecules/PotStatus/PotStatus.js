@@ -13,7 +13,7 @@ const PotStatus = ({ state, name, click }) => {
   const { potIcons } = useContext(dataContext);
 
   const element = (
-    <StyledPotStatus onClick={click}>
+    <StyledPotStatus onClick={click} data-cy="potdetails">
       <Img size="small" url={"1"} />
       <StyledPotStatusInfo>
         <UserAccountText

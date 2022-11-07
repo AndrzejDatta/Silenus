@@ -1,4 +1,4 @@
-import React, { useContext, useCallback } from "react";
+import React, { useContext } from "react";
 import Icon from "components/atoms/icon/icon.component";
 import { dataContext } from "providers/DataProvider";
 import { StyledNavbar, StyledNavbarElement } from "./Navbar.styles";
@@ -15,7 +15,8 @@ const Navbar = () => {
           icon={navIcons[src]}
           size="medium"
           color={isClicked ? "green" : "black"}
-          click={() => changeColor(name, src)}
+          click={() => changeColor(name)}
+          dataId={name === "plant" ? "dashboardNav" : `${name}Nav`}
         />
       </StyledNavbarElement>
     );

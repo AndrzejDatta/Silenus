@@ -1,10 +1,10 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import Img from 'components/atoms/Img/Img';
-import { StyledPlantText } from './MyPlant.styles';
-const MyPlant = ({ src, name = 'Plant' }) => {
+import React from "react";
+import PropTypes from "prop-types";
+import Img from "components/atoms/Img/Img";
+import { StyledPlantText } from "./MyPlant.styles";
+const MyPlant = ({ src, name = "Plant", dataId }) => {
   return (
-    <Img url={src} size="small">
+    <Img url={src} size="small" dataId={dataId}>
       {/* <StyledPlantText>{name}</StyledPlantText> */}
     </Img>
   );
