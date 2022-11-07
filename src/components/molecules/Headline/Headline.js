@@ -7,7 +7,7 @@ import plus from "assets/icons/plus.svg";
 import returnSvg from "assets/icons/return.svg";
 import Link from "components/atoms/Link/Link";
 const Headline = ({
-  text = "text",
+  text,
   isHeadlineTextOnBackground,
   isMyPotsPage,
   icon,

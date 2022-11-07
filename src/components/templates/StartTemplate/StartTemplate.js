@@ -34,7 +34,7 @@ StartTemplate.defaultProps = {
 
 StartTemplate.propTypes = {
   /**children */
-  children: PropTypes.node.isRequired,
+  children: PropTypes.node,
   /**type of rendered page */
   pageType: PropTypes.string,
   /**color of svg  */

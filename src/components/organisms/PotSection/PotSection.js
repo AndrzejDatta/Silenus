@@ -14,6 +14,7 @@ const PotSection = ({ headline, path, isPossibleToReturn }) => {
   } = useContext(dataContext);
 
   // const { isOpen, handleOpenModal, handleCloseModal } = useModal();
+
   const elements = plants?.map(({ state, name }, index) => {
     return (
       <StyledLink to="/dashboard/potdetails" key={index}>
@@ -37,6 +38,7 @@ const PotSection = ({ headline, path, isPossibleToReturn }) => {
         path={path ? path : toPath}
         returnPath={returnPath}
         isPossibleToReturn={isPossibleToReturn} //name to change
+        datId={path}
       />
       {elements}
     </StyledPotSection>
@@ -46,7 +48,6 @@ const PotSection = ({ headline, path, isPossibleToReturn }) => {
 PotSection.defaultProps = {
   headline: "Headline",
   isPossibleToReturn: false,
-  path: "/dashboard",
 };
 
 PotSection.propTypes = {
