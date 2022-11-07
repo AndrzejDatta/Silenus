@@ -1,9 +1,10 @@
-import React from 'react';
-import { ThemeProvider } from 'styled-components';
-import { theme } from 'assets/styles/theme';
-
+import React from "react";
+import { ThemeProvider } from "styled-components";
+import { theme } from "assets/styles/theme";
+import { DataProvider } from "providers/DataProvider";
+import { AppStyles } from "providers/AppStyles";
 export const parameters = {
-  actions: { argTypesRegex: '^on[A-Z].*' },
+  actions: { argTypesRegex: "^on[A-Z].*" },
   controls: {
     matchers: {
       color: /(background|color)$/i,
@@ -14,8 +15,10 @@ export const parameters = {
 
 export const decorators = [
   (Story) => (
-    <ThemeProvider theme={theme}>
-      <Story />
-    </ThemeProvider>
+    <AppStyles>
+      <DataProvider>
+        <Story />
+      </DataProvider>
+    </AppStyles>
   ),
 ];
