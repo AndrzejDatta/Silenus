@@ -3,7 +3,6 @@ import renderer from "react-test-renderer";
 import "jest-styled-components";
 import { AppStyles } from "providers/AppStyles";
 import ActivityText from "../ActivityText";
-import { render, screen, rerender } from "@testing-library/react";
 
 describe("Test ActivityText component", () => {
   it("snapshot - default style", () => {

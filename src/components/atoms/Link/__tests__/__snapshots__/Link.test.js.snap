@@ -39,6 +39,7 @@ exports[`Test Link Component Test default style 1`] = `
   <img
     className="c1"
     color="green"
+    data-cy="/dashboard"
     onClick={[Function]}
     size="small"
     src=""

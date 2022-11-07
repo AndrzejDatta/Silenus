@@ -12,6 +12,7 @@ exports[`Test Icon Component Test default stye 1`] = `
 }
 
 <img
+  alt="icon"
   className="c0"
   color="green"
   onClick={[Function]}

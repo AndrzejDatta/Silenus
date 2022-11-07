@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 import { StyledIcon } from './icon.styles';
 import plant from 'assets/icons/categoryIcons/plant.svg'
 
-const Icon = ({ icon, size, color,click,isSearchBar,isOnRightSide , locationLeaftisStyledBackground}) => {
-  return <StyledIcon alt="icon" src={icon} size={size} color={color} onClick={click} isSearchBar={isSearchBar} isOnRightSide={isOnRightSide} locationLeaftisStyledBackground={locationLeaftisStyledBackground}/>;
+const Icon = ({ icon, size, color,click,isSearchBar,isOnRightSide , locationLeaftisStyledBackground,dataId}) => {
+  return <StyledIcon alt="icon" src={icon} size={size} color={color} onClick={click} isSearchBar={isSearchBar} isOnRightSide={isOnRightSide} locationLeaftisStyledBackground={locationLeaftisStyledBackground} data-cy={dataId}/>;
 };
 
 Icon.defaultProps = {
@@ -16,6 +16,7 @@ Icon.defaultProps = {
   isOnRightSide:false,
   locationLeaftisStyledBackground:1,
   click:()=>{},
+  
 };
 
 Icon.propTypes = {
@@ -33,6 +34,8 @@ Icon.propTypes = {
   locationLeaftisStyledBackground:PropTypes.number,
   /** function use for example in arrow to navigate, use in onClick event */
   click:PropTypes.func,
+  /** identifier (need to cypress)*/
+  dataId:PropTypes.string,
 };
 
 export default Icon;
