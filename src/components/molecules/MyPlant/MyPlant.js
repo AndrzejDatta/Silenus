@@ -15,6 +15,8 @@ MyPlant.propTypes = {
   src: PropTypes.string,
   /**name of plant */
   name: PropTypes.string,
+  /** identifier (need to cypress)*/
+  dataId: PropTypes.string,
 };
 
 export default MyPlant;

@@ -11,6 +11,8 @@ Img.propTypes = {
   url: PropTypes.string.isRequired,
   /**size of  image */
   size: PropTypes.string.isRequired,
+  /** identifier (need to cypress)*/
+  dataId: PropTypes.string,
 };
 
 export default Img;
