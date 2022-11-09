@@ -9,7 +9,6 @@ const FilteredList = ({ query }) => {
     axios
       .get("/plants")
       .then((data) => setPlantsData(data.data))
-      .then((data) => console.log(data.data))
       .catch(function (error) {
         console.log(error);
       });

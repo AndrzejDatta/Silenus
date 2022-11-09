@@ -2,25 +2,20 @@ import React from "react";
 import { StyledDateSection } from "./DateSection.styles";
 import DateElement from "components/atoms/DateElement/DateElement";
 const DateSection = (props) => {
-  //TODO:sprawdzic sktory ang
-  //Tutaj za pomoca dataContext chce wyciągać czy jest ang czy pol
-  const days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  //const days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
   const dni = ["Ndz", "Pon", "Wt", "Śr", "Czw", "Pt", "Sob"];
   let daysNames = [];
-  let daysBeforeToday = [...days];
-  let daysAfterToday = [...days];
+  let daysBeforeToday = [...dni];
+  let daysAfterToday = [...dni];
   let daysNumbers = [];
   const date = new Date();
-  //const year = date.getFullYear();
-  //const month = date.getMonth();
+
   const dayNumber = date.getDate();
   let j = 0;
-  //const daysInMonth = new Date(year, month + 1, 0).getDate();
+
   let length = dayNumber;
-  const dayName = dni[date.getDay()];
 
   for (let i = length; i < length + 7; i++) {
-    console.log(i);
     daysNumbers[j] = i;
     j++;
   }

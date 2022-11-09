@@ -6,7 +6,6 @@ import StartTemplate from "components/templates/StartTemplate/StartTemplate";
 const StartPage = (props) => {
   const navigate = useNavigate();
   useEffect(() => {
-    console.log("czekam");
     setTimeout(() => {
       navigate("/dashboard");
     }, 1000);

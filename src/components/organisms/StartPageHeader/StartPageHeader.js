@@ -19,7 +19,7 @@ const StartPageHeader = ({
 };
 
 StartPageHeader.propTypes = {
-  pageType: PropTypes.bool,
+  pageType: PropTypes.string,
   logoSize: PropTypes.string,
   logoColor: PropTypes.string,
 };

@@ -18,11 +18,7 @@ const PotSection = ({ headline, path, isPossibleToReturn }) => {
   const elements = plants?.map(({ state, name }, index) => {
     return (
       <StyledLink to="/dashboard/potdetails" key={index}>
-        <PotStatus
-          state={state}
-          name={name}
-          click={() => console.log("click")}
-        />
+        <PotStatus state={state} name={name} click={() => {}} />
         {/* <Modal isOpen={isOpen} handleClose={handleCloseModal} key={index + 1}>
           <PotStatus state={state} name={name} key={index} />
         </Modal> */}
