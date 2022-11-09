@@ -1,0 +1,85 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test noAcconut.component Component Test default style 1`] = `
+.c0 {
+  font-size: 14px;
+  color: font-size:14px;
+  color: black;
+  children: Text,[object Object];
+  font-family: "Poppins",sans-serif;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  text-align: center;
+  line-height: 20px;
+  -webkit-letter-spacing: 0.01em;
+  -moz-letter-spacing: 0.01em;
+  -ms-letter-spacing: 0.01em;
+  letter-spacing: 0.01em;
+}
+
+.c0 theme color {
+  background-gradient: linear-gradient(0deg,#42A686 12.36%,#5A92CB 100%);
+  background-green: #42A686;
+  background-blue: #5A92CB;
+  error: #DD5C83;
+  light-green: #EEF6F4;
+  font-green: #3AA688;
+  light-grey: #F9F9F9;
+  grey: #EEF7F4;
+  edit-green: #CFE7E0;
+  -webkit-filter-light-green: filter:brightness(0) saturate(100%) invert(95%) sepia(6%) saturate(1860%) hue-rotate(95deg) brightness(85%) contrast(87%);
+  filter-light-green: filter:brightness(0) saturate(100%) invert(95%) sepia(6%) saturate(1860%) hue-rotate(95deg) brightness(85%) contrast(87%);
+  -webkit-filter-green: invert(57%) sepia(93%) saturate(279%) hue-rotate(113deg) brightness(82%) contrast(87%);
+  filter-green: invert(57%) sepia(93%) saturate(279%) hue-rotate(113deg) brightness(82%) contrast(87%);
+  -webkit-filter-white: invert(100%) sepia(100%) saturate(0%) hue-rotate(58deg) brightness(104%) contrast(104%);
+  filter-white: invert(100%) sepia(100%) saturate(0%) hue-rotate(58deg) brightness(104%) contrast(104%);
+  -webkit-filter-black: invert(0%) sepia(3%) saturate(0%) hue-rotate(235deg) brightness(99%) contrast(105%);
+  filter-black: invert(0%) sepia(3%) saturate(0%) hue-rotate(235deg) brightness(99%) contrast(105%);
+}
+
+.c0 theme font size {
+  title: 60px;
+  heading: 40px;
+  subtitle: 24px;
+  button: 14px;
+  large: 18px;
+  big: 16px;
+  medium: 14px;
+  small: 12px;
+  tiny: 10px;
+}
+
+.c0 theme font family {
+  montserrat: "Montserrat Alternates",sans-serif;
+  mitr: "Mitr",sans-serif;
+  poppins: "Poppins",sans-serif;
+  roboto: "Roboto",sans-serif;
+}
+
+.c1 {
+  margin-left: 5px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+<div
+  className="c0"
+  color="black"
+  fontSize="14px"
+>
+  Text
+  <a
+    className="c1"
+    color="black"
+    fontSize="14px"
+  >
+    Button Text
+  </a>
+</div>
+`;

@@ -7,7 +7,16 @@ export const theme = {
     lightGreen: "#EEF6F4",
     fontGreen: "#3AA688",
     lightGrey: "#F9F9F9",
+    grey: "#EEF7F4",
     editGreen: "#CFE7E0",
+    filterLightGreen:
+      "filter: brightness(0) saturate(100%) invert(95%) sepia(6%) saturate(1860%) hue-rotate(95deg) brightness(85%) contrast(87%);",
+    filterGreen:
+      " invert(57%) sepia(93%) saturate(279%) hue-rotate(113deg) brightness(82%) contrast(87%)",
+    filterWhite:
+      "invert(100%) sepia(100%) saturate(0%) hue-rotate(58deg) brightness(104%) contrast(104%)",
+    filterBlack:
+      "invert(0%) sepia(3%) saturate(0%) hue-rotate(235deg) brightness(99%) contrast(105%)",
   },
   font: {
     size: {

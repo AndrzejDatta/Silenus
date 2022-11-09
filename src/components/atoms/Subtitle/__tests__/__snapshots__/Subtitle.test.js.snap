@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test Title component test default style 1`] = `
+.c0 {
+  font-size: 16px;
+  color: white;
+  font-family: "Montserrat Alternates",sans-serif;
+  font-weight: 300;
+}
+
+<h2
+  className="c0"
+>
+  smart plants
+</h2>
+`;

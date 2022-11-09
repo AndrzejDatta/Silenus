@@ -4,17 +4,18 @@ import Title from "components/atoms/Title/Title";
 import Subtitle from "components/atoms/Subtitle/Subtitle";
 import { StyledStartPageText } from "components/molecules/StartPageText/StartPageText.styles";
 
-const StartPageText = ({ startPage }) => {
+const StartPageText = ({ pageType, title, subtitle }) => {
   return (
     <StyledStartPageText>
-      <Title title="Title" color={startPage} size={startPage} />
-      <Subtitle subtitle="Title" color={startPage} size={startPage} />
+      <Title title={title} pageType={pageType} />
+      <Subtitle subtitle={subtitle} pageType={pageType} />
     </StyledStartPageText>
   );
 };
 
 StartPageText.propTypes = {
-  startPage: PropTypes.string.isRequired,
+  /**type of page */
+  pageType: PropTypes.string.isRequired,
 };
 
 export default StartPageText;

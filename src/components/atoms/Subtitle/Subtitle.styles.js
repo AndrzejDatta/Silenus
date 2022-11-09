@@ -1,13 +1,19 @@
 import styled from "styled-components";
-
-export const StyledSubtitle = styled.h1`
-  font-size: ${(props) =>
-    props.size === "startPage"
-      ? ({ theme }) => theme.font.size.subtitle
-      : ({ theme }) => theme.font.size.big};
-  color: ${(props) =>
-    props.color === "startPage"
-      ? ({ theme }) => theme.color.fontGreen
-      : "black"};
+import { theme } from "assets/styles/theme";
+export const StyledSubtitle = styled.h2`
+  ${({ pageType }) => {
+    if (pageType === "loginPage") {
+      return `
+        font-size: ${theme.font.size.big};
+        color: white;
+        `;
+    } else if (pageType === "startPage") {
+      return `
+        font-size: ${theme.font.size.subtitle};
+        color: ${theme.color.fontGreen};
+        `;
+    }
+  }}
   font-family: ${({ theme }) => theme.font.family.montserrat};
+  font-weight: 300;
 `;

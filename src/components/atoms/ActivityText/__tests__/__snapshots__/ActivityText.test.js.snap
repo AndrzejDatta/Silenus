@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test ActivityText component snapshot - default style 1`] = `
+.c0 {
+  -webkit-letter-spacing: 1px;
+  -moz-letter-spacing: 1px;
+  -ms-letter-spacing: 1px;
+  letter-spacing: 1px;
+  font-size: 14px;
+  color: black;
+  font-family: "Poppins",sans-serif;
+  font-weight: normal;
+}
+
+<p
+  className="c0"
+  color="black"
+>
+  Text
+</p>
+`;
+
+exports[`Test ActivityText component snapshot - headline 1`] = `
+.c0 {
+  -webkit-letter-spacing: 1px;
+  -moz-letter-spacing: 1px;
+  -ms-letter-spacing: 1px;
+  letter-spacing: 1px;
+  font-size: 16px;
+  color: black;
+  font-family: "Poppins",sans-serif;
+  font-weight: bold;
+}
+
+<p
+  className="c0"
+  color="black"
+>
+  Text
+</p>
+`;

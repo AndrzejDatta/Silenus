@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test Filter Component Test default style 1`] = `
+.c0 {
+  background-color: #F9F9F9;
+  padding: 1px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: space-around;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: space-around;
+  justify-content: space-around;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border: none;
+  border-radius: 8px;
+  min-width: 112px;
+  margin: 0px 5px;
+  max-width: 140px;
+}
+
+.c1 {
+  font-size: 14px;
+  color: black;
+  font-family: "Poppins",sans-serif;
+}
+
+<button
+  className="c0"
+>
+  <p
+    className="c1"
+    color="black"
+  >
+    Filter
+  </p>
+</button>
+`;

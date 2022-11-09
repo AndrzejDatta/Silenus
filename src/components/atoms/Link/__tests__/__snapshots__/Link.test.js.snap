@@ -1,0 +1,48 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test Link Component Test default style 1`] = `
+.c1 {
+  width: 24px;
+  height: 24px;
+  -webkit-filter: invert(57%) sepia(93%) saturate(279%) hue-rotate(113deg) brightness(82%) contrast(87%);
+  filter: invert(57%) sepia(93%) saturate(279%) hue-rotate(113deg) brightness(82%) contrast(87%);
+  -webkit-filter: invert(57%) sepia(93%) saturate(279%) hue-rotate(113deg) brightness(82%) contrast(87%);
+  filter: invert(57%) sepia(93%) saturate(279%) hue-rotate(113deg) brightness(82%) contrast(87%);
+  cursor: pointer;
+}
+
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: space-around;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: space-around;
+  justify-content: space-around;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  justify-self: flex-end;
+  padding: 5px 0px;
+}
+
+<a
+  className="c0"
+  href="/dashboard"
+  onClick={[Function]}
+>
+  <img
+    className="c1"
+    color="green"
+    data-cy="/dashboard"
+    onClick={[Function]}
+    size="small"
+    src=""
+  />
+</a>
+`;

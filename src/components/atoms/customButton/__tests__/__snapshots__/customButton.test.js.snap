@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test CustomButton component test default style 1`] = `
+.c0 {
+  width: 200px;
+  height: 45px;
+  font-size: 14px;
+  font-family: "Poppins",sans-serif;
+  background-color: green;
+  color: black;
+  border: 1px solid #EEF7F4;
+  border-radius: 10px;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+<button
+  className="c0"
+  color="black"
+  fontSize="14px"
+  onClick={[Function]}
+  size="small"
+  type="text"
+>
+  Text
+</button>
+`;

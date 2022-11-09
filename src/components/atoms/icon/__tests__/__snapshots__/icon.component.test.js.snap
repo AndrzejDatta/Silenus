@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test Icon Component Test default stye 1`] = `
+.c0 {
+  width: 24px;
+  height: 24px;
+  -webkit-filter: invert(57%) sepia(93%) saturate(279%) hue-rotate(113deg) brightness(82%) contrast(87%);
+  filter: invert(57%) sepia(93%) saturate(279%) hue-rotate(113deg) brightness(82%) contrast(87%);
+  top: 20%;
+  left: -17%;
+  cursor: pointer;
+}
+
+<img
+  alt="icon"
+  className="c0"
+  color="green"
+  onClick={[Function]}
+  size="small"
+  src="plant.svg"
+/>
+`;

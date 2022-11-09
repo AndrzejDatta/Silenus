@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test HeadlineText Component Test default style 1`] = `
+.c0 {
+  -webkit-letter-spacing: 1px;
+  -moz-letter-spacing: 1px;
+  -ms-letter-spacing: 1px;
+  letter-spacing: 1px;
+  font-size: 18px;
+  color: #3AA688;
+  font-family: "Poppins",sans-serif;
+  font-weight: normal;
+}
+
+<h1
+  className="c0"
+>
+  Headline
+</h1>
+`;

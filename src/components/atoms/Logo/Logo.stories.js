@@ -7,7 +7,7 @@ export default {
   component: Logo,
   argTypes: {
     size: {
-      options: ["small", "medium", "large"],
+      options: ["tiny", "small", "medium", "large"],
       control: { type: "radio" },
     },
   },
