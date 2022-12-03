@@ -114,7 +114,7 @@ export const dataPL = [
   },
   {
     pageName: "MojeDoniczki",
-    headings: ["Moje doniczki"],
+    headings: "Moje doniczki",
     toPath: "/dashboard/mypots/addpot",
     returnPath: "/dashboard",
   },

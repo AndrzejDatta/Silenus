@@ -31,8 +31,8 @@ const SearchBar = ({ isSearchBar }) => {
           icon={scan}
           size="tiny"
           color="black"
-          isOnRightSide={true}
           isSearchBar={true}
+          isOnRightSide={true}
         />
       </StyledSearchBar>
       {query && <FilteredList query={query} />}
