@@ -14,15 +14,6 @@ import PlantDetailsPage from "pages/PlantDetailsPage/PlantDetailsPage";
 import AddPot from "pages/AddPot/AddPot";
 import NotFoundPage from "pages/NotFoundPage/NotFoundPage";
 const Dashboard = lazy(() => import("pages/Dashboard/Dashboard"));
-// const AddPot = lazy(() => import("pages/AddPot/AddPot"));
-// const MyPlantsPage = lazy(() => import("pages/MyPlantsPage/MyPlantsPage"));
-// const MyPotsPage = lazy(() => import("pages/MyPotsPage/MyPotsPage"));
-// const PotDetailsPage = lazy(() =>
-//   import("pages/PotDetailsPage/PotDetailsPage")
-// );
-// const PlantDetailsPage = React.lazy(() =>
-//   import("pages/PlantDetailsPage/PlantDetailsPage")
-// );
 
 const App = (props) => {
   return (
